@@ -32,7 +32,7 @@ const FreeTrialStep1 = () => {
               <Title>30억 빚을 1년만에 300억 만든, CEO비밀!</Title>
               <Box>
                 <VideoBox>
-                  <ReactPlayer width={'100%'} height={'100%'} url={'https://youtu.be/tkOcbaGJshk'}></ReactPlayer>
+                  <ReactPlayer width={'100%'} height={'100%'} url={'https://youtu.be/I_3DA2cWPfI'}></ReactPlayer>
                 </VideoBox>
                 <Button onClick={onClick} type={'full'}>책10권 이상의 노하우 비밀특강!  『 1만원 』에 바로보기</Button>
                 
@@ -42,7 +42,7 @@ const FreeTrialStep1 = () => {
               <Title>AI 영상 컨텐츠, 나도 쉽게 만들어보기!</Title>
               <Box>
                 <VideoBox>
-                  <ReactPlayer width={'100%'} height={'100%'} url={'https://youtu.be/tkOcbaGJshk'}></ReactPlayer>
+                  <ReactPlayer width={'100%'} height={'100%'} url={'https://youtu.be/jhq592jaN9M'}></ReactPlayer>
                 </VideoBox>
                 <Button onClick={onClick2} type={'full'}> 원하는 영상 "스크립트"만 입력시, 1분당 『 1만원 』에 만들기</Button>
               

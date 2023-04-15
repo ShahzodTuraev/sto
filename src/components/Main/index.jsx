@@ -121,7 +121,7 @@ const MainP = () => {
                 뉴스를 매일 3분 요약하여 “무료”로 보내드립니다.
           </Text>
           <VideoBox>
-            <ReactPlayer  ref={playerRef} playing={true} width={'100%'} height={'100%'} url={'https://youtu.be/tkOcbaGJshk'}></ReactPlayer>
+            <ReactPlayer  ref={playerRef} playing={true} width={'100%'} height={'100%'} url={'https://youtu.be/_ZGGYdqdbCo'}></ReactPlayer>
           </VideoBox>
           <InputBox>
             <InputTitle>뉴스 받을 '메일 핸드폰 번호' 입력란</InputTitle>

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import {ReactComponent as lock} from '../../assets/icons/lockvideo.svg';
+
 import {device} from "../Generic/responsive"
 const Container = styled.div`
   display: flex;
@@ -83,6 +85,7 @@ const VideoWrap = styled.div`
   width: 355px;
   height: 200px;
   margin-bottom: 15px;
+  position: relative;
   @media ${device.mobile} { 
     width: 335px;
     height: 190px;
@@ -114,7 +117,16 @@ const Img = styled.img`
 width: 100%;
 height: 100%;
 `
+const Icon = styled.div``;
+Icon.Lock = styled(lock)`
+  width:50px;
+  height: 50px;
+  z-index: 1;
+  position: absolute;
+  top: 5%;
+  left: 85%;
+`;
 
 
-export {Container,  Down, Main, Title, Img,
+export {Container,  Down, Main, Title, Img, Icon,
         SupTitle, VideoContainer, VideoBox, VideoWrap, Name, Position, Note}
