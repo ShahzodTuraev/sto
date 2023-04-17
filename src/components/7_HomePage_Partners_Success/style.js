@@ -116,6 +116,7 @@ const Note = styled.p`
 const Img = styled.img`
 width: 100%;
 height: 100%;
+cursor: pointer;
 `
 const Icon = styled.div``;
 Icon.Lock = styled(lock)`

@@ -51,7 +51,7 @@ const Step2 = () => {
           </FormWrap>
           <Button onClick={onClick} type={'step'}>3단계로 가기</Button>
         </Wrapper>
-        <Coution>10초 설문 후 1:1맞춤 견적 페이지가 나옵니다!</Coution>
+        <Coution>10초 설문 후, 1:1맞춤 견적 페이지가 나옵니다!</Coution>
       </Main>
     </Container>
   )

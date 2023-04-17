@@ -30,6 +30,7 @@ const QuestionsPage = () => {
             color='#ffffff'
             textAlign='center'
             fontSize ='32px'
+            margin= '0 0 20px 0'
           >
               메버는 3D•AI 기술회사로 CEO의 성공을 돕습니다. 지금 바로 도전 해 보세요!
           </Text>
