@@ -18,11 +18,52 @@ const PricingHome = () => {
     window.scrollTo(0, 0);
   }, []);
   const [close, setClose] = useState(false);
-  const onNavigate = () =>{
-      setTimeout(()=>{navigate('/pricing-home/monthly')}, 420)
-      setClose(true)
-  }
   const [name] = useState(`${array[0]}`);
+  const [ visible1, setVisible1] = useState('flex');
+  const [ visible2, setVisible2] = useState('none');
+  const [ border1, setBorder1] = useState('3px solid #000')
+  const [ border2, setBorder2] = useState('')
+  const [hover, setHover] = useState(false)
+  const [hover2, setHover2] = useState(false)
+  const [hover3, setHover3] = useState(false)
+  const [hover4, setHover4] = useState(false)
+  const [hover5, setHover5] = useState(false)
+  const [hover6, setHover6] = useState(false)
+  const mouseEnter = () => {setHover(true)}
+  const mouseLeave = () => {setHover(false)}
+  const mouseEnter2 = () => {setHover2(true)}
+  const mouseLeave2= () => {setHover2(false)}
+  const mouseEnter3 = () => {setHover3(true)}
+  const mouseLeave3 = () => {setHover3(false)}
+  const mouseEnter4 = () => {setHover4(true)}
+  const mouseLeave4 = () => {setHover4(false)}
+  const mouseEnter5 = () => {setHover5(true)}
+  const mouseLeave5 = () => {setHover5(false)}
+  const mouseEnter6 = () => {setHover6(true)}
+  const mouseLeave6 = () => {setHover6(false)}
+
+const setColor = {color: hover ? '#fff' : 'var(--color-6Z-dzM8-1)'}
+const setColor2 = {color: hover2 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
+const setColor3 = {color: hover3 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
+const setColor4 = {color: hover4 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
+const setColor5 = {color: hover5 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
+const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
+
+  const onNav1 = () => {
+    setVisible1('flex');
+    setVisible2('none');
+    setBorder1('3px solid #000');
+    setBorder2('none');
+
+  }
+  const onNav2 = () => {
+    setVisible1('none');
+    setVisible2('flex');
+    setBorder1('none');
+    setBorder2('3px solid #000');
+  }
+
+  
   return (
     <Container>
       <Top/>
@@ -33,87 +74,189 @@ const PricingHome = () => {
         <Title width='65%'> {name === 'undefined' ? '':`${name}`} CEO들의 <br/>매출 성장 플랜</Title>
         <Text margin='15px 0'>CEO들의 후기를 보고 천천히 고민해보세요.<br></br> 이미, 3개월 일정이 밀려 있습니다.</Text>
           <Wrap>
-            <Plan borderBottom ='3px solid #000'>교육 과정 • 매출 도전</Plan>
-            <Plan onClick={onNavigate}>SW • HW 솔루션</Plan>
+            <Plan onClick={onNav1} borderBottom ={border1}>교육 과정 • 매출 도전</Plan>
+            <Plan onClick={onNav2} borderBottom ={border2}>SW • HW 솔루션</Plan>
           </Wrap>
-          <Wrapper>
-            <Box>
-              <Title fontSize='34px'>온라인 CEO과정</Title>
-              <Text fontSize ='14px'>2,500,000원</Text>
+          
+          <Wrapper style={{display: visible1}}>
+            <Box
+              backGround = {hover? 'rgb(21, 30, 82)' : '#ffffff'}
+              onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}
+            >
+              <Title style={setColor} fontSize='34px'>온라인 CEO과정</Title>
+              <Text style={setColor} fontSize ='14px'>2,500,000원</Text>
               <Line/>
-              <Title fontWeight = '700' fontSize='32px'>250,000원</Title>
-              <Text margin='10px 0' fontSize='13px'>10주 <b>스터디 (225만원 절약)</b></Text>
+              <Title style={setColor} fontWeight = '700' fontSize='32px'>250,000원</Title>
+              <Text style={setColor} margin='10px 0' fontSize='13px'>10주 <b>스터디 (225만원 절약)</b></Text>
               <Button onClick={onClick} type='price'>온라인 CEO과정 바로가기</Button>
               <NoteWrap>
-                <Note>제공1. [10강 온라인 영상]-1,000,000원</Note>
-                <Note>제공2. [10강 PDF 전자책]-150,000원</Note>
-                <Note>제공3. [특강 강의]-100,000원</Note>
-                <Note>제공4. [실전컨설팅 1시간]-250,000원</Note>
-                <Note>제공5. [비즈니스협업MOU]-500,000원</Note>
-                <Note>제공6. [온라인 자격증발행]-100,000원</Note>
-                <Note>제공7. [3D홈페이지 맛보기]-100,000원</Note>
-                <Note>제공8. [3D마케팅 맛보기]-100,000원</Note>
-                <Note>제공9. [3D컨텐츠 맛보기]-100,000원</Note>
-                <Note>제공10.[3D자동화 맛보기]-100,000원</Note>
-                <Note>—</Note>
-                <Note>—</Note>
-                <Note>—</Note>
-                <Note>—</Note>
-                <Note>—</Note>
+                <Note style={setColor} >제공1. [10강 온라인 영상]-1,000,000원</Note>
+                <Note style={setColor} >제공2. [10강 PDF 전자책]-150,000원</Note>
+                <Note style={setColor} >제공3. [특강 강의]-100,000원</Note>
+                <Note style={setColor} >제공4. [실전컨설팅 1시간]-250,000원</Note>
+                <Note style={setColor} >제공5. [비즈니스협업MOU]-500,000원</Note>
+                <Note style={setColor} >제공6. [온라인 자격증발행]-100,000원</Note>
+                <Note style={setColor} >제공7. [3D홈페이지 맛보기]-100,000원</Note>
+                <Note style={setColor} >제공8. [3D마케팅 맛보기]-100,000원</Note>
+                <Note style={setColor} >제공9. [3D컨텐츠 맛보기]-100,000원</Note>
+                <Note style={setColor} >제공10.[3D자동화 맛보기]-100,000원</Note>
+                <Note style={setColor} >—</Note>
+                <Note style={setColor} >—</Note>
+                <Note style={setColor} >—</Note>
+                <Note style={setColor} >—</Note>
+                <Note style={setColor} >—</Note>
               </NoteWrap>
               <Button onClick={onClick} type='price'>온라인 CEO과정 바로가기</Button>         
             </Box>
-            <Box>
-              <Title fontSize='34px'>오프라인CEO과정</Title>
-              <Text fontSize ='14px'>10,000,000원</Text>
+            <Box
+              backGround = {hover2? 'rgb(21, 30, 82)' : '#ffffff'}
+              onMouseEnter={mouseEnter2} onMouseLeave={mouseLeave2}
+            >
+              <Title style={setColor2} fontSize='34px'>오프라인CEO과정</Title>
+              <Text style={setColor2} fontSize ='14px'>10,000,000원</Text>
               <Line/>
-              <Title fontWeight = '700' fontSize='32px'>2,500,000원</Title>
-              <Text margin='10px 0' fontSize='13px'>10주 <b>스터디 (750만원 절약)</b></Text>
+              <Title style={setColor2} fontWeight = '700' fontSize='32px'>2,500,000원</Title>
+              <Text style={setColor2} margin='10px 0' fontSize='13px'>10주 <b>스터디 (750만원 절약)</b></Text>
               <Button onClick={onClick} type='price'>지역별 CEO과정 예약하기</Button>
               <NoteWrap>
-              <Note>제공1. [10강 온라인 영상]-1,000,000원</Note>
-                <Note>제공2. [10강 PDF 전자책]-150,000원</Note>
-                <Note>제공3. [특강 강의]-100,000원</Note>
-                <Note>제공4. [실전컨설팅 1시간]-250,000원</Note>
-                <Note>제공5. [비즈니스협업MOU]-500,000원</Note>
-                <Note>제공6. [온라인 자격증발행]-100,000원</Note>
-                <Note>제공7. [3D홈페이지 맛보기]-100,000원</Note>
-                <Note>제공8. [3D마케팅 맛보기]-100,000원</Note>
-                <Note>제공9. [3D컨텐츠 맛보기]-100,000원</Note>
-                <Note>제공10.[3D자동화 맛보기]-100,000원</Note>
-                <Note><b>제공11. 운영수익 제휴-1,000,000원</b></Note>
-                <Note><b>제공12. CEO 네트워크-2,000,000원</b></Note>
-                <Note><b>제공13. 협업.셀럽교류-1,000,000원</b></Note>
-                <Note><b>제공14. 10주 오프코칭권-1,000,000원</b></Note>
-                <Note><b>제공15. 10주 오프수강권-2,500,000원</b></Note>
+                <Note style={setColor2}>제공1. [10강 온라인 영상]-1,000,000원</Note>
+                <Note style={setColor2}>제공2. [10강 PDF 전자책]-150,000원</Note>
+                <Note style={setColor2}>제공3. [특강 강의]-100,000원</Note>
+                <Note style={setColor2}>제공4. [실전컨설팅 1시간]-250,000원</Note>
+                <Note style={setColor2}>제공5. [비즈니스협업MOU]-500,000원</Note>
+                <Note style={setColor2}>제공6. [온라인 자격증발행]-100,000원</Note>
+                <Note style={setColor2}>제공7. [3D홈페이지 맛보기]-100,000원</Note>
+                <Note style={setColor2}>제공8. [3D마케팅 맛보기]-100,000원</Note>
+                <Note style={setColor2}>제공9. [3D컨텐츠 맛보기]-100,000원</Note>
+                <Note style={setColor2}>제공10.[3D자동화 맛보기]-100,000원</Note>
+                <Note style={setColor2}><b>제공11. 운영수익 제휴-1,000,000원</b></Note>
+                <Note style={setColor2}><b>제공12. CEO 네트워크-2,000,000원</b></Note>
+                <Note style={setColor2}><b>제공13. 협업.셀럽교류-1,000,000원</b></Note>
+                <Note style={setColor2}><b>제공14. 10주 오프코칭권-1,000,000원</b></Note>
+                <Note style={setColor2}><b>제공15. 10주 오프수강권-2,500,000원</b></Note>
               </NoteWrap>
               <Button onClick={onClick} type='price'>지역별 CEO과정 예약하기</Button>     
             </Box>
-            <Box backGround = 'rgb(21, 30, 82)'>
-              <Title color='#FFF' fontSize='34px'>1•10•100도전</Title>
-              <Text color='#FFF' fontSize ='14px'>발생매출의 20~30%</Text>
+            <Box
+              backGround = {hover3? 'rgb(21, 30, 82)' : '#ffffff'}
+              onMouseEnter={mouseEnter3} onMouseLeave={mouseLeave3}
+            >
+              <Title style={setColor3} fontSize='34px'>1•10•100도전</Title>
+              <Text  style={setColor3} fontSize ='14px'>발생매출의 20~30%</Text>
               <Line/>
-              <Title color='var(--color-6Z-dzM8-7)' fontWeight = '700' fontSize='32px'>실비+매출의 10%</Title>
-              <Text color='#FFF' margin='10px 0' fontSize='13px'>1년단위 <b>실행 (매출.지분.협업)</b></Text>
+              <Title style={setColor3} fontWeight = '700' fontSize='32px'>실비+매출의 10%</Title>
+              <Text  style={setColor3} margin='10px 0' fontSize='13px'>1년단위 <b>실행 (매출.지분.협업)</b></Text>
+              <Button style={setColor3} onClick={onClick} type='price'>1•10•100도전 시작</Button>
+              <NoteWrap>
+                <Note style={setColor3}>제공1. [10강 온라인 영상]-1,000,000원</Note>
+                <Note style={setColor3}>제공2. [10강 PDF 전자책]-150,000원</Note>
+                <Note style={setColor3}>제공3. [특강 강의]-100,000원</Note>
+                <Note style={setColor3}>제공4. [실전컨설팅 1시간]-250,000원</Note>
+                <Note style={setColor3}>제공5. [비즈니스협업MOU]-500,000원</Note>
+                <Note style={setColor3}>제공6. [온라인 자격증발행]-100,000원</Note>
+                <Note style={setColor3}>제공7. [3D AI홈페이지]-10,000,000원~</Note>
+                <Note style={setColor3}>제공8. [3D AI마케팅]-10,000,000원~</Note>
+                <Note style={setColor3}>제공9. [3D AI컨텐츠]-10,000,000원~</Note>
+                <Note style={setColor3}>제공10.[3D AI자동화]-10,000,000원~</Note>
+                <Note style={setColor3}>제공11. 운영수익 제휴-1,000,000원</Note>
+                <Note style={setColor3}>제공12. CEO 네트워크-2,000,000원</Note>
+                <Note style={setColor3}>제공13. 협업.셀럽교류-1,000,000원</Note>
+                <Note style={setColor3}>제공14. 10주 오프코칭권-1,000,000원</Note>
+                <Note style={setColor3}>제공15. 10주 오프수강권-2,500,000원</Note>
+                <Note style={setColor3}>제공16. 1년 코치.실행자 배치-실비</Note>
+                <Note style={setColor3}>제공17. 1년 HW.SW 배치-실비</Note>
+              </NoteWrap>
+              <Button onClick={onClick} type='price'>1•10•100도전 시작</Button>     
+            </Box>
+          </Wrapper>
+
+          <Wrapper style={{display: visible2}}>
+            <Box
+              backGround = {hover4? 'rgb(21, 30, 82)' : '#ffffff'}
+              onMouseEnter={mouseEnter4} onMouseLeave={mouseLeave4}
+            >
+              <Title style={setColor4} fontSize='34px'>온라인 CEO과정</Title>
+              <Text style={setColor4} fontSize ='14px'>2,500,000원</Text>
+              <Line/>
+              <Title style={setColor4} fontWeight = '700' fontSize='32px'>250,000원</Title>
+              <Text style={setColor4} margin='10px 0' fontSize='13px'>10주 <b>스터디 (225만원 절약)</b></Text>
+              <Button onClick={onClick} type='price'>온라인 바로 시작</Button>
+              <NoteWrap>
+                <Note style={setColor4}>제공1. [10강 온라인 영상]-1,000,000원</Note>
+                <Note style={setColor4}>제공2. [10강 PDF 전자책]-150,000원</Note>
+                <Note style={setColor4}>제공3. [특강 강의]-100,000원</Note>
+                <Note style={setColor4}>제공4. [실전컨설팅 1시간]-250,000원</Note>
+                <Note style={setColor4}>제공5. [비즈니스협업MOU]-500,000원</Note>
+                <Note style={setColor4}>제공6. [온라인 자격증발행]-100,000원</Note>
+                <Note style={setColor4}>제공7. [3D홈페이지 맛보기]-100,000원</Note>
+                <Note style={setColor4}>제공8. [3D마케팅 맛보기]-100,000원</Note>
+                <Note style={setColor4}>제공9. [3D컨텐츠 맛보기]-100,000원</Note>
+                <Note style={setColor4}>제공10.[3D자동화 맛보기]-100,000원</Note>
+                <Note style={setColor4}>—</Note>
+                <Note style={setColor4}>—</Note>
+                <Note style={setColor4}>—</Note>
+                <Note style={setColor4}>—</Note>
+                <Note style={setColor4}>—</Note>
+              </NoteWrap>
+              <Button onClick={onClick} type='price'>온라인 바로 시작</Button>         
+            </Box>
+            <Box
+              backGround = {hover5? 'rgb(21, 30, 82)' : '#ffffff'}
+              onMouseEnter={mouseEnter5} onMouseLeave={mouseLeave5}
+            >
+              <Title style={setColor5} fontSize='34px'>오프라인CEO과정</Title>
+              <Text style={setColor5} fontSize ='14px'>10,000,000원</Text>
+              <Line/>
+              <Title style={setColor5} fontWeight = '700' fontSize='32px'>2,500,000원</Title>
+              <Text style={setColor5} margin='10px 0' fontSize='13px'>10주 <b>스터디 (750만원 절약)</b></Text>
+              <Button onClick={onClick} type='price'>오프라인 바로 시작</Button>
+              <NoteWrap>
+                <Note style={setColor5}>제공1. [10강 온라인 영상]-1,000,000원</Note>
+                <Note style={setColor5}>제공2. [10강 PDF 전자책]-150,000원</Note>
+                <Note style={setColor5}>제공3. [특강 강의]-100,000원</Note>
+                <Note style={setColor5}>제공4. [실전컨설팅 1시간]-250,000원</Note>
+                <Note style={setColor5}>제공5. [비즈니스협업MOU]-500,000원</Note>
+                <Note style={setColor5}>제공6. [온라인 자격증발행]-100,000원</Note>
+                <Note style={setColor5}>제공7. [3D홈페이지 맛보기]-100,000원</Note>
+                <Note style={setColor5}>제공8. [3D마케팅 맛보기]-100,000원</Note>
+                <Note style={setColor5}>제공9. [3D컨텐츠 맛보기]-100,000원</Note>
+                <Note style={setColor5}>제공10.[3D자동화 맛보기]-100,000원</Note>
+                <Note style={setColor5}><b>제공11. 운영수익 제휴-1,000,000원</b></Note>
+                <Note style={setColor5}><b>제공12. CEO 네트워크-2,000,000원</b></Note>
+                <Note style={setColor5}><b>제공13. 협업.셀럽교류-1,000,000원</b></Note>
+                <Note style={setColor5}><b>제공14. 10주 오프코칭권-1,000,000원</b></Note>
+                <Note style={setColor5}><b>제공15. 10주 오프수강권-2,500,000원</b></Note>
+              </NoteWrap>
+              <Button onClick={onClick} type='price'>오프라인 바로 시작</Button>     
+            </Box>
+            <Box 
+              backGround = {hover6? 'rgb(21, 30, 82)' : '#ffffff'}
+              onMouseEnter={mouseEnter6} onMouseLeave={mouseLeave6}
+            >
+              <Title style={setColor6} fontSize='34px'>1•10•100도전</Title>
+              <Text style={setColor6} fontSize ='14px'>발생매출의 20~30%</Text>
+              <Line/>
+              <Title style={setColor6} color='var(--color-6Z-dzM8-7)' fontWeight = '700' fontSize='32px'>실비+매출의 10%</Title>
+              <Text style={setColor6} margin='10px 0' fontSize='13px'>1년단위 <b>실행 (매출.지분.협업)</b></Text>
               <Button onClick={onClick} type='price'>1•10•100도전 시작</Button>
               <NoteWrap>
-                <Note color='#FFF'>제공1. [10강 온라인 영상]-1,000,000원</Note>
-                <Note color='#FFF'>제공2. [10강 PDF 전자책]-150,000원</Note>
-                <Note color='#FFF'>제공3. [특강 강의]-100,000원</Note>
-                <Note color='#FFF'>제공4. [실전컨설팅 1시간]-250,000원</Note>
-                <Note color='#FFF'>제공5. [비즈니스협업MOU]-500,000원</Note>
-                <Note color='#FFF'>제공6. [온라인 자격증발행]-100,000원</Note>
-                <Note color='#FFF'>제공7. [3D AI홈페이지]-10,000,000원~</Note>
-                <Note color='#FFF'>제공8. [3D AI마케팅]-10,000,000원~</Note>
-                <Note color='#FFF'>제공9. [3D AI컨텐츠]-10,000,000원~</Note>
-                <Note color='#FFF'>제공10.[3D AI자동화]-10,000,000원~</Note>
-                <Note color='#FFF'>제공11. 운영수익 제휴-1,000,000원</Note>
-                <Note color='#FFF'>제공12. CEO 네트워크-2,000,000원</Note>
-                <Note color='#FFF'>제공13. 협업.셀럽교류-1,000,000원</Note>
-                <Note color='#FFF'>제공14. 10주 오프코칭권-1,000,000원</Note>
-                <Note color='#FFF'>제공15. 10주 오프수강권-2,500,000원</Note>
-                <Note color='#FFF'>제공16. 1년 코치.실행자 배치-실비</Note>
-                <Note color='#FFF'>제공17. 1년 HW.SW 배치-실비</Note>
+                <Note style={setColor6}>제공1. [10강 온라인 영상]-1,000,000원</Note>
+                <Note style={setColor6}>제공2. [10강 PDF 전자책]-150,000원</Note>
+                <Note style={setColor6}>제공3. [특강 강의]-100,000원</Note>
+                <Note style={setColor6}>제공4. [실전컨설팅 1시간]-250,000원</Note>
+                <Note style={setColor6}>제공5. [비즈니스협업MOU]-500,000원</Note>
+                <Note style={setColor6}>제공6. [온라인 자격증발행]-100,000원</Note>
+                <Note style={setColor6}>제공7. [3D AI홈페이지]-10,000,000원~</Note>
+                <Note style={setColor6}>제공8. [3D AI마케팅]-10,000,000원~</Note>
+                <Note style={setColor6}>제공9. [3D AI컨텐츠]-10,000,000원~</Note>
+                <Note style={setColor6}>제공10.[3D AI자동화]-10,000,000원~</Note>
+                <Note style={setColor6}>제공11. 운영수익 제휴-1,000,000원</Note>
+                <Note style={setColor6}>제공12. CEO 네트워크-2,000,000원</Note>
+                <Note style={setColor6}>제공13. 협업.셀럽교류-1,000,000원</Note>
+                <Note style={setColor6}>제공14. 10주 오프코칭권-1,000,000원</Note>
+                <Note style={setColor6}>제공15. 10주 오프수강권-2,500,000원</Note>
+                <Note style={setColor6}>제공16. 1년 코치.실행자 배치-실비</Note>
+                <Note style={setColor6}>제공17. 1년 HW.SW 배치-실비</Note>
               </NoteWrap>
               <Button onClick={onClick} type='price'>1•10•100도전 시작</Button>     
             </Box>

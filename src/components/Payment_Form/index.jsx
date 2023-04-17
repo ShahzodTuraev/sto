@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Main, Title, Text, Wrapper, Coution, Icon, CardBox, MainWrapper, TextBox, Head, IconWrap, IconText, Awrap, Img } from './style';
 import { Input, Button } from '../Generic';
 import { useNavigate } from 'react-router-dom';
-import Logo from '../../assets/imgs/merisa.jpg'
+import Logo from '../../assets/imgs/mever-flayer.png'
 import { Bottom, Top } from '../Generic/transform';
 
 const FreeTrialStep2 = () => {

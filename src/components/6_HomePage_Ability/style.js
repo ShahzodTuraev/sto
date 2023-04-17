@@ -217,7 +217,7 @@ const AdText = styled.p`
   }
 `;
 const AdImg = styled.img`
-  width: 360px;
+  width: 260px;
   height: auto;
   margin: -70px 0 30px 0;
   @media ${device.mobile} { 

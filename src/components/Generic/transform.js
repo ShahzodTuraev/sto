@@ -19,7 +19,7 @@ const Top = styled.div`
   transform: translateY(-50%);
   animation: ${expand} 0.25s ease-out;
   animation-delay: ${({animationDelay}) => (animationDelay? `${animationDelay}` : '0')};
-  z-index: 1;
+  z-index: 2;
 `;
 const Bottom = styled.div`
   position: fixed;
@@ -32,7 +32,7 @@ const Bottom = styled.div`
   animation: ${expand} 0.25s ease-out;
   animation-delay: ${({animationDelay}) => (animationDelay? `${animationDelay}` : '0')};
 
-  z-index: 1;
+  z-index: 2;
 `;
 
 const expandClose = keyframes`
@@ -55,7 +55,7 @@ const TopClose = styled.div`
   transform: translateY(-50%);
   animation: ${expandClose} 0.25s ease-out ;
   ;
-  z-index: 1;
+  z-index: 2;
 `;
 const BottomClose = styled.div`
   position: fixed;
@@ -66,7 +66,7 @@ const BottomClose = styled.div`
   background-color: #202020;
   transform: translateY(-50%);
   animation: ${expandClose} 0.25s ease-out;
-  z-index: 1;
+  z-index: 2;
 `;
 
 const firstTop = keyframes`
@@ -113,7 +113,7 @@ const FirstTop = styled.div`
   left: 0;
   width: 100%;
   background-color: #202020;
-  z-index: 1;
+  z-index: 2;
   animation: ${firstTop} 0.75s ease-out;
 `;
 const FirstBottom = styled.div`
@@ -122,7 +122,7 @@ const FirstBottom = styled.div`
   left: 0;
   width: 100%;
   background-color: #202020;
-  z-index: 1;
+  z-index: 2;
   animation: ${firstTop1} 0.75s ease-out;
 `;
 

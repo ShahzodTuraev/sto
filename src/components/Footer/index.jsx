@@ -1,15 +1,16 @@
 import React from 'react';
 import { Box, Box2, Box3, BoxWrap, Contact, Container, Icon, Img, Li, Main, Text, Wrapper,} from './style';
-import logo from '../../assets/imgs/mever-logo.png'
-import sns1 from '../../assets/icons/sns1.png'
-import sns2 from '../../assets/icons/sns2.png'
-import sns3 from '../../assets/icons/sns3.png'
-import sns4 from '../../assets/icons/sns4.png'
-import sns5 from '../../assets/icons/sns5.png'
-import sns6 from '../../assets/icons/sns6.png'
+import logo from '../../assets/imgs/mever-logo.png';
+import sns1 from '../../assets/icons/sns1.png';
+import sns2 from '../../assets/icons/sns2.png';
+import sns3 from '../../assets/icons/sns3.png';
+import sns4 from '../../assets/icons/sns4.png';
+import sns5 from '../../assets/icons/sns5.png';
+import sns6 from '../../assets/icons/sns6.png';
 import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  
   const navigate = useNavigate();
   const onDirect1 =() => {
     navigate('/main')

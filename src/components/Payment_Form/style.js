@@ -15,7 +15,8 @@ const MainWrapper = styled.div`
   justify-content: space-between;
   gap: 30px;
   @media ${device.mobile}{
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -96,7 +97,7 @@ const TextBox = styled.div`
   height: auto;
   padding: 30px 0;
   @media ${device.mobile}{
-    display: none;
+    width: 94%;
   }
 
 `
@@ -105,11 +106,15 @@ const Head = styled.h1`
   line-height: 110%;
   font-size: 2rem;
   font-weight: 900;
-  
+  @media ${device.mobile}{
+    text-align: center;
+    font-size: 1.6rem;
+  }
 `;
 const IconWrap = styled.div`
   display: flex;
   gap: 10px;
+  
 `;
 
 const IconText = styled.p`

@@ -77,7 +77,7 @@ const VideoBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 `;
 
 const VideoWrap = styled.div`
@@ -120,6 +120,7 @@ cursor: pointer;
 `
 const Icon = styled.div``;
 Icon.Lock = styled(lock)`
+  display: ${({display})=>(display ? `${display}` : 'block' )};
   width:50px;
   height: 50px;
   z-index: 1;
@@ -127,7 +128,23 @@ Icon.Lock = styled(lock)`
   top: 5%;
   left: 85%;
 `;
+const PdfWrap = styled.div`
+  display: ${({display})=>(display ? `${display}` : 'flex' )};
+  justify-content: end;
+  gap: 10px;
+  width: 90%;
+  cursor: pointer;
+  color: #1677FF;
+  &:hover{
+    color: #6A07D9;
+  }
+
+`
+const PdfIcon = styled.img`
+  width: 25px;
+  height: auto;
+`;
 
 
-export {Container,  Down, Main, Title, Img, Icon,
+export {Container,  Down, Main, Title, Img, Icon, PdfIcon,  PdfWrap,
         SupTitle, VideoContainer, VideoBox, VideoWrap, Name, Position, Note}

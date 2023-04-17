@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {device} from "../Generic/responsive"
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -34,7 +33,7 @@ const Title = styled.h1`
 `;
 
 const Text = styled.p`
-  color : ${({color})=>(color ? `${color}` : 'rgb(77, 82, 86)')};
+  color: rgb(77, 82, 86);
   font-weight: 400;
   line-height: 150%;
   font-size: ${({fontSize})=>(fontSize ? `${fontSize}` : '1.25rem;')}; 
@@ -49,10 +48,10 @@ const Wrapper = styled.div`
   height: auto;
   gap: 10px;
   @media ${device.tablet} { 
-    flex-direction: column-reverse;
+    flex-direction: column;
   };
   @media ${device.mobile} { 
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   `;
 
@@ -90,7 +89,7 @@ const Line = styled.div`
   width: 120px;
   height: 2px;
   position: absolute;
-  top: 103px;
+  top: 100px;
   left: 120px;
   @media ${device.tablet} { 
     left: 260px;

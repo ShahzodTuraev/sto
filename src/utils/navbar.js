@@ -6,7 +6,6 @@ import SuccessHomePage from "../pages/SuccessHome";
 import PricingHomePage from "../pages/PricingHome";
 import ExtendPage from "../pages/Extend";
 import FeaturesPage from "../pages/Features";
-import PricingMonthlyPage from "../pages/PricingMonthly";
 import PaymentFormPage from "../pages/Payment_Form";
 import Step1Page from "../pages/Form_Step_1";
 import Step2Page from "../pages/Form_Step_2";
@@ -60,13 +59,6 @@ export const navbar = [
     id: useId,
     element: <PricingHomePage/>,
     path: '/pricing-home',
-    private: false,
-    hidden: true
-  },
-  {
-    id: useId,
-    element: <PricingMonthlyPage/>,
-    path: '/pricing-home/monthly',
     private: false,
     hidden: true
   },

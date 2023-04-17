@@ -14,7 +14,6 @@ const Main = styled.div`
   max-width: 580px;
   width: 100%;
   height: auto;
-  box-shadow: 0px 10px 40px 0px rgba(29, 46, 59, 0.15);
   border-radius: 10px;
   padding: 40px 70px;
   margin-bottom: 10rem;
@@ -27,19 +26,24 @@ const Main = styled.div`
 
 const Title = styled.div`
   font-weight: 700;
-  font-size: 20px;
+  font-size: 27px;
   line-height: 140%;
   letter-spacing: -0.06rem;
   margin-bottom: 30px;
 `;
 const Wraper = styled.div`
   display: flex;
+  align-items: center;
   gap: 15px;
   align-items: center;
+  margin-bottom: 15px;
 `
 const Text = styled.p`
-font-weight: 500;
+  font-weight: 500;
   font-size: 1.6rem;
+  @media ${device.mobile}{
+    font-size: 1.1rem;
+  }
 `;
 
 const Note = styled.p`

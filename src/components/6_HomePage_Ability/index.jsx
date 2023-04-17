@@ -4,7 +4,7 @@ import { Container, Main,  QuesText, Icon, Title, Box,
         } from './style';
 import { Button } from '../Generic';
 import { Index } from '../1_HomePage_Intro/style';
-import Logo from '../../assets/imgs/merisa.jpg'
+import Logo from '../../assets/imgs/mever-flayer.png'
 import { useNavigate } from 'react-router-dom';
 const AbilityPage = () => {
   const navigate = useNavigate()

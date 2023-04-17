@@ -6,12 +6,27 @@ export const array = [];
 const Step5 = () => {
   
   const navigate = useNavigate()
-  
+  const [percentage, setPercentage] = useState(0);
   const [isChecked, setIsChecked] = useState(false);
   const [isChecked2, setIsChecked2] = useState(false);
   const [isChecked3, setIsChecked3] = useState(false);
   const [isChecked4, setIsChecked4] = useState(false);
   const [close, setClose] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPercentage(prevPercentage => {
+        const newPercentage = prevPercentage + 1;
+        if (newPercentage >= 100) {
+          clearInterval(interval);
+          return 100;
+        }
+        return newPercentage;
+      });
+    }, 40);
+
+    return () => clearInterval(interval);
+  }, []);  
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -35,7 +50,7 @@ const Step5 = () => {
     const timer6 = setTimeout(()=>{
       setClose(true)
     }, 4300)
-
+    
 
     return () => {
       clearTimeout(timer);
@@ -46,6 +61,7 @@ const Step5 = () => {
       clearTimeout(timer6);
     };
   }, [navigate]);
+
   
   return (
     <Container>
@@ -58,67 +74,64 @@ const Step5 = () => {
         <div className="skill-box">
                 <div className="skill-bar">
                     <span className="skill-per ">
-                        <span className="tooltip">100%</span>
+                        <span className="tooltip">{percentage}%</span>
                     </span>
                 </div>
             </div>
             <Note>5 / 5</Note>
+
             <Wraper>
               <input
               className='spinner' 
               type="checkbox" 
               id="my-checkbox"
               checked={isChecked}
-              
               />
               <label className='label' htmlFor="my-checkbox">
                 <div className="check"></div>
               </label>
               <Text>메버AI 데이터 베이스를 분석합니다.</Text>
             </Wraper>
+
             <Wraper>
               <input
               className='spinner' 
               type="checkbox" 
               id="my-checkbox"
               checked={isChecked2}
-              
               />
               <label className='label' htmlFor="my-checkbox">
                 <div className="check"></div>
               </label>
               <Text>3D메버로 입체적 필터링 합니다.</Text>
             </Wraper>
+
             <Wraper>
               <input
               className='spinner' 
               type="checkbox" 
               id="my-checkbox"
               checked={isChecked3}
-              
               />
               <label className='label' htmlFor="my-checkbox">
                 <div className="check"></div>
               </label>
               <Text>1:1 맞춤형 사례분석을 생성합니다.</Text>
             </Wraper>
+
             <Wraper>
               <input
               className='spinner' 
               type="checkbox" 
               id="my-checkbox"
               checked={isChecked4}
-              
               />
               <label className='label' htmlFor="my-checkbox">
                 <div className="check"></div>
               </label>
               <Text>최상의 메버AI 시스템을 선택합니다.</Text>
             </Wraper>
-            
-
-
-          
+    
       </Main>
     </Container>
   )

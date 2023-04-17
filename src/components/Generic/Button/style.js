@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 const getType = ({type})=>{
   switch(type){
     case 'small':
@@ -67,13 +66,23 @@ const getType = ({type})=>{
       } 
 
     case 'full':
-      return {
-        height: '50px',
-        fontSize: '20px',
-        padding: '0 20px',
-        boxShadow: '0px 4px 8px 0px rgba(0, 28, 56, 0.15)',
-        width: '100%'
-      }   
+      if(window.innerWidth <= 414){
+        return{
+          fontSize: '20px',
+          padding: '0 20px',
+          boxShadow: '0px 4px 8px 0px rgba(0, 28, 56, 0.15)',
+          height: '60px',
+          width: '100%'
+        }
+      }else{
+        return {
+          height: '50px',
+          fontSize: '20px',
+          padding: '0 20px',
+          boxShadow: '0px 4px 8px 0px rgba(0, 28, 56, 0.15)',
+          width: '100%'
+      }
+      }
     default:
       if(window.innerWidth<= 414){
         return {

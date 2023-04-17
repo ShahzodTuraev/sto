@@ -14,7 +14,6 @@ const Main = styled.div`
   max-width: 580px;
   width: 100%;
   height: auto;
-  box-shadow: 0px 10px 40px 0px rgba(29, 46, 59, 0.15);
   border-radius: 10px;
   padding: 40px 70px;
   margin-bottom: 10rem;

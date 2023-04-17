@@ -66,9 +66,9 @@ const Box = styled.div`
   background: #0E3B68;
   width: 100%;
   height: auto;
-  padding: 10px;
-  gap: 10px;
-  border-radius: 8px;
+  padding: 5px;
+  gap: 5px;
+  border-radius: 4px;
   
 `;
 
