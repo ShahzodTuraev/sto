@@ -30,11 +30,11 @@ const PricingMonthly = () => {
       { close && <TopClose/> }
       { close && <BottomClose/> }
       <Main>
-        <Title width='65%'> {name} CEO들의 <br></br>필수과정 • 도전 • 네트웍</Title>
-        <Text margin='15px 0'>CEO.기업가들이 말하는 3D메버 후기를 확인 해 보세요</Text>
+        <Title width='65%'> {name === 'undefined' ? '':`${name}`} CEO들의 <br/>매출 성장 플랜</Title>
+        <Text margin='15px 0'>CEO들의 후기를 보고 천천히 고민해보세요.<br></br> 이미, 3개월 일정이 밀려 있습니다.</Text>
           <Wrap>
-            <Plan onClick={onNavigate}>후기 확인</Plan>
-            <Plan borderBottom ='3px solid #000'>우리 계획</Plan>
+            <Plan onClick={onNavigate}>교육 과정 • 매출 도전</Plan>
+            <Plan borderBottom ='3px solid #000'>SW • HW 솔루션</Plan>
           </Wrap>
           <Wrapper>
             <Box>

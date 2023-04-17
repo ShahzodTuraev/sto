@@ -62,10 +62,10 @@ const Footer = () => {
             </BoxWrap>
         </Box>
         <Box2>
-          <Li onClick={onDirect1}>3분뉴스 자기계발 </Li>
-          <Li onClick={onDirect2}>CEO슽토리</Li>
-          <Li onClick={onDirect3}>CEO서비스 견적</Li>
-          <Li onClick={onDirect4}>1억 10억 100억도전</Li>
+          <Li onClick={onDirect1}>3분뉴스 • 3분계발 </Li>
+          <Li onClick={onDirect2}>메버 스토리</Li>
+          <Li onClick={onDirect3}>서비스 견적</Li>
+          <Li onClick={onDirect4}>1억•10억•100억 매출 도전</Li>
         </Box2>
         </Wrapper>
             <Box3>

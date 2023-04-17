@@ -31,8 +31,8 @@ const Step3 = () => {
       { close && <TopClose/> }
       { close && <BottomClose/> }
       <Main>
-        <Title>다음의 간단한 질문에 답하면, 어떤 퍼널이 당신의 사업에 가장 적합한지 찾아줍니다.</Title>
-        <Text>사업을 시작한 지 얼마나 되었습니까?</Text>
+        <Title>다음의 간단한 질문에 답하면, 맞춤형 AI가 가장 적합한 AI • 3D 기술을 찾아줍니다.</Title>
+        <Text>사업을 시작한 지 얼마나 되었나요?</Text>
         <Alert>{displayText}</Alert>
         <Progress percent={60} showInfo={false} />
         <Note>3 / 5</Note>
@@ -40,17 +40,17 @@ const Step3 = () => {
           <FormWrap>
             <Radio.Group onChange={onChange} value={value}>
               <Space direction="vertical">
-                <Radio value={'0~2년'}> 0~2년</Radio>
-                <Radio value={'2~5년'}>2~5년</Radio>
-                <Radio value={'5~10년'}>5~10년</Radio>
+                <Radio value={'0~2년'}> 1~2년</Radio>
+                <Radio value={'2~5년'}>3~5년</Radio>
+                <Radio value={'5~10년'}>6~10년</Radio>
                 <Radio value={'10년 이상'}> 10년 이상</Radio>
-                <Radio value={'기타'}>기타</Radio>
+                <Radio value={'기타'}>창업 준비 중</Radio>
               </Space>
             </Radio.Group>
           </FormWrap>
           <Button onClick={onClick} type={'step'}>4단계로 가기</Button>
         </Wrapper>
-        <Coution>30초 설문을 마치면 클릭퍼널스 2주 무료 이용 권을 드립니다!</Coution>
+        <Coution>10초 설문 후 1:1맞춤 견적 페이지가 나옵니다!</Coution>
       </Main>
     </Container>
   )

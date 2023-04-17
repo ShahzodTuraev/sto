@@ -54,7 +54,7 @@ const Step5 = () => {
       { close && <TopClose/> }
       { close && <BottomClose/> }
       <Main>
-        <Title>성공</Title>
+        <Title>당신을 위한 1:1 맞춤형 사례 분석이<br></br> 진행중입니다!</Title>
         <div className="skill-box">
                 <div className="skill-bar">
                     <span className="skill-per ">
@@ -74,7 +74,7 @@ const Step5 = () => {
               <label className='label' htmlFor="my-checkbox">
                 <div className="check"></div>
               </label>
-              <Text>Content</Text>
+              <Text>메버AI 데이터 베이스를 분석합니다.</Text>
             </Wraper>
             <Wraper>
               <input
@@ -87,7 +87,7 @@ const Step5 = () => {
               <label className='label' htmlFor="my-checkbox">
                 <div className="check"></div>
               </label>
-              <Text>Content</Text>
+              <Text>3D메버로 입체적 필터링 합니다.</Text>
             </Wraper>
             <Wraper>
               <input
@@ -100,7 +100,7 @@ const Step5 = () => {
               <label className='label' htmlFor="my-checkbox">
                 <div className="check"></div>
               </label>
-              <Text>Content</Text>
+              <Text>1:1 맞춤형 사례분석을 생성합니다.</Text>
             </Wraper>
             <Wraper>
               <input
@@ -113,12 +113,11 @@ const Step5 = () => {
               <label className='label' htmlFor="my-checkbox">
                 <div className="check"></div>
               </label>
-              <Text>Content</Text>
+              <Text>최상의 메버AI 시스템을 선택합니다.</Text>
             </Wraper>
             
 
 
-        <Title>완성되었다!</Title>
           
       </Main>
     </Container>
