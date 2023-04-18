@@ -73,4 +73,5 @@ const Wrapper = styled.div`
   }
 `;
 
+
 export {Container, Main, Section, Text, IconPlay, Wrapper,}

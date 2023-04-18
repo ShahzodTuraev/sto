@@ -100,11 +100,6 @@ const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
                 <Note style={setColor} >제공8. [3D마케팅 맛보기]-100,000원</Note>
                 <Note style={setColor} >제공9. [3D컨텐츠 맛보기]-100,000원</Note>
                 <Note style={setColor} >제공10.[3D자동화 맛보기]-100,000원</Note>
-                <Note style={setColor} >—</Note>
-                <Note style={setColor} >—</Note>
-                <Note style={setColor} >—</Note>
-                <Note style={setColor} >—</Note>
-                <Note style={setColor} >—</Note>
               </NoteWrap>
               <Button onClick={onClick} type='price'>온라인 CEO과정 바로가기</Button>         
             </Box>
@@ -163,8 +158,8 @@ const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
                 <Note style={setColor3}>제공13. 협업.셀럽교류-1,000,000원</Note>
                 <Note style={setColor3}>제공14. 10주 오프코칭권-1,000,000원</Note>
                 <Note style={setColor3}>제공15. 10주 오프수강권-2,500,000원</Note>
-                <Note style={setColor3}>제공16. 1년 코치.실행자 배치-실비</Note>
-                <Note style={setColor3}>제공17. 1년 HW.SW 배치-실비</Note>
+                <Note style={setColor3}><b>제공16. 1년 코치.실행자 배치-실비</b></Note>
+                <Note style={setColor3}><b>제공17. 1년 HW.SW 배치-실비</b></Note>
               </NoteWrap>
               <Button onClick={onClick} type='price'>1•10•100도전 시작</Button>     
             </Box>
@@ -175,30 +170,15 @@ const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
               backGround = {hover4? 'rgb(21, 30, 82)' : '#ffffff'}
               onMouseEnter={mouseEnter4} onMouseLeave={mouseLeave4}
             >
-              <Title style={setColor4} fontSize='34px'>온라인 CEO과정</Title>
+              <Title style={setColor4} fontSize='34px'>이상민CEO 컨설팅</Title>
               <Text style={setColor4} fontSize ='14px'>2,500,000원</Text>
               <Line/>
               <Title style={setColor4} fontWeight = '700' fontSize='32px'>250,000원</Title>
-              <Text style={setColor4} margin='10px 0' fontSize='13px'>10주 <b>스터디 (225만원 절약)</b></Text>
-              <Button onClick={onClick} type='price'>온라인 바로 시작</Button>
+              <Text style={setColor4} margin='10px 0' fontSize='13px'>1회 <b>AI•3D 컨설팅 (225만원 절약)</b></Text>
               <NoteWrap>
-                <Note style={setColor4}>제공1. [10강 온라인 영상]-1,000,000원</Note>
-                <Note style={setColor4}>제공2. [10강 PDF 전자책]-150,000원</Note>
-                <Note style={setColor4}>제공3. [특강 강의]-100,000원</Note>
-                <Note style={setColor4}>제공4. [실전컨설팅 1시간]-250,000원</Note>
-                <Note style={setColor4}>제공5. [비즈니스협업MOU]-500,000원</Note>
-                <Note style={setColor4}>제공6. [온라인 자격증발행]-100,000원</Note>
-                <Note style={setColor4}>제공7. [3D홈페이지 맛보기]-100,000원</Note>
-                <Note style={setColor4}>제공8. [3D마케팅 맛보기]-100,000원</Note>
-                <Note style={setColor4}>제공9. [3D컨텐츠 맛보기]-100,000원</Note>
-                <Note style={setColor4}>제공10.[3D자동화 맛보기]-100,000원</Note>
-                <Note style={setColor4}>—</Note>
-                <Note style={setColor4}>—</Note>
-                <Note style={setColor4}>—</Note>
-                <Note style={setColor4}>—</Note>
-                <Note style={setColor4}>—</Note>
-              </NoteWrap>
-              <Button onClick={onClick} type='price'>온라인 바로 시작</Button>         
+                <Note style={setColor4}>30억 빚을 1년만에 300억으로 만든 이상민CEO가 1:1 컨설팅을 합니다. 10강의 내용을 단, 1회 컨설팅으로 어떤 산업이든 코칭.진단하고, AI•3D기술로 해결할 수 있도록 명쾌함을 선사합니다! </Note>
+            </NoteWrap>
+              <Button onClick={onClick} type='price'>1:1 컨설팅 자세히 보기</Button>     
             </Box>
             <Box
               backGround = {hover5? 'rgb(21, 30, 82)' : '#ffffff'}

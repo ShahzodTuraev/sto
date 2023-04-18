@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactComponent as icon } from "../../assets/icons/play.svg";
 import {device} from "../Generic/responsive"
 const Container = styled.div`
   display: flex;
@@ -18,7 +19,7 @@ const Main = styled.div`
   justify-content: space-between;
   max-width: 1170px;
   width: 100%;
-  padding: 80px 0;
+  margin-top: 40px;
   `;
 
 const Tit = styled.h1`
@@ -52,11 +53,49 @@ const Text = styled.p`
     margin: 12px 7px;
   };
 `;
-
-const Img = styled.img`
-  width: 95%;
-  margin-top: 50px;
+const VideoBox = styled.div`
+  box-shadow: 0px 4px 16px 2px rgba(0, 44, 122, 0.2);
+  width: 1000px;
+  height: 600px;
+  padding: 20px;
+  `;
+const Section = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  height: 42px;
+  text-align: center;
+  background: var(--color-6Z-dzM8-7);
+  color: var(--color-6Z-dzM8-5);
+  gap: 5px;
+  margin-top: 30px;
+  @media ${device.tablet}{
+    width: 95%
+    };
+  @media ${device.mobile}{
+    width: 95%;
+  }
+`;
+const Icon = styled.div``;
+Icon.Play = styled(icon)`
+  width: 20px;
+  @media ${device.mobile}{
+    width: 14px;
+  }
+`;
+const VideoTitle = styled.p`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 18px;
+  @media ${device.mobile}{
+    font-size:12px;
+  }
 `;
 
 
-export {Container, Main,  Text, Tit, Img};
+
+export {Container, Icon, Main,  Text, Tit, VideoBox, Section, VideoTitle};

@@ -121,10 +121,10 @@ const MainP = () => {
                 뉴스를 매일 3분 요약하여 “무료”로 보내드립니다.
           </Text>
           <VideoBox>
-            <ReactPlayer  ref={playerRef} playing={true} width={'100%'} height={'100%'} url={'https://youtu.be/_ZGGYdqdbCo'}></ReactPlayer>
+            <ReactPlayer  ref={playerRef} playing={true} width={'100%'} height={'100%'} url={'https://youtu.be/VIkx70UGw0A'}></ReactPlayer>
           </VideoBox>
           <InputBox>
-            <InputTitle>뉴스 받을 '메일 핸드폰 번호' 입력란</InputTitle>
+            <InputTitle>뉴스 받을 정보 입력란</InputTitle>
             <Wrapper>
                 <InputWrap>
                 
@@ -143,7 +143,7 @@ const MainP = () => {
                   value={data.Phone}
                   onChange={handleChange}
                   onFocus={FocusTel}
-                  placeholder='핸드폰번호 (예)010-1234-5678'
+                  placeholder='핸드폰번호 (예)01075521110'
                 />
                 <AlertTel>{displayTel}</AlertTel>
                 </InputWrap>

@@ -21,7 +21,7 @@ const Extend = () => {
       { close && <BottomClose/> }
       <Main>
           <Tit>CEO가 비공개 하라는, 바로 그 특강!</Tit>
-          <Text>책 수십권의 가치를 단 몇 만원에 훔쳐가기!!</Text>
+          <Text>책 수십권의 가치를 단 1만원에 훔쳐가기!!</Text>
           <BoxWrap>
             <TitleWrap>
               <Title>30억 빚에서 1년만에 300억 회사! <br>
@@ -38,8 +38,8 @@ const Extend = () => {
               </Box>
             </TitleWrap>
             <TitleWrap>
-              <Title>성공하는 CEO의 AI 사관학교<br>
-              </br>『CEO 아카데미』 10주 과정</Title>
+              <Title>성공하는 CEO의 AI 매출 만들기<br>
+              </br>『AI•3D•STO 아카데미』 10강</Title>
               <Box>
                 <VideoBox>
                   <ReactPlayer width={'100%'} height={'100%'} url={'https://youtu.be/DSev011voNo'}></ReactPlayer>
