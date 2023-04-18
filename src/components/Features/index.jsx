@@ -142,7 +142,7 @@ const Features = () => {
           <VideoTitle>아래 비디오에서 메버에 대해 더 자세히 알아보시고 AI 3D 기술을 천천히 둘러보세요!</VideoTitle>
         </Section>
         <VideoBox>
-        <ReactPlayer width={'100%'} height={'100%'} url={`${selectedId.url}`}></ReactPlayer>
+        <ReactPlayer controls width={'100%'} height={'100%'} url={selectedId.videoSrc}></ReactPlayer>
         </VideoBox>
     </Main>
     

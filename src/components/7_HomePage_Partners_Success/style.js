@@ -145,6 +145,13 @@ const PdfIcon = styled.img`
   height: auto;
 `;
 
+const MainVideo = styled.div`
+display: ${({display})=>(display? `${display}`: 'flex')};
+  width: 900px;
+  height: 500px;
+  margin: 20px;
+  border: 1px solid red;
+`;
 
-export {Container,  Down, Main, Title, Img, Icon, PdfIcon,  PdfWrap,
+export {Container,  Down, Main, Title, Img, Icon, PdfIcon,  PdfWrap, MainVideo,
         SupTitle, VideoContainer, VideoBox, VideoWrap, Name, Position, Note}

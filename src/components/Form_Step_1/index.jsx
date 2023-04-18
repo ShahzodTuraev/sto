@@ -43,15 +43,15 @@ const Step1 = () => {
           <FormWrap>
             <Radio.Group onChange={onChange} value={value}>
               <Space direction="vertical">
-                <Radio value={'에이전시/프리랜서'}>프리랜서 / 1인사업자</Radio>
-                <Radio value={'정보 제품'}>IT 정보통신 사업자</Radio>
-                <Radio value={'전자상거래'}>의•식•주 상품 온 / 오프라인 사업자</Radio>
-                <Radio value={'코칭/컨설팅'}> 코칭/컨설팅 / 교육업</Radio>
-                <Radio value={'네트워크 마케팅'}>온 / 오프라인 마케팅 사업자</Radio>
-                <Radio value={'동네 자영업'}>10인 미만 자영업 / 프렌차이즈</Radio>
-                <Radio value={'B2B 잠재고객 창출'}>10인이상 중소.중견 사업자</Radio>
-                <Radio value={'블로깅/제휴 사업'}>100인이상 기업 / 상장기업</Radio>
-                <Radio value={'비영리 사업'}> 비영리 / 협업 / 제휴 사업</Radio>
+                <Radio value={'프리랜서 / 1인사업자'}>프리랜서 / 1인사업자</Radio>
+                <Radio value={'IT 정보통신 사업자'}>IT 정보통신 사업자</Radio>
+                <Radio value={'의•식•주 상품 온 / 오프라인 사업자'}>의•식•주 상품 온 / 오프라인 사업자</Radio>
+                <Radio value={'코칭/컨설팅 / 교육업'}> 코칭/컨설팅 / 교육업</Radio>
+                <Radio value={'온 / 오프라인 마케팅 사업자'}>온 / 오프라인 마케팅 사업자</Radio>
+                <Radio value={'10인 미만 자영업 / 프렌차이즈'}>10인 미만 자영업 / 프렌차이즈</Radio>
+                <Radio value={'10인이상 중소.중견 사업자'}>10인이상 중소.중견 사업자</Radio>
+                <Radio value={'100인이상 기업 / 상장기업'}>100인이상 기업 / 상장기업</Radio>
+                <Radio value={'비영리 / 협업 / 제휴 사업'}> 비영리 / 협업 / 제휴 사업</Radio>
               </Space>
             </Radio.Group>
           </FormWrap>

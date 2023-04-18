@@ -58,6 +58,15 @@ const VideoBox = styled.div`
   width: 1000px;
   height: 600px;
   padding: 20px;
+  @media ${device.tablet}{
+    width: 95%;
+    height: 400px;
+    
+    };
+  @media ${device.mobile}{
+    width: 95%;
+    height: 220px;
+  }
   `;
 const Section = styled.div`
   display: flex;

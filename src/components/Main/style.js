@@ -43,7 +43,7 @@ const Text = styled.p`
 
 const VideoBox = styled.div`
   width: 80%;
-  height: 600px;
+  height: 530px;
   @media ${device.tablet}{
     width: 80%;
     height: 380px;

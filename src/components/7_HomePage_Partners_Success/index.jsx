@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {  Container, Down, Icon, Img, Main, Name, Note, PdfIcon, PdfWrap, Position, SupTitle, Title, VideoBox, VideoContainer, VideoWrap, } from './style';
+import {  Container, Down, Icon, Img, Main, MainVideo, Name, Note, PdfIcon, PdfWrap, Position, SupTitle, Title, VideoBox, VideoContainer, VideoWrap, } from './style';
 import { Button } from '../Generic';
 import { Index } from '../1_HomePage_Intro/style';
 import { useNavigate } from 'react-router-dom';
@@ -28,7 +28,9 @@ const PartnersPage = () => {
         <Main>
           <Title>CEO들이 공개하지 말라는..<br></br> 『AI·3D 자동수익화』 비밀</Title>
           <SupTitle>10강으로 가치를 바로 느껴보세요.</SupTitle>
+          <MainVideo></MainVideo>
           <VideoContainer>
+
             {videoData.map((video)=>(
               <VideoBox onClick={onClick}  key={video.id}>
               <VideoWrap>
