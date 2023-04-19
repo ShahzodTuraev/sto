@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Container, Main, Title, Tit, Text, VideoBox, Box, TitleWrap, BoxWrap} from './style';
 import {Button} from '../Generic';
 import ReactPlayer from 'react-player';
@@ -9,6 +9,9 @@ import { Bottom, BottomClose, Top, TopClose } from '../Generic/transform';
 const Extend = () => {
   const navigate = useNavigate()
   const [close, setClose] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const onClick = () => {
     setTimeout(()=>{navigate('/success-home')}, 420)
       setClose(true)

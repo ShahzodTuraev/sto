@@ -170,75 +170,43 @@ const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
               backGround = {hover4? 'rgb(21, 30, 82)' : '#ffffff'}
               onMouseEnter={mouseEnter4} onMouseLeave={mouseLeave4}
             >
-              <Title style={setColor4} fontSize='34px'>이상민CEO 컨설팅</Title>
+              <Title style={setColor4} fontSize='34px'>CEO AI•3D컨설팅</Title>
               <Text style={setColor4} fontSize ='14px'>2,500,000원</Text>
               <Line/>
-              <Title style={setColor4} fontWeight = '700' fontSize='32px'>250,000원</Title>
+              <Title style={setColor4} fontWeight = '700' fontSize='32px'>250,000원/1회2h</Title>
               <Text style={setColor4} margin='10px 0' fontSize='13px'>1회 <b>AI•3D 컨설팅 (225만원 절약)</b></Text>
               <NoteWrap>
                 <Note style={setColor4}>30억 빚을 1년만에 300억으로 만든 이상민CEO가 1:1 컨설팅을 합니다. 10강의 내용을 단, 1회 컨설팅으로 어떤 산업이든 코칭.진단하고, AI•3D기술로 해결할 수 있도록 명쾌함을 선사합니다! </Note>
             </NoteWrap>
-              <Button onClick={onClick} type='price'>1:1 컨설팅 자세히 보기</Button>     
+              <Button onClick={onClick} type='price'>1:1 컨설팅 바로보기</Button>     
             </Box>
             <Box
               backGround = {hover5? 'rgb(21, 30, 82)' : '#ffffff'}
               onMouseEnter={mouseEnter5} onMouseLeave={mouseLeave5}
             >
-              <Title style={setColor5} fontSize='34px'>오프라인CEO과정</Title>
+              <Title style={setColor5} fontSize='34px'>3D홈페이지마케팅</Title>
               <Text style={setColor5} fontSize ='14px'>10,000,000원</Text>
               <Line/>
-              <Title style={setColor5} fontWeight = '700' fontSize='32px'>2,500,000원</Title>
+              <Title style={setColor5} fontWeight = '700' fontSize='32px'>월330,000원/3년</Title>
               <Text style={setColor5} margin='10px 0' fontSize='13px'>10주 <b>스터디 (750만원 절약)</b></Text>
-              <Button onClick={onClick} type='price'>오프라인 바로 시작</Button>
               <NoteWrap>
-                <Note style={setColor5}>제공1. [10강 온라인 영상]-1,000,000원</Note>
-                <Note style={setColor5}>제공2. [10강 PDF 전자책]-150,000원</Note>
-                <Note style={setColor5}>제공3. [특강 강의]-100,000원</Note>
-                <Note style={setColor5}>제공4. [실전컨설팅 1시간]-250,000원</Note>
-                <Note style={setColor5}>제공5. [비즈니스협업MOU]-500,000원</Note>
-                <Note style={setColor5}>제공6. [온라인 자격증발행]-100,000원</Note>
-                <Note style={setColor5}>제공7. [3D홈페이지 맛보기]-100,000원</Note>
-                <Note style={setColor5}>제공8. [3D마케팅 맛보기]-100,000원</Note>
-                <Note style={setColor5}>제공9. [3D컨텐츠 맛보기]-100,000원</Note>
-                <Note style={setColor5}>제공10.[3D자동화 맛보기]-100,000원</Note>
-                <Note style={setColor5}><b>제공11. 운영수익 제휴-1,000,000원</b></Note>
-                <Note style={setColor5}><b>제공12. CEO 네트워크-2,000,000원</b></Note>
-                <Note style={setColor5}><b>제공13. 협업.셀럽교류-1,000,000원</b></Note>
-                <Note style={setColor5}><b>제공14. 10주 오프코칭권-1,000,000원</b></Note>
-                <Note style={setColor5}><b>제공15. 10주 오프수강권-2,500,000원</b></Note>
-              </NoteWrap>
-              <Button onClick={onClick} type='price'>오프라인 바로 시작</Button>     
+                <Note style={setColor5}>3D홈페이지는 기존의 홈페이지 대비 고객을 끌어들이는 마법같은 효과입니다. 그리고 AI 마케팅은 그 고객을 꾸준한 관리와 정보로 매출까지 만들어내는 인공지능 시스템을 말합니다! </Note>
+            </NoteWrap>
+              <Button onClick={onClick} type='price'>3D홈페이지 마케팅 바로보기</Button>     
             </Box>
             <Box 
               backGround = {hover6? 'rgb(21, 30, 82)' : '#ffffff'}
               onMouseEnter={mouseEnter6} onMouseLeave={mouseLeave6}
             >
-              <Title style={setColor6} fontSize='34px'>1•10•100도전</Title>
-              <Text style={setColor6} fontSize ='14px'>발생매출의 20~30%</Text>
+              <Title style={setColor6} fontSize='34px'>3D칠판•키오스크</Title>
+              <Text style={setColor6} fontSize ='14px'>10,000,000원</Text>
               <Line/>
-              <Title style={setColor6} color='var(--color-6Z-dzM8-7)' fontWeight = '700' fontSize='32px'>실비+매출의 10%</Title>
+              <Title style={setColor6} color='var(--color-6Z-dzM8-7)' fontWeight = '700' fontSize='32px'>월230,000원/3년</Title>
               <Text style={setColor6} margin='10px 0' fontSize='13px'>1년단위 <b>실행 (매출.지분.협업)</b></Text>
-              <Button onClick={onClick} type='price'>1•10•100도전 시작</Button>
               <NoteWrap>
-                <Note style={setColor6}>제공1. [10강 온라인 영상]-1,000,000원</Note>
-                <Note style={setColor6}>제공2. [10강 PDF 전자책]-150,000원</Note>
-                <Note style={setColor6}>제공3. [특강 강의]-100,000원</Note>
-                <Note style={setColor6}>제공4. [실전컨설팅 1시간]-250,000원</Note>
-                <Note style={setColor6}>제공5. [비즈니스협업MOU]-500,000원</Note>
-                <Note style={setColor6}>제공6. [온라인 자격증발행]-100,000원</Note>
-                <Note style={setColor6}>제공7. [3D AI홈페이지]-10,000,000원~</Note>
-                <Note style={setColor6}>제공8. [3D AI마케팅]-10,000,000원~</Note>
-                <Note style={setColor6}>제공9. [3D AI컨텐츠]-10,000,000원~</Note>
-                <Note style={setColor6}>제공10.[3D AI자동화]-10,000,000원~</Note>
-                <Note style={setColor6}>제공11. 운영수익 제휴-1,000,000원</Note>
-                <Note style={setColor6}>제공12. CEO 네트워크-2,000,000원</Note>
-                <Note style={setColor6}>제공13. 협업.셀럽교류-1,000,000원</Note>
-                <Note style={setColor6}>제공14. 10주 오프코칭권-1,000,000원</Note>
-                <Note style={setColor6}>제공15. 10주 오프수강권-2,500,000원</Note>
-                <Note style={setColor6}>제공16. 1년 코치.실행자 배치-실비</Note>
-                <Note style={setColor6}>제공17. 1년 HW.SW 배치-실비</Note>
-              </NoteWrap>
-              <Button onClick={onClick} type='price'>1•10•100도전 시작</Button>     
+                <Note style={setColor6}>사업자들의 필수 하드웨어인 포스.키오스크.전자칠판을 3D홈페이지로 업그레이드 시켜드립니다. 기존 하드웨어 유무에 상관없이 쉽고,빠르게 웹3D기술로 고객을 더 많이 유치해보세요! </Note>
+            </NoteWrap>
+              <Button onClick={onClick} type='price'>3D칠판•키오스크 바로보기</Button>     
             </Box>
           </Wrapper>
       </Main>

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Container, Introbox, IntroImg, IntroText, IntroTextBox, IntroTitle,  
   Main,  QuesText, AdHead, Title, Icon, FunctionCard, Suptitle, BoxUnit,
-  CanWrapper, CanText, CanImgBox, CanImg, ResponsiveImg, TabletImg} from './style';
-import introPic from '../../assets/imgs/clicknow.png';
-import canImg_1 from '../../assets/imgs/box-1.avif';
+  CanWrapper, CanText, CanImgBox, CanImg, ResponsiveImg, TabletImg, BrandImg} from './style';
+import introPic from '../../assets/imgs/pic-2.png';
+import canImg_1 from '../../assets/imgs/pic-3.png';
+import brands from '../../assets/imgs/brands.png';
 import { Button } from '../Generic';
 import { Index } from '../1_HomePage_Intro/style';
 import { useNavigate } from 'react-router-dom';
@@ -52,7 +53,7 @@ const OpportunityPage = () => {
               <CanText>내용을 입력하고 버튼을 누르면 즉시 사용 가능한 3D홈페이지와 AI컨텐츠를 경험하실 수 있습니다</CanText>
             </CanWrapper>
             <CanText>메버는 이 회사들과 함께합니다:</CanText>
-            <Icon.Brand/>
+            <BrandImg src={brands}/>
           </IntroTextBox>
           <CanImgBox>
             <CanImg src={canImg_1}/> 

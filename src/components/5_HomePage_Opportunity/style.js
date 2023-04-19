@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {ReactComponent as down} from '../../assets/icons/arrows-down.svg'
 import {ReactComponent as right} from '../../assets/icons/arrow-right.svg'
-import {ReactComponent as brand} from '../../assets/icons/WordPress.svg'
 import {device} from '../Generic/responsive'
 
 const Container = styled.div`
@@ -150,9 +149,9 @@ Icon.Right = styled(right)`
   width: auto;
   margin-right: 10px;
 `;
-Icon.Brand = styled(brand)`
+const BrandImg = styled.img`
   width: 198px;
-  height: 22px;
+  height: 50px;
   margin-top: 5px;
   @media ${device.tablet}{
     margin: 15px 0;
@@ -222,12 +221,14 @@ const CanImgBox = styled.div`
   }
 `;
 const CanImg = styled.img`
+  width: 90%;
+  margin: 20px;
   @media ${device.mobile}{
     width: 300px;
   }
 `;
 
-export {Container, Main, Introbox, IntroTextBox, IntroTitle, IntroImg, 
+export {Container, Main, Introbox, IntroTextBox, IntroTitle, BrandImg, IntroImg, 
   IntroText, Title, Icon, QuesText, AdHead, ResponsiveImg, TabletImg,
   FunctionCard, Suptitle, BoxUnit, CanWrapper, CanText, CanImgBox, CanImg
 }

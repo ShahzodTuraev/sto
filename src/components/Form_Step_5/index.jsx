@@ -4,7 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { Bottom, Top, TopClose, BottomClose } from '../Generic/transform';
 export const array = [];
 const Step5 = () => {
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const navigate = useNavigate()
   const [percentage, setPercentage] = useState(0);
   const [isChecked, setIsChecked] = useState(false);

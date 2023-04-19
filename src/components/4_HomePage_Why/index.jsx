@@ -4,7 +4,7 @@ import { Container, Introbox, IntroImg, IntroText, IntroTextBox, IntroTitle, Int
   IconBox, 
   QuesText,
   AdHead} from './style';
-import introPic from '../../assets/imgs/whyIntro.avif'
+import introPic from '../../assets/imgs/pic-1.png'
 import { Button } from '../Generic';
 import { Index } from '../1_HomePage_Intro/style';
 import { useNavigate } from 'react-router-dom';

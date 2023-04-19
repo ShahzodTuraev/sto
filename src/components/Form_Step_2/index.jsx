@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Progress, Radio, Space } from 'antd';
 import { Container, Main, Title, Text, Alert, Wrapper, Coution, FormWrap, Note, } from './style';
 import {Button } from '../Generic';
@@ -6,7 +6,9 @@ import { useNavigate } from 'react-router-dom';
 import { array } from '../Form_Step_5';
 import { Bottom, BottomClose, Top, TopClose } from '../Generic/transform';
 const Step2 = () => {
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [value, setValue] = useState();
   const onChange = (e) => {
     setValue(e.target.value);

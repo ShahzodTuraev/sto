@@ -1,8 +1,4 @@
 import styled from "styled-components";
-import { ReactComponent as tony } from "../../assets/icons/Brands-Tony-Robbins.svg";
-import { ReactComponent as master } from "../../assets/icons/Brands-Mastermind.svg";
-import { ReactComponent as lady } from "../../assets/icons/Brands-LadyBoss.svg";
-import { ReactComponent as camping } from "../../assets/icons/Brands-CampingWorld.svg";
 import { device } from "../Generic/responsive"
 
 const Container = styled.div`
@@ -10,7 +6,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 60px 0;
+  margin-top: 60px;
   background: linear-gradient(to right, #E0ECFB, #F4F9FC);
 `;
 
@@ -43,7 +39,6 @@ const BrandWrap = styled.div`
   display: flex;
   justify-content: space-between;
   width: 1108px;
-  height: 50px;
   align-items: center;
   gap: 45px;
   @media ${device.tablet}{
@@ -60,48 +55,12 @@ const BrandWrap = styled.div`
   }
 `;
 
-const Icon = styled.div``;
+const Img = styled.img`
+  width: auto;
+  height: 180px;
 
-Icon.Tony = styled(tony)`
-  width: 25%;
-  height: 50px;
-  @media ${device.tablet}{
-    width: 100%;
-  }
-  @media ${device.mobile}{
-    width: 270px;
-  }
-`;
-Icon.Master = styled(master)`
-  width: 25%;
-  height: 50px;
-  @media ${device.tablet}{
-    width: 100%;
-  }
-  @media ${device.mobile}{
-    width: 270px;
-  }
-`;
-Icon.Lady = styled(lady)`
-  width: 25%;
-  height: 50px;
-  @media ${device.tablet}{
-    width: 100%;
-  }
-  @media ${device.mobile}{
-    width: 270px;
-  }
-`;
-Icon.Camping = styled(camping)`
-  width: 25%;
-  height: 50px;
-  @media ${device.tablet}{
-    width: 100%;
-  }
-  @media ${device.mobile}{
-    width: 270px;
-  }
 `;
 
 
-export {Container, Main, UpTitle, Icon, BrandWrap}
+
+export {Container, Main, UpTitle, Img, BrandWrap}

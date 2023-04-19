@@ -1,15 +1,13 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState} from 'react';
 import { Container, Main, Title, Text, VideoBox, AlertCheck, AlertEmail, AlertTel, InputBox, InputTitle, Wrapper, InputWrap, } from './style';
 import {Button, Input} from '../Generic';
 import { useNavigate } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import { Checkbox } from 'antd';
 import Contact from '../Contacts'
-// import axios from 'axios';
 import { FirstBottom, BottomClose, FirstTop, TopClose } from '../Generic/transform';
 
 const MainP = () => {
-  // const [playlist, setPlaylist] = useState([]);
 
   // useEffect(() => {
   //   axios
@@ -89,16 +87,6 @@ const MainP = () => {
         setDisplayCheck('');
       }
     };
-    const playerRef = useRef(null);
-
-    useEffect(() => {
-      const hasPlayedBefore = localStorage.getItem('hasPlayedBefore');
-  
-      if (!hasPlayedBefore) {
-        playerRef.current?.getInternalPlayer()?.playVideo();
-        localStorage.setItem('hasPlayedBefore', true);
-      }
-    }, []);
 
     const FocusEmail = () => {
       setDisplayEmail('')
@@ -121,7 +109,7 @@ const MainP = () => {
                 뉴스를 매일 3분 요약하여 “무료”로 보내드립니다.
           </Text>
           <VideoBox>
-            <ReactPlayer  ref={playerRef} playing={true} width={'100%'} height={'100%'} url={'https://youtu.be/VIkx70UGw0A'}></ReactPlayer>
+            <ReactPlayer muted={true}  playing={true} width={'100%'} height={'100%'} url={'https://youtu.be/VIkx70UGw0A'}></ReactPlayer>
           </VideoBox>
           <InputBox>
             <InputTitle>뉴스 받을 정보 입력란</InputTitle>

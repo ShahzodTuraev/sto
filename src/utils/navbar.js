@@ -18,7 +18,7 @@ export const navbar = [
     id: useId, 
     element: <MainPage/>, 
     title: 'Main', 
-    path:'/main', 
+    path:'/', 
     private: false, 
     hidden: false
   },

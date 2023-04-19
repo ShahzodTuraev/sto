@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Container, Main, Title, Text, Wrapper, Coution, Icon, CardBox, MainWrapper, TextBox, Head, IconWrap, IconText, Awrap, Img } from './style';
 import { Input, Button } from '../Generic';
 import { useNavigate } from 'react-router-dom';
@@ -6,6 +6,9 @@ import Logo from '../../assets/imgs/mever-flayer.png'
 import { Bottom, Top } from '../Generic/transform';
 
 const FreeTrialStep2 = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const navigate = useNavigate();
   const onClick = () => {
     navigate('/pro-monthly/step-2')
@@ -17,7 +20,7 @@ const FreeTrialStep2 = () => {
       <Img src={Logo}/>
       <MainWrapper>
         <Main>
-          <Title>무료 14일 평가판 시작</Title>
+          <Title>간단 결제 후 시작</Title>
           <Wrapper>
             <Input placeholder='성명'/>
             <Input  placeholder='전화 번호'/>
@@ -27,31 +30,31 @@ const FreeTrialStep2 = () => {
             
             <Button onClick={onClick} type={'step'}>내 무료 평가판 시작</Button>
           </Wrapper>
-          <Coution>오늘부터 14일 무료 이용 후 월 $197(관련 세금 별도). 대시보드 또는 이메일(support@clickfunnels.com)을 통해 취소하십시오. 또한 서비스 약관, 개인 정보 보호 정책 및 제휴 계약에 동의합니다.</Coution>
+          <Coution>결제 후 이용 (관련 세금 별도). 대시보드 또는 이메일(sm@mever.me)을 통해 취소하십시오. 또한 서비스 약관, 개인 정보 보호 정책 및 제휴 계약에 동의합니다.</Coution>
         </Main>
         <TextBox>
-          <Head> ClickFunnels를 사용하여 제품과 메시지를 쉽게 세상에 알리는 100,000명 이상의 기업가와 함께하세요!</Head>
+          <Head> 메버와 함께 성공하는 CEO가 되세요!</Head>
           <IconWrap>
             <IconWrap>
               <Icon.Check/>
-              <IconText>사용하기 쉬운</IconText>
+              <IconText>누구나 쉽게 사용</IconText>
             </IconWrap>
             <IconWrap>
               <Icon.Check/>
-              <IconText>엄청나게 강력한</IconText>
+              <IconText>AI 3D 신기술로</IconText>
             </IconWrap>
             <IconWrap>
               <Icon.Check/>
-              <IconText>성장에 이상적</IconText>
+              <IconText>매출성장을 무한하게</IconText>
             </IconWrap>
           </IconWrap>
           <CardBox>
             <Text>계획</Text>
             <Awrap>
               <IconText>프로 월간</IconText>
-              <IconText>$0 오늘 마감</IconText>
+              <IconText>0원 오늘 마감</IconText>
             </Awrap>
-            <Text>평가판 사용 후 $197/m(관련 세금 별도)</Text>
+            <Text>결제 후 시작(관련 세금 별도)</Text>
           </CardBox>
           <IconWrap>
             <IconWrap>

@@ -1,5 +1,5 @@
-import ceo1 from '../../assets/imgs/ceo1.jpg'
-import ceo2 from '../../assets/imgs/ceo2.jpg'
+import ceo1 from '../../assets/imgs/free-video-1.jpg'
+import ceo2 from '../../assets/imgs/free-video-2.webp'
 import ceo3 from '../../assets/imgs/CEO 아카데미 1강 비즈니스 모델별 사례 현실 결론_유료.png'
 import ceo4 from '../../assets/imgs/CEO 아카데미 2강  AI + 3D + STO 구조 철학 특허_유료.png'
 import ceo5 from '../../assets/imgs/CEO 아카데미 3강 AI+3D + STO 특강+ 마인드 바디 특강 _유료.png'
@@ -18,6 +18,7 @@ export const videoData = [
     imgSrc: ceo1,
     title: '[무료] CEO들의 진짜 후기', 
     note: '강재훈COO, 안승재CEO, 김성태CEO, 박상설CEO',
+    videoLink: 'https://youtu.be/jNLm64wRlzo'
   },
   {
     id: 2,
@@ -25,6 +26,7 @@ export const videoData = [
     imgSrc: ceo2,
     title: '[무료] 30억 빚을 300억 회사로 만든 비밀', 
     note: '강사 : 이상민 CEO',
+    videoLink: 'https://youtu.be/KILJzJw2mA8'
   },
   {
     id: 3,

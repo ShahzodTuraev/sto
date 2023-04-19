@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Container, Icon, Main, Tit, Text, VideoBox, Section, VideoTitle} from './style';
 import {Button} from '../Generic';
 import {Index} from '../1_HomePage_Intro/style';
@@ -7,7 +7,9 @@ import { FirstBottom,  FirstTop } from '../Generic/transform';
 import ReactPlayer from 'react-player';
 export const idSelect = [];
 const Features = () => {
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const navigate = useNavigate();
   const onClick = ()=>{
     navigate('/form/step-1')

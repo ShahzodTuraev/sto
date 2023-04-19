@@ -167,10 +167,10 @@ const ClientText = styled.p`
   color: rgb(77, 82, 86);
 `;
 const LogoImg = styled.img`
+width: 150px;
 @media ${device.mobile}{
-    width: 230px;
-    height: auto;
-    margin-top: 40px;
+
+    margin-top: 10px;
   }
 `;
 const LogoTitle = styled.p`

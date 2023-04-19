@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Container, Main, Title, Tit, Text, VideoBox, Box, TitleWrap, BoxWrap} from './style';
 import {Button} from '../Generic';
 import ReactPlayer from 'react-player';
@@ -7,6 +7,9 @@ import { useNavigate } from 'react-router-dom';
 import { Bottom, BottomClose, Top, TopClose } from '../Generic/transform';
 
 const FreeTrialStep1 = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const navigate = useNavigate()
   const onClick = () => {
     setTimeout(()=>{navigate('/extend')}, 420)
