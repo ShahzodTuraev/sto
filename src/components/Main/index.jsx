@@ -1,33 +1,68 @@
-import React, {useState} from 'react';
-import { Container, Main, Title, Text, VideoBox, AlertCheck, AlertEmail, AlertTel, InputBox, InputTitle, Wrapper, InputWrap, } from './style';
+import React, {useState, useEffect} from 'react';
+import { Container, Main, Title, Text, VideoBox, AlertCheck, AlertEmail, AlertTel, InputBox, InputTitle, Wrapper, InputWrap, DownTitle, } from './style';
 import {Button, Input} from '../Generic';
 import { useNavigate } from 'react-router-dom';
-import ReactPlayer from 'react-player';
 import { Checkbox } from 'antd';
 import Contact from '../Contacts'
 import { FirstBottom, BottomClose, FirstTop, TopClose } from '../Generic/transform';
+import axios from 'axios';
 
 const MainP = () => {
 
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       "https://www.googleapis.com/youtube/v3/playlists?part=snippet&channelId={UCXHaChrER0XYPrR43S7mx5A}&maxResults=50&key={AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8}"
-  //     )
-  //     .then((res) => {
-  //       console.log(res);
-  //       setPlaylist(res.data.items);
-  //     })
-  //     .catch(() => {});
-  // }, []);
-  // console.log(playlist);
-  
+  const [videos, setVideos] = useState([]);
+  useEffect(() => {
+    // 유튜브 API로부터 동영상 목록을 가져올 함수
+    const fetchVideos = async () => {
+      try {
+        // API 요청에 필요한 데이터
+        const apiKey = 'AIzaSyBEXujBWL2aIpFwcXhODZ8nE0Vnx0UHVA0';
+        const playlistId = 'PLaYfzmFK70MnTbgiR6KjyCCWJNKcFk8bM';
+
+        // API 요청
+        const response = await axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${apiKey}&maxResults=50`);
+
+        // API 응답 결과에서 동영상 정보만 추출하여 저장
+        const videosData = response.data.items.map(item => item.snippet);
+
+        // 동영상 정보 중 업로드 날짜가 최신인 동영상을 찾아 저장
+        let latestVideo = null;
+          for (let i = 0; i < videosData.length; i++) {
+            let video = videosData[i];
+            if (!latestVideo || new Date(video.publishedAt) > new Date(latestVideo.publishedAt)) {
+              latestVideo = video;
+            }
+          }
+
+        // 최신 동영상 정보를 상태에 저장
+        setVideos([latestVideo]);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchVideos();
+  }, []);
+
+    // 최신 동영상 정보를 화면에 표시하는 JSX
+    const latestVideoId = videos[0]?.resourceId?.videoId;
+    const latestVideoJSX = latestVideoId && (
+        <iframe
+        title='news'
+        width="100%"
+        height="100%"
+        src={`https://www.youtube.com/embed/${latestVideoId}`}
+        allowFullScreen
+        />
+    );
+
   const [data, setData] = useState({
     Email: '',
     Phone: '',
   });
   const api_post = () => {
     fetch('https://api.mever.me/api/v1/req2', {
+      // https://api.mever.me:8080/payment
+      // https://api.mever.me/api/v1/req2
       method: 'POST',
       body: JSON.stringify(data)
     })
@@ -109,7 +144,7 @@ const MainP = () => {
                 뉴스를 매일 3분 요약하여 “무료”로 보내드립니다.
           </Text>
           <VideoBox>
-            <ReactPlayer muted={true}  playing={true} width={'100%'} height={'100%'} url={'https://youtu.be/VIkx70UGw0A'}></ReactPlayer>
+          {videos.length > 0 ? latestVideoJSX : 'Loading...'}
           </VideoBox>
           <InputBox>
             <InputTitle>뉴스 받을 정보 입력란</InputTitle>
@@ -145,6 +180,8 @@ const MainP = () => {
               <Button type='main' onClick={onSubmit} >무료 뉴스 신청하기</Button>
             </Wrapper>
           </InputBox>
+          <DownTitle>문의전화</DownTitle>
+          <Text>1688-9050</Text>
           <Contact/>
       </Main>
     </Container>

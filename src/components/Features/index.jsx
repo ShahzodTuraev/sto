@@ -27,14 +27,14 @@ const Features = () => {
       title: '고객과 매출이 늘어나는 기술! 3D웹사이트!',
       text: '온라인 마케팅을 모르는 분도, 이미 온라인 마케팅에 수 많은 시행착오를 하시는 분도, 한결같이 하는 말! "3D홈페이지 자체가 마케팅이다!" 라고 합니다. 물론 마케팅은 핵심 카피, 컨텐츠 스토리, 훌륭한 상품서비스 등 수 많은 조건들이 뒤 따라야 합니다. 하지만, 분명한 것은 3D페이지 첫 3초로 고객은 귀사의 브랜드에 반합니다.',
       button: '3D 홈페이지 마케팅 예약하기',
-      videoSrc: 'https://youtu.be/I_3DA2cWPfI'
+      videoSrc: 'https://youtu.be/tjRCSwnrAv4'
     },
     {id: 3,
       subtitle: '실전 온•오프라인 CEO 교육과정',
       title: '오직 CEO를 위한 AI•3D활용 실전교육.',
       text: '다시한번 말씀 드리지만, 우리는 전문 강사가 아닙니다. 오직 현장에서 17년간 크고 작은 실패와 성공으로 AI•3D 기술로 30억 빚을 300억 회사의 성공 스토리를 10강으로 100% 공개합니다. 저희가 했다면, 당신도 할 수 있습니다. 아니, 그 이상도 가능합니다. 10주 온/오프라인 강의로 사업의 판도를 바꿔보세요.',
       button: '온•오프라인 CEO 교육과정 바로가기',
-      videoSrc: 'https://youtu.be/I_3DA2cWPfI'
+      videoSrc: 'https://youtu.be/SiFwsbWTKrY'
     },
     {id: 4,
       subtitle: 'AI•3D 이상민 CEO컨설팅',

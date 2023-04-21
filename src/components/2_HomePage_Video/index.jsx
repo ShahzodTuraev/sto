@@ -13,7 +13,7 @@ const VideoPage = () => {
           <Text>아래 비디오에서 메버에 대해 더 자세히 알아보시고 AI 3D 기술을 천천히 둘러보세요!</Text>
         </Section>
         <Wrapper>
-          <ReactPlayer muted={true} playing={true} width={'100%'} height={'100%'} url={'https://youtu.be/2slWcfxpFPg'}></ReactPlayer>
+          <ReactPlayer controls loop={true} playing={true} width={'100%'} height={'100%'} url={' https://youtu.be/XkDaRgIRbXQ'}></ReactPlayer>
         </Wrapper>
       </Main> 
     </Container>

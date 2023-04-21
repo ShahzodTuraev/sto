@@ -31,7 +31,7 @@ const Extend = () => {
               </br>『이상민 CEO』의 AI 비밀 특강</Title>
               <Box>
                 <VideoBox>
-                  <ReactPlayer width={'100%'} height={'100%'} url={'https://youtu.be/W4RRWqn0x6w'}></ReactPlayer>
+                  <ReactPlayer controls width={'100%'} height={'100%'} url={'https://youtu.be/W4RRWqn0x6w'}></ReactPlayer>
                 </VideoBox>
                 {window.innerWidth <= 414 ?
                 <Button onClick={onClick} type={'full'}>책10권의 가치를, <br/> 단 1만원 결제 후 바로보기</Button> :
@@ -45,7 +45,7 @@ const Extend = () => {
               </br>『AI•3D•STO 아카데미』 10강</Title>
               <Box>
                 <VideoBox>
-                  <ReactPlayer width={'100%'} height={'100%'} url={'https://youtu.be/DSev011voNo'}></ReactPlayer>
+                  <ReactPlayer controls width={'100%'} height={'100%'} url={'https://youtu.be/DSev011voNo'}></ReactPlayer>
                 </VideoBox>
                 <Button onClick={onClick} type={'full'}>성공하는 CEO들의 AI경영 3D마케팅 바로보기</Button>
               </Box>

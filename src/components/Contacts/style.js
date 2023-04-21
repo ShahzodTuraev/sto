@@ -4,7 +4,8 @@ import {device} from "../Generic/responsive"
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
+  width: 100%;
   `;
 
 const Main = styled.div`
@@ -12,40 +13,82 @@ const Main = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 200%;
+  max-width: 1170px;
+  width: 100%;
   margin-top: 10px;
   @media ${device.mobile}{
     width: 100%;
   }
   `;
 
-const Title = styled.p`
-  font-size: 22px;
-  font-weight: 600;
-  text-align: center;
-  `;
-const Text = styled.p`
-  font-size: 18px;
-  text-align: center;
-  margin: 8px 0;
-`;
+
+
 const Iconbox = styled.div`
   display: flex;
-  width: 100%;
+  width: 70%;
   justify-content: space-between;
-  margin-top: 15px;
+  margin: 15px 0;
   @media ${device.tablet}{
-    width: 70%;
+    width: 55%;
     margin-top: 10px;
   }
   @media ${device.mobile}{
-    width: 100%;
+    width: 85%;
   }
 `;
 const Img = styled.img`
-cursor: pointer;
-width: 48px;
-height: 48px;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 9px;
+  box-shadow: 3px 3px 3px #D9D5D5;
+  @media ${device.tablet}{
+    width: 35px;
+    height: 35px;
+  }
+  @media ${device.mobile}{
+    width: 33px;
+    height: 33px;
+  }
 `;
+const InputWrap = styled.form`
+  display: flex;
+  width: 70%;
+  gap: 20px;
+  @media ${device.tablet}{
+    width: 55%;
+  }
+  @media ${device.tablet}{
+    width: 85%;
+  }
 
-export {Container, Main, Iconbox, Img, Title, Text}
+`
+const Button = styled.button`
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  @media ${device.tablet}{
+    width: 35px;
+    height: 35px;
+  }
+  @media ${device.mobile}{
+    width: 33px;
+    height: 33px;
+  }
+`
+const AnswerBox = styled.div`
+width: 70%;
+margin-top: 30px;
+@media ${device.tablet}{
+    width: 55%;
+  }
+  @media ${device.tablet}{
+    width: 85%;
+    margin-top: 5px;
+  }
+`;
+const Answer = styled.p`
+  font-size: 1.2rem;
+`;
+export {Answer, AnswerBox, Container, Main, Iconbox, Img, InputWrap, Button}

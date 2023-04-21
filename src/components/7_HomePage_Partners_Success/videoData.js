@@ -98,12 +98,6 @@ export const videoData = [
     title: '[유료10강] 주주들과의 협업·수료식', 
     note: '강사 : 이상민 CEO',
   },
-  {
-    id: 13,
-    type: 'paid',
-    imgSrc: ceo12,
-    title: '[유료10강] 주주들과의 협업·수료식', 
-    note: '강사 : 이상민 CEO',
-  },
+
 ]
 

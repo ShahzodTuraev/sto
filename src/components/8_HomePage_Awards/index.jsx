@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Img, Main, Text, Title, Up, Wrapper, } from './style';
-import photo from '../../assets/imgs/groupPhoto.avif'
+import photo1 from '../../assets/imgs/group-1.jpg'
+import photo2 from '../../assets/imgs/group-2.jpg'
+import photo3 from '../../assets/imgs/group-3.jpg'
 import { Button } from '../Generic';
 import { Index } from '../1_HomePage_Intro/style';
 import { useNavigate } from 'react-router-dom';
@@ -22,9 +24,9 @@ const QuestionsPage = () => {
             메버는 2025년까지 1,004명의 CEO,기업가,크리에이터,강사,코치,인플루언서,유튜버가 '1•10•100' 상을 받도록 돕습니다!
           </Text>
           <Wrapper>
-            <Img src={photo}/>
-            <Img src={photo}/>
-            <Img src={photo}/>
+            <Img src={photo1}/>
+            <Img src={photo2}/>
+            <Img src={photo3}/>
           </Wrapper>
           <Text
             color='#ffffff'

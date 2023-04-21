@@ -5,8 +5,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
   background: linear-gradient( #E0ECFB, #F4F9FC);
+  min-height: 100vh;
   `;
 
 const Main = styled.div`
@@ -152,6 +152,11 @@ const AlertTel =styled.p`
       left: 5.5rem;
     }
   `;
+  const DownTitle = styled.p`
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  `;
 
-export {Container, Main, Title, Text, VideoBox, InputBox, 
+export {Container, Main, Title, Text, VideoBox, InputBox, DownTitle,
       InputTitle, Wrapper, InputWrap, AlertCheck, AlertEmail, AlertTel };
