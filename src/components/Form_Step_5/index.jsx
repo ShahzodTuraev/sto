@@ -23,7 +23,7 @@ const Step5 = () => {
           clearInterval(interval);
           return 100;
         }
-        return newPercentage;
+        return  newPercentage;
       });
     }, 40);
 

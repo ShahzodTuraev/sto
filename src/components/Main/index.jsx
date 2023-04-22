@@ -6,10 +6,8 @@ import { Checkbox } from 'antd';
 import Contact from '../Contacts'
 import { FirstBottom, BottomClose, FirstTop, TopClose } from '../Generic/transform';
 import axios from 'axios';
-import ReactPlayer from 'react-player';
 
 const MainP = () => {
-  console.log(process.env.REACT_APP_OPENAI_API_KEY);
 
   const [videos, setVideos] = useState([]);
   useEffect(() => {
@@ -56,7 +54,6 @@ const MainP = () => {
         allowFullScreen
         />
     );
-    console.log(latestVideoJSX);
 
   const [data, setData] = useState({
     Email: '',
@@ -147,8 +144,7 @@ const MainP = () => {
                 뉴스를 매일 3분 요약하여 “무료”로 보내드립니다.
           </Text>
           <VideoBox>
-          {/* {videos.length > 0 ? latestVideoJSX : 'Loading...'} */}
-          <ReactPlayer controls width='100%' loop={true} height='100%' url='https://youtu.be/KIvNjmCjApM'></ReactPlayer>
+          {videos.length > 0 ? latestVideoJSX : 'Loading...'}
           </VideoBox>
           <InputBox>
             <InputTitle>뉴스 받을 정보 입력란</InputTitle>

@@ -77,6 +77,14 @@ const Note = styled.p`
   text-align: center;
 `;
 
+const Wraper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+`
 
 
-export { Container, Alert, Main, Title, Text, FormWrap, Wrapper, Coution, Note}
+
+export { Container, Alert, Main, Title, Text, FormWrap, Wrapper, Wraper, Coution, Note}
