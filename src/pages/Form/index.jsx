@@ -1,4 +1,4 @@
-import Step1 from "../../components/Form_Step_1";
+import Step1 from "../../components/Form";
 
 const Step1Page = () => <Step1/>
 

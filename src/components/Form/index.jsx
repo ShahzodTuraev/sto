@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import { Progress, Radio, Space } from 'antd';
-import { Container, Main, Wraper, Title, Text, Alert, Wrapper, Coution, FormWrap, Note, } from './style';
+import { Container, Main,  Title, Text, Alert, Wrapper, Coution, FormWrap, Note, } from './style';
 import {Button } from '../Generic';
-// import { useNavigate } from 'react-router-dom';
-import { array } from '../Form_Step_5';
-import { Bottom, Top, FirstBottom, FirstTop } from '../Generic/transform';
+import { Bottom, Top, FirstBottom, FirstTop, TopClose, BottomClose } from '../Generic/transform';
 import { useNavigate } from 'react-router-dom';
-const Step1 = () => {
+export const result = [];
 
+// form results collecting array 
+
+const Step1 = () => {
+  
   // the function for returning the top of the page:
 
   useEffect(() => {
@@ -25,117 +27,68 @@ const Step1 = () => {
     ];
 
   // establishing first index of the form:
-
+  
   const [index, setIndex] = useState(0);
 
   // change the shape of form index in convenient way:
-
+  
   const atForm = form[index];
 
   // state variable for checkbox value:
 
   const [value, setValue] = useState();
-
+  
+  // display opening and closing state variable:
+  const [close, setClose] = useState(false);
+  const [action, setAction ] = useState(false)
+  // const [open, setOpen] = useState(false)
+  
+  // alert (choose one of them) state variable:
+  
+  const [displayText, setDisplayText] = useState('');
+  
   // function for selecting checkbox:
-
+  
   const onChange = (e) => {
     setValue(e.target.value);
-    setDisplayText('')
+    setDisplayText('');
+    setAction(false)
   };
-  // display opening and closing state variable:
 
-  const [close, setClose] = useState(false)
-  // const [open, setOpen] = useState(false)
+  // navigate variable to the next page:
 
-  // alert (choose one of them) state variable:
-
-  const [displayText, setDisplayText] = useState('');
+  const navigate = useNavigate();
+  
+  const postResult = () => {
+    if(atForm.id === 4){
+      console.log(result);
+      setTimeout(()=>{navigate('/form-generate')}, 420)
+      setClose(true)
+    }
+  }
 
   // click button Function:
 
   const onClick =()=> {
-    if(value){
+    if(value){    
       setTimeout(()=>{setIndex(index + 1)}, 420);
-      setClose(true);
-      // setTimeout(()=>{setOpen(true)}, 420);
-      array.push(value);
-      setValue('')
+      setAction(true);
+      result.push(value);
+      setValue('');
+      postResult()     
     }else{
       setDisplayText('하나를 선택하십시오!');
     }
   }
 
-  // form 5 states:
-  const [percentage, setPercentage] = useState(0);
-  const [isChecked, setIsChecked] = useState(false);
-  const [isChecked2, setIsChecked2] = useState(false);
-  const [isChecked3, setIsChecked3] = useState(false);
-  const [isChecked4, setIsChecked4] = useState(false);
-
-  // navigate variable to the next page:
-
-  const navigate = useNavigate();
-
-  // form 5 useEffects for SetTimeOut:
-    useEffect(() => {
-    const interval = setInterval(() => {
-      atForm.id ===5 && setPercentage(prevPercentage => {
-        const newPercentage = prevPercentage + 1;
-        if (newPercentage >= 100) {
-          atForm.id===5 && clearInterval(interval);
-          return 100;
-        }
-        return newPercentage;
-      });
-    }, 40);
-    return () => clearInterval(interval);
-  }, [atForm.id]);  
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      atForm.id===5 && setIsChecked(true);
-    }, 1000);
-
-    const timer2 = setTimeout(() => {
-      atForm.id===5 && setIsChecked2(true);
-    }, 2000);
-
-    const timer3 = setTimeout(() => {
-      atForm.id===5 && setIsChecked3(true);
-    }, 3000);
-
-    const timer4 = setTimeout(() => {
-      atForm.id===5 && setIsChecked4(true);
-    }, 4000);
-    const timer5 = setTimeout(()=>{
-      atForm.id===5 && navigate('/pricing-home')
-    }, 5350);
-    const timer6 = setTimeout(()=>{
-      atForm.id===5 && setClose(true)
-    }, 4300)
-
-    return () => { 
-      clearTimeout(timer);
-      clearTimeout(timer2);
-      clearTimeout(timer3);
-      clearTimeout(timer4);
-      clearTimeout(timer5);
-      clearTimeout(timer6);
-    };
-  }, [atForm.id, navigate]);
-
   return (
     <Container>
       <Top/>
       <Bottom/>
-      { close && <FirstBottom/> }
-      { close && <FirstTop/> }
-      {/* { open && <Top/> }
-      { open && <Bottom/> } */}
-
-
-      
-      {atForm.id < 5 &&
+      { action && <FirstBottom/> }
+      { action && <FirstTop/> }      
+      { close && <TopClose/> }
+      { close && <BottomClose/> }
       <Main>
         <Title>다음의 간단한 질문에 답하면, 맞춤형 AI가 가장 적합한 AI • 3D 기술을 찾아줍니다.</Title>
         <Text>{atForm.question}</Text>
@@ -182,7 +135,6 @@ const Step1 = () => {
               </Space>}
 
               {/*Form 4  */}
-
               {atForm.id===4 && <Space direction="vertical">
                 <Radio value={' AI • 3D 등 IT기술을 사업에 활용 중이다'}> AI • 3D 등 IT기술을 사업에 활용 중이다</Radio>
                 <Radio value={'들어는 봤지만 활용하는 법을 모른다'}>들어는 봤지만 활용하는 법을 모른다</Radio>
@@ -195,72 +147,7 @@ const Step1 = () => {
           <Button onClick={onClick} type={'step'}>{atForm.id + 1}단계로 가기</Button>
         </Wrapper>
         <Coution>10초 설문 후, 1:1맞춤 견적 페이지가 나옵니다!</Coution>
-      </Main>}
-      {/* form 5 */}
-      {atForm.id === 5 && 
-      <Main>
-      <Title>당신을 위한 1:1 맞춤형 사례 분석이<br></br> 진행중입니다!</Title>
-      <div className="skill-box">
-              <div className="skill-bar">
-                  <span className="skill-per ">
-                      <span className="tooltip">{percentage}%</span>
-                  </span>
-              </div>
-          </div>
-          <Note>5 / 5</Note>
-          <Wraper>
-            <input
-            className='spinner' 
-            type="checkbox" 
-            id="my-checkbox"
-            checked={isChecked}
-            />
-            <label className='label' htmlFor="my-checkbox">
-              <div className="check"></div>
-            </label>
-            <Text>메버AI 데이터 베이스를 분석합니다.</Text>
-          </Wraper>
-          <Wraper>
-            <input
-            className='spinner' 
-            type="checkbox" 
-            id="my-checkbox"
-            checked={isChecked2}
-            />
-            <label className='label' htmlFor="my-checkbox">
-              <div className="check"></div>
-            </label>
-            <Text>3D메버로 입체적 필터링 합니다.</Text>
-          </Wraper>
-          <Wraper>
-            <input
-            className='spinner' 
-            type="checkbox" 
-            id="my-checkbox"
-            checked={isChecked3}
-            />
-            <label className='label' htmlFor="my-checkbox">
-              <div className="check"></div>
-            </label>
-            <Text>1:1 맞춤형 사례분석을 생성합니다.</Text>
-          </Wraper>
-
-          <Wraper>
-            <input
-            className='spinner' 
-            type="checkbox" 
-            id="my-checkbox"
-            checked={isChecked4}
-            />
-            <label className='label' htmlFor="my-checkbox">
-              <div className="check"></div>
-            </label>
-            <Text>최상의 메버AI 시스템을 선택합니다.</Text>
-          </Wraper>
-    </Main>
-      }
-
-
+      </Main>
     </Container>
   )
 }

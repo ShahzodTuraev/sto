@@ -7,12 +7,8 @@ import PricingHomePage from "../pages/PricingHome";
 import ExtendPage from "../pages/Extend";
 import FeaturesPage from "../pages/Features";
 import PaymentFormPage from "../pages/Payment_Form";
-import Step1Page from "../pages/Form_Step_1";
-import Step2Page from "../pages/Form_Step_2";
-import Step3Page from "../pages/Form_Step_3";
-import Step4Page from "../pages/Form_Step_4";
-import Step5Page from "../pages/Form_Step_5";
-import VideoPagePage from "../pages/VideoPage";
+import Step1Page from "../pages/Form";
+import FormGeneratePage from "../pages/FormGenerate";
 export const navbar = [
   {
     id: useId, 
@@ -42,7 +38,7 @@ export const navbar = [
   {
     id: useId,
     element: <StoryHomePage/>,
-    path: '/story-home',
+    path: '/story',
     private: false,
     hidden: true
   },
@@ -50,7 +46,7 @@ export const navbar = [
   {
     id: useId,
     element: <SuccessHomePage/>,
-    path: '/success-home',
+    path: '/lectures',
     private: false,
     hidden: true
   },
@@ -58,19 +54,10 @@ export const navbar = [
   {
     id: useId,
     element: <PricingHomePage/>,
-    path: '/pricing-home',
+    path: '/pricing',
     private: false,
     hidden: true
   },
-
-  {
-    id: useId,
-    element: <VideoPagePage/>,
-    path: '/video-page',
-    private: false,
-    hidden: true
-  },
-
 
   {
     id: useId,
@@ -91,38 +78,15 @@ export const navbar = [
   {
     id: useId,
     element: <Step1Page/>,
-    path: '/form/step-1',
-    private: false,
-    hidden: true
-  },
-
-  {
-    id: useId,
-    element: <Step2Page/>,
-    path: '/form/step-2',
+    path: '/form',
     private: false,
     hidden: true
   },
   {
     id: useId,
-    element: <Step3Page/>,
-    path: '/form/step-3',
+    element: <FormGeneratePage/>,
+    path: '/form-generate',
     private: false,
     hidden: true
-  },
-  {
-    id: useId,
-    element: <Step4Page/>,
-    path: '/form/step-4',
-    private: false,
-    hidden: true
-  },
-  {
-    id: useId,
-    element: <Step5Page/>,
-    path: '/form/step-5',
-    private: false,
-    hidden: true
-  },
-
+  }
 ];

@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Main, Title, Note, Wraper, Text, } from './style';
 import { useNavigate } from 'react-router-dom';
 import { Bottom, Top, TopClose, BottomClose } from '../Generic/transform';
-export const array = [];
-const Step5 = () => {
+const FormGenerate = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -139,4 +138,4 @@ const Step5 = () => {
   )
 }
 
-export default Step5
+export default FormGenerate

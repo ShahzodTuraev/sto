@@ -5,8 +5,8 @@ import AbilityPage from '../6_HomePage_Ability';
 import QuestionsPage from '../8_HomePage_Questions';
 import Footer from '../Footer';
 import { useNavigate } from 'react-router-dom';
-import { array } from '../Form_Step_5';
 import { Bottom, BottomClose, Top, TopClose } from '../Generic/transform';
+import {result} from '../Form'
 
 const PricingHome = () => {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const PricingHome = () => {
     window.scrollTo(0, 0);
   }, []);
   const [close, setClose] = useState(false);
-  const [name] = useState(`${array[0]}`);
+  const [name] = useState(`${result[0]}`);
   const [ visible1, setVisible1] = useState('flex');
   const [ visible2, setVisible2] = useState('none');
   const [ border1, setBorder1] = useState('3px solid #000')
