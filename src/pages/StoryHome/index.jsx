@@ -1,4 +1,4 @@
-import StoryHome from "../../components/StoryHome";
+import StoryHome from "../../components/Story";
 
 const StoryHomePage = () => <StoryHome/>
 

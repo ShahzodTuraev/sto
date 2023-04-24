@@ -14,13 +14,13 @@ const Footer = () => {
     navigate('/')
   }
   const onDirect2 =() => {
-    navigate('/next-step')
+    navigate('/story')
   }
   const onDirect3 =() => {
-    navigate('/pricing-home')
+    navigate('/form')
   }
   const onDirect4 =() => {
-    navigate('/success-home')
+    navigate('/form')
   }
   return (
     <Container>

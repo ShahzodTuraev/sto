@@ -24,26 +24,27 @@ const antIcon = (
 
 const Footer = () => {
   const onClick1 = () => {
-    window.location.href = 'https://www.youtube.com/channel/UCXHaChrER0XYPrR43S7mx5A';
+    window.open('https://www.youtube.com/channel/UCXHaChrER0XYPrR43S7mx5A', '_blank');
   }
   const onClick2 = () => {
-    window.location.href = '';
+    window.open('https://www.tiktok.com/ko-KR/', '_blank');
   }
   const onClick3 = () => {
-    window.location.href = 'https://www.instagram.com/official_mever/';
+    window.open('https://www.instagram.com/official_mever/', '_blank');
   }
   const onClick4 = () => {
-    window.location.href = 'https://www.facebook.com/people/%EB%A9%94%EB%B2%84/100088805142901/';
+    window.open('https://www.facebook.com/people/%EB%A9%94%EB%B2%84/100088805142901/', '_blank');
   }
   const onClick5 = () => {
-    window.location.href = 'https://blog.naver.com/mevershop';
+    window.open('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%EB%A9%94%EB%B2%84', '_blank');
   }
   const onClick6 = () => {
-    window.location.href = 'https://pf.kakao.com/_cLNxib';
+    window.open('https://pf.kakao.com/_cLNxib', '_blank');
   }
   const onClick7 = () => {
-    window.location.href = 'https://www.google.com/search?q=mever&oq=mever&aqs=chrome..69i57j0i512j69i59j0i512l4j0i10i131i433i512l2.2962j0j15&sourceid=chrome&ie=UTF-8';
+    window.open('https://www.google.com/search?q=%EB%A9%94%EB%B2%84&source=hp&ei=wu5FZOG5IoaF2roPnb-f8AU&iflsig=AOEireoAAAAAZEX80gTo4vi3L7g-pHphKOoUlqv27rzb&ved=0ahUKEwjhosGzwcH-AhWGglYBHZ3fB14Q4dUDCAs&uact=5&oq=%EB%A9%94%EB%B2%84&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgUIABCABDIFCAAQgAQyCwguEIAEEMcBEK8BMgcIABCABBAKMg0IABCABBCxAxCDARAKMgYIABAKEAMyDQgAEIAEELEDEIMBEAoyBwgAEIAEEAoyBwgAEIAEEApQughYughgsBBoAXAAeACAAXGIAXGSAQMwLjGYAQCgAQKgAQGwAQA&sclient=gws-wiz', '_blank');
   }
+  
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
   const [question, setQuestion] = useState("");

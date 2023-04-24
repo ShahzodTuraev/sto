@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { Container } from './style';
 import Footer from '../Footer'
-import PartnerSuccessPage from '../7_HomePage_Partners_Success';
+import Lectures from '../Lectures';
 import QuestionsPage from '../8_HomePage_Awards';
 
 const SuccessHome = () => {
@@ -10,7 +10,7 @@ const SuccessHome = () => {
   }, []);
   return (
     <Container>
-      <PartnerSuccessPage/>
+      <Lectures/>
       <QuestionsPage/>
       <Footer/>
     </Container>

@@ -46,7 +46,7 @@ const FormGenerate = () => {
       setIsChecked4(true);
     }, 4000);
     const timer5 = setTimeout(()=>{
-      navigate('/pricing-home')
+      navigate('/pricing')
     }, 5350);
     const timer6 = setTimeout(()=>{
       setClose(true)

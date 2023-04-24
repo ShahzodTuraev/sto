@@ -10,19 +10,32 @@ import {result} from '../Form'
 
 const PricingHome = () => {
   const navigate = useNavigate();
+  // if click from story page to the price page, class default is 'SW • HW 솔루션'
+  const path = localStorage.getItem('path')
+
+  // Function for the Buttons:
+  
   const onClick =()=>{
     setTimeout(()=>{navigate('/payment-form')}, 420)
       setClose(true)
   }
+
+  // Function for fixing page scroll:
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // closing animation state:
+  
   const [close, setClose] = useState(false);
+  // Form result choosen name:
   const [name] = useState(`${result[0]}`);
-  const [ visible1, setVisible1] = useState('flex');
-  const [ visible2, setVisible2] = useState('none');
-  const [ border1, setBorder1] = useState('3px solid #000')
-  const [ border2, setBorder2] = useState('')
+  // class selection states:
+  const [ visible1, setVisible1] = useState(path ? 'none' : 'flex');
+  const [ visible2, setVisible2] = useState(path ? 'flex' : 'none');
+  const [ border1, setBorder1] = useState(path? '' : '3px solid #000')
+  const [ border2, setBorder2] = useState(path? '3px solid #000' : '')
+  
   const [hover, setHover] = useState(false)
   const [hover2, setHover2] = useState(false)
   const [hover3, setHover3] = useState(false)
@@ -54,6 +67,7 @@ const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
     setVisible2('none');
     setBorder1('3px solid #000');
     setBorder2('none');
+    localStorage.removeItem('path')
 
   }
   const onNav2 = () => {
@@ -63,7 +77,6 @@ const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
     setBorder2('3px solid #000');
   }
 
-  
   return (
     <Container>
       <Top/>

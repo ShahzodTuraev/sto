@@ -10,7 +10,7 @@ import { idSelect } from '../Features';
 const AbilityPage = () => {
   const navigate = useNavigate()
   const onClick = () => {
-    navigate('/form/step-1');
+    navigate('/form');
   }
   const abilities = [
     {id: 1,

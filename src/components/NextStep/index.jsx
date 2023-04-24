@@ -17,7 +17,7 @@ const FreeTrialStep1 = () => {
   }
   const [close, setClose] = useState(false);
   const onClick2 = () => {
-      navigate('/story-home')
+      navigate('/story')
   }
   return (
     <Container>

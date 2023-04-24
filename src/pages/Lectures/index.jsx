@@ -1,4 +1,4 @@
-import SuccessHome from "../../components/SuccessHome";
+import SuccessHome from "../../components/Success";
 
 const SuccessHomePage = () => <SuccessHome/>
 

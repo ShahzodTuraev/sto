@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Container, Main, Title, Text, VideoBox, AlertCheck, AlertEmail, AlertTel, InputBox, InputTitle, Wrapper, InputWrap, DownTitle, } from './style';
+import { Container, Main, Title, Text, Phone, VideoBox, AlertCheck, AlertEmail, AlertTel, InputBox, InputTitle, Wrapper, InputWrap, DownTitle, } from './style';
 import {Button, Input} from '../Generic';
 import { useNavigate } from 'react-router-dom';
 import { Checkbox } from 'antd';
@@ -150,28 +150,26 @@ const MainP = () => {
             <InputTitle>뉴스 받을 정보 입력란</InputTitle>
             <Wrapper>
                 <InputWrap>
-                
-                <Input 
-                  type="email"
-                  name="Email"
-                  value={data.Email} 
-                  onChange={handleChange}
-                  onFocus={FocusEmail}
-                  placeholder='이메일 (예)sm@mever.me' 
-                />
-                <AlertEmail>{displayEmail}</AlertEmail>
-                <Input
-                  type="tel"
-                  name="Phone"
-                  value={data.Phone}
-                  onChange={handleChange}
-                  onFocus={FocusTel}
-                  placeholder='핸드폰번호 (예)01075521110'
-                />
-                <AlertTel>{displayTel}</AlertTel>
+                  <Input 
+                    type="email"
+                    name="Email"
+                    value={data.Email} 
+                    onChange={handleChange}
+                    onFocus={FocusEmail}
+                    placeholder='이메일 (예)sm@mever.me' 
+                  />
+                  <AlertEmail>{displayEmail}</AlertEmail>
+                  <Input
+                    type="tel"
+                    name="Phone"
+                    value={data.Phone}
+                    onChange={handleChange}
+                    onFocus={FocusTel}
+                    placeholder='핸드폰번호 (예)01075521110'
+                  />
+                  <AlertTel>{displayTel}</AlertTel>
                 </InputWrap>
-                  <Checkbox 
-                    
+                  <Checkbox
                     checked={isChecked} 
                     onChange={handleCheckboxChange} 
                     className='checkbox'
@@ -181,7 +179,7 @@ const MainP = () => {
             </Wrapper>
           </InputBox>
           <DownTitle>문의전화</DownTitle>
-          <Text>1688-9050</Text>
+          <Phone href="tel:1688-9050">1688-9050</Phone>
           <Contact/>
       </Main>
     </Container>

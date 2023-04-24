@@ -13,7 +13,7 @@ const Extend = () => {
     window.scrollTo(0, 0);
   }, []);
   const onClick = () => {
-    setTimeout(()=>{navigate('/success-home')}, 420)
+    setTimeout(()=>{navigate('/lectures')}, 420)
       setClose(true)
   }
   return (

@@ -28,7 +28,7 @@ const Title = styled.h1`
   font-weight: 700;
   text-align: center;
   @media ${device.mobile}{
-    font-size: 34px;
+    font-size: 32px;
   }
 `;
 const Text = styled.p`
@@ -37,7 +37,7 @@ const Text = styled.p`
   text-align: center;
   margin: 8px 0;
   @media ${device.mobile}{
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 
@@ -99,6 +99,7 @@ const InputWrap = styled.div`
   }
   @media ${device.mobile}{
     width: 90%;
+    gap: 40px !important;
   };
 `;
 
@@ -153,10 +154,22 @@ const AlertTel =styled.p`
     }
   `;
   const DownTitle = styled.p`
+  margin-top: 10px;
   font-size: 22px;
   font-weight: 600;
   text-align: center;
   `;
 
-export {Container, Main, Title, Text, VideoBox, InputBox, DownTitle,
+  const Phone = styled.a`
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    margin: 8px 0;
+    @media ${device.mobile}{
+      font-size: 16px;
+    }
+  `;
+
+export {Container, Main, Title, Text, VideoBox, InputBox, DownTitle, Phone,
       InputTitle, Wrapper, InputWrap, AlertCheck, AlertEmail, AlertTel };

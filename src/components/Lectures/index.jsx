@@ -8,12 +8,13 @@ import pdf from '../../assets/imgs/pdf.png'
 import { Bottom, BottomClose, Top, TopClose } from '../Generic/transform';
 import ReactPlayer from 'react-player';
 
-const PartnersPage = () => {
+const Lectures = () => {
   const [close, setClose] = useState(false);
   const [vidId, setVidId] = useState('');
   const navigate = useNavigate();
   const onClick =()=> {
-    setTimeout(()=>{navigate('/pricing-home')}, 420)
+    setTimeout(()=>{navigate('/form')}, 420);
+    localStorage.setItem('path', vidId)
       setClose(true)
   }
   useEffect(() => {
@@ -36,7 +37,7 @@ const PartnersPage = () => {
             {videoData.map((video)=>(
               <VideoBox key={video.id}>
               
-              <VideoWrap onClick={()=>{video.type === 'free' ? setVidId(video.id) : navigate('/form/step-1')}}>
+              <VideoWrap onClick={()=>{video.type === 'free' ? setVidId(video.id) : (navigate('/login'))}}>
               <Img src={video.imgSrc}/>
                 <Icon.Lock display = {video.type === 'free' ? 'none': 'block'}/>
                 <Icon.Play/>
@@ -60,5 +61,5 @@ const PartnersPage = () => {
   )
 }
 
-export default PartnersPage;
+export default Lectures;
 

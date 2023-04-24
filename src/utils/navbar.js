@@ -2,13 +2,14 @@ import useId from "../hooks/useId";
 import NextStepPage from "../pages/NextStep";
 import MainPage from "../pages/Main"
 import StoryHomePage from "../pages/StoryHome";
-import SuccessHomePage from "../pages/SuccessHome";
-import PricingHomePage from "../pages/PricingHome";
+import SuccessHomePage from "../pages/Lectures";
+import PricingHomePage from "../pages/Pricing";
 import ExtendPage from "../pages/Extend";
 import FeaturesPage from "../pages/Features";
 import PaymentFormPage from "../pages/Payment_Form";
 import Step1Page from "../pages/Form";
 import FormGeneratePage from "../pages/FormGenerate";
+import LogInPage from "../pages/LogIn";
 export const navbar = [
   {
     id: useId, 
@@ -86,6 +87,13 @@ export const navbar = [
     id: useId,
     element: <FormGeneratePage/>,
     path: '/form-generate',
+    private: false,
+    hidden: true
+  },
+  {
+    id: useId,
+    element: <LogInPage/>,
+    path: '/login',
     private: false,
     hidden: true
   }
