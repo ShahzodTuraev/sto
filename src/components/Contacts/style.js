@@ -21,8 +21,6 @@ const Main = styled.div`
   }
   `;
 
-
-
 const Iconbox = styled.div`
   display: flex;
   width: 70%;
@@ -52,6 +50,7 @@ const Img = styled.img`
   }
 `;
 const InputWrap = styled.form`
+  position: relative;
   display: flex;
   width: 70%;
   gap: 20px;
@@ -91,4 +90,12 @@ margin-top: 30px;
 const Answer = styled.p`
   font-size: 1.2rem;
 `;
-export {Answer, AnswerBox, Container, Main, Iconbox, Img, InputWrap, Button}
+
+const Alert = styled.p`
+  font-size: 18px;
+  color: red;
+  position: absolute;
+  bottom: 0;
+  left: 50%
+`
+export {Alert, Answer, AnswerBox, Container, Main, Iconbox, Img, InputWrap, Button}

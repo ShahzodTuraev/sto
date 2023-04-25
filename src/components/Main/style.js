@@ -61,7 +61,7 @@ const InputBox = styled.div`
   width: 80%;
   padding: 8px 12px;
   background: #0E3B68;
-  margin: 20px 0;
+  margin: 5px 0 20px 0;
   border-radius: 9px;
   position: relative;
   @media ${device.tablet}{
@@ -99,7 +99,6 @@ const InputWrap = styled.div`
   }
   @media ${device.mobile}{
     width: 90%;
-    gap: 40px !important;
   };
 `;
 
