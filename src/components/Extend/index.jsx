@@ -23,7 +23,7 @@ const Extend = () => {
       { close && <TopClose/> }
       { close && <BottomClose/> }
       <Main>
-          <Tit>CEO가 비공개 하라는, 바로 그 특강!</Tit>
+          <Tit>CEO가 비공개 하라는, <br /> 바로 그 특강!</Tit>
           <Text>책 수십권의 가치를 단 1만원에 훔쳐가기!!</Text>
           <BoxWrap>
             <TitleWrap>
@@ -47,7 +47,10 @@ const Extend = () => {
                 <VideoBox>
                   <ReactPlayer controls width={'100%'} height={'100%'} url={'https://youtu.be/DSev011voNo'}></ReactPlayer>
                 </VideoBox>
+                {window.innerWidth <= 414 ?
+                <Button onClick={onClick} type={'full'}>성공하는 CEO들의 <br/> AI경영 3D마케팅 바로보기</Button> :
                 <Button onClick={onClick} type={'full'}>성공하는 CEO들의 AI경영 3D마케팅 바로보기</Button>
+                }
               </Box>
             </TitleWrap>
           </BoxWrap>

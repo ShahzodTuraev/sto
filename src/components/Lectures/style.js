@@ -58,7 +58,7 @@ const SupTitle = styled.p`
   font-size: 2.0rem;
   margin: 30px 0;
   @media ${device.mobile} { 
-    font-size: 20px;
+    font-size: 18px;
     margin: 15px 0;
   }
 `;
@@ -96,6 +96,10 @@ const Name = styled.p`
   font-weight: 900;
   line-height: 120%;
   font-size: 1.25rem;
+  margin-bottom: 5px;
+  @media ${device.mobile} { 
+    font-size: 1rem;
+  }
 `;
 
 const Position = styled.p`
@@ -103,6 +107,9 @@ const Position = styled.p`
   line-height: 140%;
   font-size: 1rem;
   color: rgb(77, 82, 86);
+  @media ${device.mobile} { 
+    font-size: 14px;
+  }
 `;
 
 const Note = styled.p`

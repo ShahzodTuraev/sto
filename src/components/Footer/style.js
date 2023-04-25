@@ -57,7 +57,11 @@ const Img = styled.img`
   margin-bottom: 20px;
   margin-right: 50px;
   cursor: pointer;
+  @media ${device.mobile}{
+    margin-right: 30px;
+  }
   `;
+  
 const Contact = styled.div`
   display: flex;
   flex-direction: column;

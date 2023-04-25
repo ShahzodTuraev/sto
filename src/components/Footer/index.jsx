@@ -35,7 +35,7 @@ const Footer = () => {
                 <Text>사업자 번호 653-81-02062</Text>
               </Contact>
               <Contact>
-                <Text>1688-9050</Text>
+                <Text> 1688-9050 </Text>
                 <Text>sm@mever.me</Text>
                 <Text>서울특별시 강남대로 373 홍우빌딩</Text>
               </Contact>

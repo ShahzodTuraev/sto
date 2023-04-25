@@ -48,6 +48,9 @@ body {
   --padding: 0 130px;  
 }
 
+s{
+  color: red;
+};
 
 .reactPlayer {
   position: absolute;

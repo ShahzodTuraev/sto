@@ -52,8 +52,8 @@ const Lectures = () => {
             ))
             }
           </VideoContainer>
-          <Note>3D홈페이지 3D마케팅 AI컨텐츠는 IT기술로 운영됩니다. 지금 바로 시작 해 보세요.</Note>
-          <Button onClick={onClick} type={'large'}>CEO들이 제발! 공개하지 말라는 <br></br>『10강 자동수익 배우러가기』 </Button>
+          <Note>3D홈페이지 3D마케팅 AI컨텐츠는 IT기술로 <br /> 운영됩니다. 지금 바로 시작 해 보세요.</Note>
+          <Button onClick={onClick} type={'large'}>CEO들이 제발! 공개하지 말라는 <br /> 『10강 자동수익 배우러가기』 </Button>
           <Index>10주간 시청할 수 있습니다 • 온오프라인 참여 가능</Index>
         </Main> 
       </Down>

@@ -30,7 +30,7 @@ const Tit = styled.h1`
     font-size: 3rem;
   };
   @media ${device.mobile}{
-    font-size: 40px;
+    font-size: 36px;
   };
   
 `
@@ -42,7 +42,7 @@ const Title = styled.h1`
     font-size: 28px;
   };
   @media ${device.mobile}{
-    font-size: 26px;
+    font-size: 22px;
   };
 
 `
@@ -56,7 +56,7 @@ const Text = styled.p`
     margin: 14px 0;
   };
   @media ${device.mobile}{
-    font-size: 18px;
+    font-size: 16px;
     margin: 12px 7px;
     
   };

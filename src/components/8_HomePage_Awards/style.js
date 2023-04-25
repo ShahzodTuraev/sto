@@ -6,17 +6,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-`;
-
-const Up = styled.div`
-  width: 100%;
-  background: #042C54;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 80px 0;
+  background: #042C54;
 `;
-
 
   const Main = styled.div`
   display: flex;
@@ -36,19 +28,35 @@ const Title = styled.h1`
   margin-bottom: 30px;
   @media ${device.tablet}{
     width: 95%;
+  };
+  @media ${device.mobile}{
+    font-size: 2rem;
+  }
+`;
+
+const Suptitle = styled.p`
+  color: rgba(255, 255, 255, 0.8);
+  width: 80%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  @media ${device.mobile}{
+    font-size: 1rem;
+    width: 90%;
   }
 `;
 
 const Text = styled.p`
-  color: ${({color}) => (color? `${color}` : 'rgb(29, 46, 59)')};
-  font-size:${({fontSize})=> (fontSize? `${fontSize}` : '18px')};
-  font-weight: ${({fontWeight})=>(fontWeight? `${fontWeight}` : '400')};
-  line-height: ${({lineHeight})=>(lineHeight? `${lineHeight}`: '150%')};
-  text-align: ${({textAlign})=>(textAlign? `${textAlign}`: 'start')};
-  width: ${({width})=>(width ? `${width}`: '100%' )};
-  margin: ${({margin})=>(margin ? `${margin}` : '0')};
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
   @media ${device.tablet}{
     width: 94%;
+  }
+  @media ${device.mobile}{
+    font-size: 26px;
   }
 `;
 
@@ -71,4 +79,4 @@ const Wrapper = styled.div`
   border-radius: 8px;
   `;
 
-export {Container, Up, Main, Title, Text, Wrapper, Img, }
+export {Container, Suptitle, Main, Title, Text, Wrapper, Img, }

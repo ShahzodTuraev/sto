@@ -31,13 +31,24 @@ const Title = styled.h1`
     font-size: ${({fontSize})=>(fontSize ? `${fontSize}` : '2.5rem;')};
   }
 `;
+const LineText =styled.p`
+  color: rgb(77, 82, 86);
+  font-weight: 400;
+  line-height: 150%;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: line-through;
+  text-decoration-color: rgba(217, 98, 85, 0.7);
+  text-decoration-thickness: 2px;
+
+`;
 
 const Text = styled.p`
   color: rgb(77, 82, 86);
   font-weight: 400;
   line-height: 150%;
-  font-size: ${({fontSize})=>(fontSize ? `${fontSize}` : '1.25rem;')}; 
-  margin: ${({margin})=>(margin ? `${margin}` : '0')}; 
+  font-size: 13px;
+  margin: 10px 0;
   text-align: center;
 `;
 const Wrap = styled.div`
@@ -73,9 +84,7 @@ const Box = styled.div`
   height: auto;
   background: ${({backGround})=>(backGround ? `${backGround}` : '#FFFFFF')};
   box-shadow: 0px 10px 40px 0px rgba(170, 183, 199, 0.3);
-  position: relative;
   transition: all 0.2s;
-  
   @media ${device.tablet} { 
     width: 40rem
   }
@@ -84,20 +93,6 @@ const Box = styled.div`
   }
 `;
 
-const Line = styled.div`
-  background: linear-gradient(to right , #FFFFFF, rgb(255, 0, 0));
-  width: 120px;
-  height: 2px;
-  position: absolute;
-  top: 100px;
-  left: 120px;
-  @media ${device.tablet} { 
-    left: 260px;
-  }
-  @media ${device.tablet} { 
-    left: 120px;
-  }
-`;
 const NoteWrap = styled.div`
   margin: 20px 0;
 `
@@ -110,4 +105,4 @@ const Note = styled.p`
   font-size: 0.9375rem;
 `;
 
-export {Container, Main, Title, Text, Plan, Wrapper, Wrap, Box, Line, Note, NoteWrap};
+export {Container, Main, Title, LineText, Text, Plan, Wrapper, Wrap, Box, Note, NoteWrap};

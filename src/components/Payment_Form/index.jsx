@@ -1,17 +1,35 @@
 import React, {useEffect} from 'react';
 import { Container, Main, Title, Text, Wrapper, Coution, Icon, CardBox, MainWrapper, TextBox, Head, IconWrap, IconText, Awrap, Img } from './style';
 import { Input, Button } from '../Generic';
-import { useNavigate } from 'react-router-dom';
 import Logo from '../../assets/imgs/mever-flayer.png'
 import { Bottom, Top } from '../Generic/transform';
+import { loadTossPayments } from '@tosspayments/payment-sdk'
 
 const FreeTrialStep2 = () => {
+const clientKey = 'test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq'
+
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const navigate = useNavigate();
+  // async/await을 사용하는 경우
+  async function toss_go() {
+    
+    const tossPayments = await loadTossPayments(clientKey);
+    
+    tossPayments.requestPayment('카드', {
+  amount: 1500,
+  orderId: 'AoARhnV12hjn_mbxAzvqV',
+  orderName: '토스 티셔츠 외 2건',
+  customerName: '박토스',
+  successUrl: 'http://localhost:8080/success',
+  failUrl: 'http://localhost:8080/fail',
+})
+  }
   const onClick = () => {
-    navigate('/pro-monthly/step-2')
+    console.log("zz")
+    toss_go();
+
   }
   return (
     <Container>

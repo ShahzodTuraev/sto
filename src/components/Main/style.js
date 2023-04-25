@@ -28,7 +28,7 @@ const Title = styled.h1`
   font-weight: 700;
   text-align: center;
   @media ${device.mobile}{
-    font-size: 32px;
+    font-size: 28px;
   }
 `;
 const Text = styled.p`
