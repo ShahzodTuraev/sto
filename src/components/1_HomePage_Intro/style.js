@@ -7,7 +7,6 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   background: var(--color-6Z-dzM8-3);
-
 `;
 
   const Main = styled.div`
@@ -28,7 +27,6 @@ const Container = styled.div`
 
 `;
 const Suptitle = styled.p`
-  font-family: 'Caveat', cursive;
   font-weight: 700;
   font-size: 2.25rem;
   text-align: center;
@@ -119,7 +117,74 @@ const SectionText = styled.p`
   @media ${device.mobile}{
     font-size: 15px;
   };
-`
+`;
+
+const VideoMain = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1170px;
+  width: 100%;
+  margin-bottom: 100px;
+`;
+
+const VideoSection = styled.div`
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 1108px;
+  height: 42px;
+  text-align: center;
+  background: var(--color-6Z-dzM8-7);
+  color: var(--color-6Z-dzM8-5);
+  padding-top: 10px;
+  gap: 5px;
+  margin-top: 30px;
+  @media ${device.tablet}{
+    width: 95%
+    };
+  @media ${device.mobile}{
+    width: 95%;
+    padding-top: 5px;
+    margin-top: 0px;
+  }
+`;
+
+const VideoText = styled.p`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 18px;
+  @media ${device.mobile}{
+    font-size:12px;
+  }
+`;
+
+const IconPlay = styled.img`
+  width: 20px;
+  @media ${device.mobile}{
+    width: 14px;
+  }
+`;
+
+const VideoWrapper = styled.div`
+  box-shadow: 0px 4px 16px 2px rgba(0, 44, 122, 0.2);
+  width: 1108px;
+  height: 640px;
+  padding: 20px;
+  @media ${device.tablet}{
+    width: 95%;
+    height: 400px;
+    
+    };
+  @media ${device.mobile}{
+    width: 95%;
+    height: 220px;
+  }
+`;
 
 
-export {Container, Main, Suptitle, Title, Text, Index, IconCheck, Wrapper, Section, SectionText}
+export {Container, Main, Suptitle, Title, Text, Index, IconCheck, Wrapper, Section, SectionText,
+        VideoMain, VideoSection, VideoText, IconPlay, VideoWrapper,}

@@ -31,6 +31,7 @@ const Tit = styled.h1`
   };
   @media ${device.mobile}{
     font-size: 36px;
+    margin: 10px 0 20px 0;
   };
   
 `

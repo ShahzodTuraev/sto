@@ -1,55 +1,109 @@
-import React, {useEffect} from 'react';
-import { Container, Main, Title, Text, Wrapper, Coution, Icon, CardBox, MainWrapper, TextBox, Head, IconWrap, IconText, Awrap, Img } from './style';
+import React, {useEffect, useState} from 'react';
+import { Alert, Container, Main, Title, Text, Wrapper, Coution, Icon, CardBox, MainWrapper, TextBox, Head, IconWrap, IconText, Awrap, Img, InputWrap } from './style';
 import { Input, Button } from '../Generic';
 import Logo from '../../assets/imgs/mever-flayer.png'
 import { Bottom, Top } from '../Generic/transform';
-import { loadTossPayments } from '@tosspayments/payment-sdk'
+import { loadTossPayments } from '@tosspayments/payment-sdk';
+import axios from 'axios';
 
-const FreeTrialStep2 = () => {
-const clientKey = 'test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq'
-
+const Payment = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  // async/await을 사용하는 경우
-  async function toss_go() {
-    
-    const tossPayments = await loadTossPayments(clientKey);
-    
-    tossPayments.requestPayment('카드', {
-  amount: 1500,
-  orderId: 'AoARhnV12hjn_mbxAzvqV',
-  orderName: '토스 티셔츠 외 2건',
-  customerName: '박토스',
-  successUrl: 'http://localhost:8080/success',
-  failUrl: 'http://localhost:8080/fail',
-})
-  }
-  const onClick = () => {
-    console.log("zz")
-    toss_go();
+  // form state alert state:
+  const [nameAlert, setNameAlert] = useState('');
+  const [emailAlert, setEmailAlert] = useState('');
 
+  const clientKey = process.env.REACT_APP_TOSS_PAYMENTS_KEY
+  // product name and payment amount come from pricing page according to the choice:
+  const productName = localStorage.getItem('productName');
+  const paymentAmount = Number(localStorage.getItem('paymentAmount'))
+  // client email adress come from main initial page :
+  const [emailReplace, setEmailReplace] = useState(localStorage.getItem('email'));
+  const [customerName, setCustomerName] = useState('')
+  // data input onChange functions:
+  const onChangeEmail = (e) => {
+    setEmailReplace(e.target.value)
+  };
+  const onChangeName =(e) => {
+    setCustomerName(e.target.value)
   }
+
+  // async/await을 사용하는 경우
+
+  async function toss_go() {
+
+    const tossPayments = await loadTossPayments(clientKey);
+    axios.post('/payment', {
+      payType: '카드',
+      totalAmount: `${paymentAmount}`,
+      orderName: `${productName}`,
+      name: `${customerName}`,
+      email: `${emailReplace}`,
+    })
+      .then((res) => {
+        tossPayments.requestPayment('카드', {
+          amount: res.data.totalAmount,
+          orderId: res.data.orderId,
+          orderName: res.data.orderName,
+          name: res.data.name,
+          email: res.data.email,
+          successUrl: 'http://localhost:8080/success',
+          failUrl: 'http://localhost:8080/fail',
+        });
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+
+    // tossPayments.requestPayment('카드', {
+    //   amount: `${paymentAmount}`,
+    //   orderId: 'AoARhnV12hjn_mbxAzvqV111',
+    //   orderName: `${productName}`,
+    //   customerName: `${customerName}`,
+    //   successUrl: 'http://localhost:8080/success',
+    //   failUrl: 'http://localhost:8080/fail',
+    // })
+  }
+  // payment start button
+  const onClick = async () => {
+    if(customerName.length > 0 
+      && emailReplace.length > 4 
+      && emailReplace.includes('@', '.')){
+        toss_go();
+      }else{
+        if(customerName.length === 0){setNameAlert('입력한 성명를 확인해주세요!')}
+        if(emailReplace.length < 4 || !emailReplace.includes('@', '.')){setEmailAlert('입력한 이메일 주소를 확인해주세요!')}
+      }
+  }
+// if focus on input, alert gets lost
+  const onFocusName =()=>{setNameAlert('')};
+  const onFocusEmail =()=>{setEmailAlert('')};
+
   return (
     <Container>
       <Top/>
       <Bottom/>
       <Img src={Logo}/>
       <MainWrapper>
+        {/* payment input form */}
         <Main>
           <Title>간단 결제 후 시작</Title>
           <Wrapper>
-            <Input placeholder='성명'/>
-            <Input  placeholder='전화 번호'/>
-            <Input placeholder='이메일 주소'/>
-            <Input placeholder='주소'/>
-            <Input placeholder='상세주소'/>
-            
-            <Button onClick={onClick} type={'step'}>내 무료 평가판 시작</Button>
+            <InputWrap>
+              <Input onChange={onChangeName} onFocus={onFocusName} placeholder='성명'/>
+              <Alert>{nameAlert}</Alert>
+            </InputWrap>
+            <InputWrap>
+              <Input onChange={onChangeEmail} onFocus={onFocusEmail} value = {emailReplace} placeholder='이메일 주소'/>
+              <Alert>{emailAlert}</Alert>
+            </InputWrap>
+            <Button onClick={onClick} type={'step'}>결제하기</Button>
           </Wrapper>
           <Coution>결제 후 이용 (관련 세금 별도). 대시보드 또는 이메일(sm@mever.me)을 통해 취소하십시오. 또한 서비스 약관, 개인 정보 보호 정책 및 제휴 계약에 동의합니다.</Coution>
         </Main>
+        {/* left side page */}
         <TextBox>
           <Head> 메버와 함께 성공하는 CEO가 되세요!</Head>
           <IconWrap>
@@ -91,4 +145,4 @@ const clientKey = 'test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq'
   )
 }
 
-export default FreeTrialStep2
+export default Payment

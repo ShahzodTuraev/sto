@@ -16,7 +16,10 @@ const Container = styled.div`
   align-items: center;
   max-width: 1170px;
   width: 100%;
-  margin: 70px;
+  margin: 70px 0;
+  @media ${device.mobile}{
+    margin: 30px;
+  }
 `;
 
 const Introbox = styled.div`
@@ -53,7 +56,7 @@ const IntroTitle = styled.h1`
     margin-bottom: 35px;
   };
   @media ${device.mobile}{
-    font-size: 29px;
+    font-size: 26px;
   }
 `;
 const IntroImg = styled.img`

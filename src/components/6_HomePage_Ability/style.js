@@ -111,7 +111,7 @@ const Title = styled.h1`
 
   }
   @media ${device.mobile} { 
-    font-size:26px;
+    font-size:24px;
     width: 90%;
   }
 `;
@@ -119,7 +119,6 @@ const Title = styled.h1`
 const QuesText = styled.p`
   text-align: center;
   color: rgb(29, 46, 59);
-  font-family: "Caveat", handwriting;
   font-weight: 700;
   line-height: 140%;
   font-size: 1.5rem;

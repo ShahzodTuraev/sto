@@ -20,7 +20,9 @@ const OpportunityPage = () => {
         <Introbox>
           <IntroImg src={introPic}></IntroImg>
           <IntroTextBox>
-            <IntroTitle>메버는 "3D홈페이지 • AI마케팅"을 통해 고객들이 여러분을 찾아오도록 도와줍니다!</IntroTitle>
+            {window.innerWidth < 414 ?
+              <IntroTitle>메버는 "3D홈페이지 • <br /> AI마케팅"을 통해 고객들이 <br /> 여러분을 찾아오도록 도와줍니다!</IntroTitle>:
+              <IntroTitle>메버는 "3D홈페이지 • AI마케팅"을 통해 고객들이 여러분을 찾아오도록 도와줍니다!</IntroTitle>}
             <ResponsiveImg src={introPic}/>
             <TabletImg src={introPic}/>
             <IntroText>우리는 최초의 웹3D 빌더이자 페이스북, 구글, 유튜브, 인스타그램 또는 틱톡과 같은 사이트에서 사용자를 모아서 당신의 상점으로 이끌어주는 AI마케팅 플랫폼이기도 합니다!

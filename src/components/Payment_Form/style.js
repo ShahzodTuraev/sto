@@ -52,7 +52,7 @@ const Note = styled.p`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1px;
 `;
 
 const CoWrap = styled.div`
@@ -143,8 +143,23 @@ const Awrap = styled.div`
 const Img = styled.img`
   width: 300px;
   margin: 40px 0;
+  `;
+const InputWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red; */
+  position: relative;
+  padding-bottom: 20px;
+`
+const Alert = styled.p`
+  font-size: 14px;
+  font-weight: 500;
+  color: red;
+  position: absolute;
+  bottom: 0;
 `;
 
-export { Container, Main, Title, Text, Note, Wrapper, IconWrap, 
+export { Container, Main, Title, Text, Note, Wrapper, IconWrap, Alert,
         CoWrap, Coution, Icon, CardBox, MainWrapper, TextBox, Head, 
-        IconText, Awrap, Img}
+        IconText, Awrap, Img, InputWrap}

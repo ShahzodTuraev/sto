@@ -24,16 +24,9 @@ const Title = styled.h1`
   text-align: center;
   margin-bottom: 30px;
   @media ${device.mobile}{
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 20px;
   }
 `;
-
-
-
-
-
-
-
 
 export {Container, Main, Title }

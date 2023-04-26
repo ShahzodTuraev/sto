@@ -102,6 +102,7 @@ const Title = styled.h1`
   @media ${device.mobile}{
     font-size: 22px;
     margin: 20px 0;
+    line-height: 150%;
   }
 `;
 

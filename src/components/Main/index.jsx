@@ -90,9 +90,9 @@ const MainP = () => {
         isChecked) {
           setTimeout(()=>{navigate('/next-step')}, 420)
           setClose(true)
-
-      event.preventDefault();
-    api_post();
+          localStorage.setItem('email', data.Email )
+        event.preventDefault();
+      api_post();
     
     }else{
       if(!isChecked){

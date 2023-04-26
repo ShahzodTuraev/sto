@@ -16,19 +16,40 @@ const Main = styled.div`
   max-width: 1170px;
   width: 100%;
 `;
+const Heading = styled.h1`
+  line-height: 120%;
+  font-weight: 900;
+  font-size: 3.25rem;
+  width: 80%;
+  text-align: center;
+  @media ${device.tablet} { 
+    font-size: 2.6rem;
+  };
+  @media ${device.mobile} { 
+    font-size: 2rem;
+  }
+`;
+const SupHeading = styled.p`
+  margin: 15px 0;
+  color: #3f3f3f;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  @media ${device.tablet} { 
+    font-size: 22px;
+  };
+  @media ${device.mobile} { 
+    font-size: 16px;
+  }
+`;
 
 const Title = styled.h1`
   line-height: 120%;
-  font-weight: ${({fontWeight})=>(fontWeight ? `${fontWeight}` : '900')}; 
-  font-size: ${({fontSize})=>(fontSize ? `${fontSize}` : '3.75rem;')}; 
-  color : ${({color})=>(color ? `${color}` : 'var(--color-6Z-dzM8-1);')};
-  width: ${({width})=>(width ? `${width}` : '100%')};
+  font-weight: 700; 
+  font-size: 32px; 
   text-align: center;
-  @media ${device.tablet}{
-    font-size: ${({fontSize})=>(fontSize ? `${fontSize}` : '3.5rem;')};
-  }
   @media ${device.mobile} { 
-    font-size: ${({fontSize})=>(fontSize ? `${fontSize}` : '2.5rem;')};
+    font-size: 26px;
   }
 `;
 const LineText =styled.p`
@@ -105,4 +126,4 @@ const Note = styled.p`
   font-size: 0.9375rem;
 `;
 
-export {Container, Main, Title, LineText, Text, Plan, Wrapper, Wrap, Box, Note, NoteWrap};
+export {Container, Main, Title, LineText, Text, Heading, SupHeading, Plan, Wrapper, Wrap, Box, Note, NoteWrap};

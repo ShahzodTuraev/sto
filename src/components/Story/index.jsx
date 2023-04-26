@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Container } from './style';
 import Intro from '../1_HomePage_Intro'
-import VideoPage from '../2_HomePage_Video';
 import EntrepreneursHomePage from '../3_HomePage_Entrepreneurs';
 import WhyFourthPage from '../4_HomePage_Why';
 import OpportunityPage from '../5_HomePage_Opportunity';
@@ -19,7 +18,6 @@ const StoryHome = () => {
       <FirstTop/>
       <FirstBottom/>
       <Intro/>
-      <VideoPage/>
       <EntrepreneursHomePage/>
       <WhyFourthPage/>
       <OpportunityPage/>

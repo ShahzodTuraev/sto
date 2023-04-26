@@ -97,7 +97,7 @@ const AbilityPage = () => {
   return (
     <Container>
       <Main>
-        <Title>『메버』는 CEO들이 온라인 성공에 필요한 모든 것을 제공합니다.</Title>
+        <Title>『메버』는 CEO들이 온라인 성공에 <br /> 필요한 모든 것을 제공합니다.</Title>
         <QuesText>고객이 온•오프라인을 찾아 소비하게 만드는 메버! <br /> SW•HW 『특허 솔루션』을 압도적으로 선사합니다.</QuesText>
         <Wrapper>
             
@@ -114,10 +114,14 @@ const AbilityPage = () => {
         </Wrapper>
         <AdBox>
           <AdImg src={Logo}/>
+          
           <AdTitle>메버는 업계에서 『제일 비쌉니다!』</AdTitle>
-          <AdText>세계 최고의 명품은 높은 가격만큼 희소성•가치성•환급성이 높습니다. 메버 또한 업계에서 똑같이 증명하고 있습니다!</AdText>
+          {window.innerWidth <= 414 ?
+                <AdText>세계 최고의 명품은 높은 가격만큼  희소성•<br />가치성•환급성이 높습니다. 메버 또한 <br /> 업계에서 똑같이 증명하고 있습니다!</AdText> :
+                <AdText>세계 최고의 명품은 높은 가격만큼 희소성•가치성•환급성이 높습니다. 메버 또한 업계에서 똑같이 증명하고 있습니다!</AdText>
+          }
           <Button onClick={onClick} >CEO를 위한, 1:1 맞춤 견적</Button>
-          <Index color='#7690A9' >약정 계약 없음 • 언제든지 해지 가능</Index>
+          <Index color='#b6c6d6' >약정 계약 없음 • 언제든지 해지 가능</Index>
         </AdBox>
       </Main> 
     </Container>

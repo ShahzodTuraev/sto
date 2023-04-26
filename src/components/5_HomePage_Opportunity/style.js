@@ -52,7 +52,7 @@ const IntroTitle = styled.h1`
     font-size: 36px;
   }
   @media ${device.mobile}{
-    font-size: 30px;
+    font-size: 26px;
     text-align: center;
   }
 `;

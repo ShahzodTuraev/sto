@@ -1,5 +1,5 @@
 import React, {useState, useEffect}from 'react';
-import { Container, Main, Title, LineText, Text, Wrapper, Plan, Box, Note, NoteWrap, Wrap } from './style';
+import { Container, Main, Title, LineText, Heading, SupHeading, Text, Wrapper, Plan, Box, Note, NoteWrap, Wrap } from './style';
 import {Button} from '../Generic';
 import AbilityPage from '../6_HomePage_Ability';
 import QuestionsPage from '../8_HomePage_Questions';
@@ -15,9 +15,46 @@ const PricingHome = () => {
 
   // Function for the Buttons:
   
-  const onClick =()=>{
+  const onClick_1 =()=>{
     setTimeout(()=>{navigate('/payment-form')}, 420)
-      setClose(true)
+    setClose(true)
+    localStorage.setItem('productName', '250000won')
+    localStorage.setItem('paymentAmount', '250000')
+  }
+
+  const onClick_2 =()=>{
+    setTimeout(()=>{navigate('/payment-form')}, 420)
+    setClose(true)
+    localStorage.setItem('productName', '2500000won')
+    localStorage.setItem('paymentAmount', '2500000')
+  }
+
+  const onClick_3 =()=>{
+    setTimeout(()=>{navigate('/payment-form')}, 420)
+    setClose(true)
+    localStorage.setItem('productName', '실비+매출의 10%')
+    localStorage.setItem('paymentAmount', '10000')
+  }
+
+  const onClick_4 =()=>{
+    setTimeout(()=>{navigate('/payment-form')}, 420)
+    setClose(true)
+    localStorage.setItem('productName', '250,000원/1회2h')
+    localStorage.setItem('paymentAmount', '250000')
+  }
+
+  const onClick_5 =()=>{
+    setTimeout(()=>{navigate('/payment-form')}, 420)
+    setClose(true)
+    localStorage.setItem('productName', '월330,000원/3년')
+    localStorage.setItem('paymentAmount', '330000')
+  }
+
+  const onClick_6 =()=>{
+    setTimeout(()=>{navigate('/payment-form')}, 420)
+    setClose(true)
+    localStorage.setItem('productName', '월230,000원/3년')
+    localStorage.setItem('paymentAmount', '230000')
   }
 
   // Function for fixing page scroll:
@@ -84,8 +121,11 @@ const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
       { close && <TopClose/> }
       { close && <BottomClose/> }
       <Main>
-        <Title width='65%'> {name === 'undefined' ? '':`${name}`} <br /> CEO들의 <br/>매출 성장 플랜</Title>
-        <Text margin='15px 0'>CEO들의 후기를 보고 천천히 고민해보세요.<br></br> 이미, 3개월 일정이 밀려 있습니다.</Text>
+        {window.innerWidth <= 414 ?
+          <Heading > {name} <br /> CEO들의 매출 <br /> 성장 플랜</Heading> :
+          <Heading > {name} <br /> CEO들의 매출 성장 플랜</Heading>
+        }
+        <SupHeading>CEO들의 후기를 보고 천천히 고민해보세요. <br /> 이미, 3개월 일정이 밀려 있습니다.</SupHeading>
           <Wrap>
             <Plan onClick={onNav1} borderBottom ={border1}>교육 과정 • 매출 도전</Plan>
             <Plan onClick={onNav2} borderBottom ={border2}>SW • HW 솔루션</Plan>
@@ -96,12 +136,12 @@ const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
               backGround = {hover? 'rgb(21, 30, 82)' : '#ffffff'}
               onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}
             >
-              <Title style={setColor} fontSize='34px'>온라인 CEO과정</Title>
+              <Title style={setColor} >온라인 CEO과정</Title>
               <LineText style={setColor}>2,500,000원</LineText>
     
-              <Title style={setColor} fontWeight = '700' fontSize='32px'>250,000원</Title>
+              <Title style={setColor} >250,000원</Title>
               <Text style={setColor} >10주 <b>스터디 (225만원 절약)</b></Text>
-              <Button onClick={onClick} type='price'>온라인 CEO과정 바로가기</Button>
+              <Button onClick={onClick_1} type='price'>온라인 CEO과정 바로가기</Button>
               <NoteWrap>
                 <Note style={setColor} >제공1. [10강 온라인 영상]-1,000,000원</Note>
                 <Note style={setColor} >제공2. [10강 PDF 전자책]-150,000원</Note>
@@ -114,18 +154,18 @@ const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
                 <Note style={setColor} >제공9. [3D컨텐츠 맛보기]-100,000원</Note>
                 <Note style={setColor} >제공10.[3D자동화 맛보기]-100,000원</Note>
               </NoteWrap>
-              <Button onClick={onClick} type='price'>온라인 CEO과정 바로가기</Button>
+              <Button onClick={onClick_1} type='price'>온라인 CEO과정 바로가기</Button>
             </Box>
             <Box
               backGround = {hover2? 'rgb(21, 30, 82)' : '#ffffff'}
               onMouseEnter={mouseEnter2} onMouseLeave={mouseLeave2}
             >
-              <Title style={setColor2} fontSize='34px'>오프라인CEO과정</Title>
+              <Title style={setColor2} >오프라인CEO과정</Title>
               <LineText style={setColor2} >10,000,000원</LineText>
     
-              <Title style={setColor2} fontWeight = '700' fontSize='32px'>2,500,000원</Title>
+              <Title style={setColor2} >2,500,000원</Title>
               <Text style={setColor2} >10주 <b>스터디 (750만원 절약)</b></Text>
-              <Button onClick={onClick} type='price'>지역별 CEO과정 예약하기</Button>
+              <Button onClick={onClick_2} type='price'>지역별 CEO과정 예약하기</Button>
               <NoteWrap>
                 <Note style={setColor2}>제공1. [10강 온라인 영상]-1,000,000원</Note>
                 <Note style={setColor2}>제공2. [10강 PDF 전자책]-150,000원</Note>
@@ -143,18 +183,18 @@ const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
                 <Note style={setColor2}><b>제공14. 10주 오프코칭권-1,000,000원</b></Note>
                 <Note style={setColor2}><b>제공15. 10주 오프수강권-2,500,000원</b></Note>
               </NoteWrap>
-              <Button onClick={onClick} type='price'>지역별 CEO과정 예약하기</Button>     
+              <Button onClick={onClick_2} type='price'>지역별 CEO과정 예약하기</Button>     
             </Box>
             <Box
               backGround = {hover3? 'rgb(21, 30, 82)' : '#ffffff'}
               onMouseEnter={mouseEnter3} onMouseLeave={mouseLeave3}
             >
-              <Title style={setColor3} fontSize='34px'>1•10•100도전</Title>
+              <Title style={setColor3} >1•10•100도전</Title>
               <LineText style={setColor3} >발생매출의 20~30%</LineText>
     
-              <Title style={setColor3} fontWeight = '700' fontSize='32px'>실비+매출의 10%</Title>
+              <Title style={setColor3} >실비+매출의 10%</Title>
               <Text style={setColor3} >1년단위 <b>실행 (매출.지분.협업)</b></Text>
-              <Button style={setColor3} onClick={onClick} type='price'>1•10•100도전 시작</Button>
+              <Button style={setColor3} onClick={onClick_3} type='price'>1•10•100도전 시작</Button>
               <NoteWrap>
                 <Note style={setColor3}>제공1. [10강 온라인 영상]-1,000,000원</Note>
                 <Note style={setColor3}>제공2. [10강 PDF 전자책]-150,000원</Note>
@@ -174,7 +214,7 @@ const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
                 <Note style={setColor3}><b>제공16. 1년 코치.실행자 배치-실비</b></Note>
                 <Note style={setColor3}><b>제공17. 1년 HW.SW 배치-실비</b></Note>
               </NoteWrap>
-              <Button onClick={onClick} type='price'>1•10•100도전 시작</Button>
+              <Button onClick={onClick_3} type='price'>1•10•100도전 시작</Button>
             </Box>
           </Wrapper>
 
@@ -183,43 +223,43 @@ const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
               backGround = {hover4? 'rgb(21, 30, 82)' : '#ffffff'}
               onMouseEnter={mouseEnter4} onMouseLeave={mouseLeave4}
             >
-              <Title style={setColor4} fontSize='34px'>CEO AI•3D컨설팅</Title>
+              <Title style={setColor4} >CEO AI•3D컨설팅</Title>
               <LineText style={setColor4} >2,500,000원</LineText>
     
-              <Title style={setColor4} fontWeight = '700' fontSize='32px'>250,000원/1회2h</Title>
+              <Title style={setColor4} >250,000원/1회2h</Title>
               <Text style={setColor4} >1회 <b>AI•3D 컨설팅 (225만원 절약)</b></Text>
               <NoteWrap>
                 <Note style={setColor4}>30억 빚을 1년만에 300억으로 만든 이상민CEO가 1:1 컨설팅을 합니다. 10강의 내용을 단, 1회 컨설팅으로 어떤 산업이든 코칭.진단하고, AI•3D기술로 해결할 수 있도록 명쾌함을 선사합니다! </Note>
             </NoteWrap>
-              <Button onClick={onClick} type='price'>1:1 컨설팅 바로보기</Button>     
+              <Button onClick={onClick_4} type='price'>1:1 컨설팅 바로보기</Button>     
             </Box>
             <Box
               backGround = {hover5? 'rgb(21, 30, 82)' : '#ffffff'}
               onMouseEnter={mouseEnter5} onMouseLeave={mouseLeave5}
             >
-              <Title style={setColor5} fontSize='34px'>3D홈페이지마케팅</Title>
+              <Title style={setColor5} >3D홈페이지마케팅</Title>
               <LineText style={setColor5} >10,000,000원</LineText>
     
-              <Title style={setColor5} fontWeight = '700' fontSize='32px'>월330,000원/3년</Title>
+              <Title style={setColor5} >월330,000원/3년</Title>
               <Text style={setColor5} >10주 <b>스터디 (750만원 절약)</b></Text>
               <NoteWrap>
                 <Note style={setColor5}>3D홈페이지는 기존의 홈페이지 대비 고객을 끌어들이는 마법같은 효과입니다. 그리고 AI 마케팅은 그 고객을 꾸준한 관리와 정보로 매출까지 만들어내는 인공지능 시스템을 말합니다! </Note>
             </NoteWrap>
-              <Button onClick={onClick} type='price'>3D홈페이지 마케팅 바로보기</Button>
+              <Button onClick={onClick_5} type='price'>3D홈페이지 마케팅 바로보기</Button>
             </Box>
             <Box
               backGround = {hover6? 'rgb(21, 30, 82)' : '#ffffff'}
               onMouseEnter={mouseEnter6} onMouseLeave={mouseLeave6}
             >
-              <Title style={setColor6} fontSize='34px'>3D칠판•키오스크</Title>
+              <Title style={setColor6} >3D칠판•키오스크</Title>
               <LineText style={setColor6} >10,000,000원</LineText>
     
-              <Title style={setColor6} color='var(--color-6Z-dzM8-7)' fontWeight = '700' fontSize='32px'>월230,000원/3년</Title>
+              <Title style={setColor6} >월230,000원/3년</Title>
               <Text style={setColor6} >1년단위 <b>실행 (매출.지분.협업)</b></Text>
               <NoteWrap>
                 <Note style={setColor6}>사업자들의 필수 하드웨어인 포스.키오스크.전자칠판을 3D홈페이지로 업그레이드 시켜드립니다. 기존 하드웨어 유무에 상관없이 쉽고,빠르게 웹3D기술로 고객을 더 많이 유치해보세요! </Note>
             </NoteWrap>
-              <Button onClick={onClick} type='price'>3D칠판•키오스크 바로보기</Button>     
+              <Button onClick={onClick_6} type='price'>3D칠판•키오스크 바로보기</Button>     
             </Box>
           </Wrapper>
       </Main>

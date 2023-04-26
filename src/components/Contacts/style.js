@@ -82,7 +82,7 @@ margin-top: 30px;
 @media ${device.tablet}{
     width: 55%;
   }
-  @media ${device.tablet}{
+  @media ${device.mobile}{
     width: 85%;
     margin-top: 5px;
   }
@@ -96,6 +96,14 @@ const Alert = styled.p`
   color: red;
   position: absolute;
   bottom: 0;
-  left: 50%
+  left: 50%;
+  @media ${device.tablet}{
+    left: 40%;;
+  }
+  @media ${device.mobile}{
+    top: 0;
+    left: 30%;
+    font-size: 15px;
+  }
 `
 export {Alert, Answer, AnswerBox, Container, Main, Iconbox, Img, InputWrap, Button}
