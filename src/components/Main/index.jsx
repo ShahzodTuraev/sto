@@ -15,8 +15,8 @@ const MainP = () => {
     const fetchVideos = async () => {
       try {
         // API 요청에 필요한 데이터
-        const apiKey = 'AIzaSyBEXujBWL2aIpFwcXhODZ8nE0Vnx0UHVA0';
-        const playlistId = 'PLaYfzmFK70MnTbgiR6KjyCCWJNKcFk8bM';
+        const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY;
+        const playlistId = process.env.REACT_APP_YOUTUBE_PLAYLIST_ID;
 
         // API 요청
         const response = await axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${apiKey}&maxResults=50`);
@@ -56,14 +56,16 @@ const MainP = () => {
     );
 
   const [data, setData] = useState({
-    Email: '',
-    Phone: '',
+    email: '',
+    phone: '',
   });
   const api_post = () => {
-    fetch('https://api.mever.me/api/v1/req2', {
-      // https://api.mever.me:8080/payment
+    fetch('https://api.mever.me:8080/insMember', {
       // https://api.mever.me/api/v1/req2
       method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data)
     })
       .then(response => response.json())
@@ -85,12 +87,13 @@ const MainP = () => {
   const [displayCheck, setDisplayCheck] = useState('');
   const [close, setClose] = useState(false)
   const onSubmit = (event) => {
-    if (data.Email.includes('@', '.') &&
-        (data.Phone.length> 10 && /[a-zA-Z]/.test(data.Phone) === false) &&
+    if (data.email.includes('@', '.') &&
+        (data.phone.length> 10 && /[a-zA-Z]/.test(data.phone) === false) &&
         isChecked) {
           setTimeout(()=>{navigate('/next-step')}, 420)
           setClose(true)
-          localStorage.setItem('email', data.Email )
+          localStorage.setItem('email', data.email);
+          localStorage.setItem('phone', data.phone);
         event.preventDefault();
       api_post();
     
@@ -99,10 +102,10 @@ const MainP = () => {
         setDisplayCheck('동이 해 주세요!')
       }
     };
-    if(!data.Email.includes('@', '.')){
+    if(!data.email.includes('@', '.')){
       setDisplayEmail('입력한 이메일 주소 확인해 주세요!');
     };
-    if(data.Phone.length < 10 || /[a-zA-Z]/.test(data.Phone) === true ){
+    if(data.phone.length < 10 || /[a-zA-Z]/.test(data.phone) === true ){
       setDisplayTel('입력한 전화번호 확인해 주세요!');
     }
 
@@ -152,8 +155,8 @@ const MainP = () => {
                 <InputWrap>
                   <Input 
                     type="email"
-                    name="Email"
-                    value={data.Email} 
+                    name="email"
+                    value={data.email} 
                     onChange={handleChange}
                     onFocus={FocusEmail}
                     placeholder='이메일 (예)sm@mever.me' 
@@ -161,8 +164,8 @@ const MainP = () => {
                   <AlertEmail>{displayEmail}</AlertEmail>
                   <Input
                     type="tel"
-                    name="Phone"
-                    value={data.Phone}
+                    name="phone"
+                    value={data.phone}
                     onChange={handleChange}
                     onFocus={FocusTel}
                     placeholder='핸드폰번호 (예)01075521110'

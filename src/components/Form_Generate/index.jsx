@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Main, Title, Note, Wraper, Text, } from './style';
 import { useNavigate } from 'react-router-dom';
 import { Bottom, Top, TopClose, BottomClose } from '../Generic/transform';
+import { result } from '../Form';
 const FormGenerate = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -13,6 +14,26 @@ const FormGenerate = () => {
   const [isChecked3, setIsChecked3] = useState(false);
   const [isChecked4, setIsChecked4] = useState(false);
   const [close, setClose] = useState(false);
+    // Backend Post Request:
+    const dsrcVal = result.join('-')
+    const [data, setData] = useState({
+      email: localStorage.getItem('email'),
+      phone: localStorage.getItem('phone'),
+      dscr: dsrcVal
+    });
+    const api_post = () => {
+      fetch('https://api.mever.me:8080/insMember', {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+      })
+        .then(response => response.json())
+        .catch(error => {
+          console.error(error);
+        });
+    };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,11 +48,12 @@ const FormGenerate = () => {
     }, 40);
 
     return () => clearInterval(interval);
-  }, []);  
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsChecked(true);
+      api_post()
     }, 1000);
 
     const timer2 = setTimeout(() => {
@@ -50,6 +72,7 @@ const FormGenerate = () => {
     }, 5350);
     const timer6 = setTimeout(()=>{
       setClose(true)
+      setData()
     }, 4300)
     
 

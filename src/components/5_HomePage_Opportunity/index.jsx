@@ -31,8 +31,12 @@ const OpportunityPage = () => {
             <IntroText>그리고 지금까지 경험하지 못한 3D홈페이지에서, 높은 매출 전환률과 체류시간을 경험할 수 있습니다! 그리고 이는 다양한 특허망을 갖고 있는 메버만이 할 수 있습니다. </IntroText>
           </IntroTextBox>
         </Introbox>
-        <QuesText>메버가 하는 일은 3D홈페이지 • AI마케팅이 전부는 아닙니다.</QuesText>
-        <Title>메버는 대한민국 CEO들이 글로벌 온라인 경쟁력을 갖추고 전세계적인 영향력을 행사할 수 있게 돕습니다. </Title>
+        {window.innerWidth < 414 ?
+          <QuesText>메버가 하는 일은 3D홈페이지 • <br /> AI마케팅이 전부는 아닙니다.</QuesText> :
+          <QuesText>메버가 하는 일은 3D홈페이지 • AI마케팅이 전부는 아닙니다.</QuesText>}
+        {window.innerWidth < 414 ?
+          <Title>메버는 대한민국 CEO들이 글로벌 <br /> 온라인 경쟁력을 갖추고 전세계적인 <br /> 영향력을 행사할 수 있게 돕습니다. </Title> :
+          <Title>메버는 대한민국 CEO들이 글로벌 온라인 경쟁력을 갖추고 전세계적인 영향력을 행사할 수 있게 돕습니다. </Title>}
         <AdHead>CEO를 위한 모든 것!</AdHead>
         <Icon.Down/>
 

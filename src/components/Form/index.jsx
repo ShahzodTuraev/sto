@@ -4,9 +4,9 @@ import { Container, Main,  Title, Text, Alert, Wrapper, Coution, FormWrap, Note,
 import {Button } from '../Generic';
 import { Bottom, Top, FirstBottom, FirstTop, TopClose, BottomClose } from '../Generic/transform';
 import { useNavigate } from 'react-router-dom';
-export const result = [];
 
 // form results collecting array 
+export const result = [];
 
 const Step1 = () => {
   
@@ -58,10 +58,10 @@ const Step1 = () => {
   // navigate variable to the next page:
 
   const navigate = useNavigate();
-  
+
+
   const postResult = () => {
     if(atForm.id === 4){
-      console.log(result);
       setTimeout(()=>{navigate('/form-generate')}, 420)
       setClose(true)
     }
@@ -70,12 +70,12 @@ const Step1 = () => {
   // click button Function:
 
   const onClick =()=> {
-    if(value){    
+    if(value){
       setTimeout(()=>{setIndex(index + 1)}, 420);
       setAction(true);
       result.push(value);
       setValue('');
-      postResult()     
+      postResult()
     }else{
       setDisplayText('하나를 선택하십시오!');
     }
@@ -86,7 +86,7 @@ const Step1 = () => {
       <Top/>
       <Bottom/>
       { action && <FirstBottom/> }
-      { action && <FirstTop/> }      
+      { action && <FirstTop/> }
       { close && <TopClose/> }
       { close && <BottomClose/> }
       <Main>

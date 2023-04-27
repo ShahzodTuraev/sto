@@ -52,7 +52,7 @@ const IntroTitle = styled.h1`
     font-size: 36px;
   }
   @media ${device.mobile}{
-    font-size: 26px;
+    font-size: 24px;
     text-align: center;
   }
 `;
@@ -108,7 +108,7 @@ const QuesText = styled.p`
     font-size: 22px;
   }
   @media ${device.mobile}{
-    font-size: 22px;
+    font-size: 20px;
     width: 90%;
   }
 `;
@@ -122,7 +122,7 @@ const Title = styled.h1`
   margin: 20px 0;
   width: 80%;
   @media ${device.mobile}{
-    font-size: 25px;
+    font-size: 23px;
     width: 90%;
   }
 `;

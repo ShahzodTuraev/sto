@@ -15,7 +15,7 @@ const Payment = () => {
   const [nameAlert, setNameAlert] = useState('');
   const [emailAlert, setEmailAlert] = useState('');
 
-  const clientKey = process.env.REACT_APP_TOSS_PAYMENTS_KEY
+  const clientKey = 'test_ck_OyL0qZ4G1VOmmAG4JOP8oWb2MQYg';
   // product name and payment amount come from pricing page according to the choice:
   const productName = localStorage.getItem('productName');
   const paymentAmount = Number(localStorage.getItem('paymentAmount'))
@@ -35,7 +35,7 @@ const Payment = () => {
   async function toss_go() {
 
     const tossPayments = await loadTossPayments(clientKey);
-    axios.post('/payment', {
+    axios.post('https://api.mever.me:8080/payment', {
       payType: '카드',
       totalAmount: `${paymentAmount}`,
       orderName: `${productName}`,
@@ -49,8 +49,8 @@ const Payment = () => {
           orderName: res.data.orderName,
           name: res.data.name,
           email: res.data.email,
-          successUrl: 'http://localhost:8080/success',
-          failUrl: 'http://localhost:8080/fail',
+          successUrl: 'https://api.mever.me:8080/success',
+          failUrl: 'http://api.mever.me:8080/fail',
         });
       })
       .catch((error) => {
