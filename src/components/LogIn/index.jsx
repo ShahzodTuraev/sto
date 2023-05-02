@@ -15,12 +15,12 @@ const LogIn = () => {
   };
   const navigate = useNavigate();
   const onClick = () => {
-    setTimeout(()=>{navigate('/form')}, 420)
+    setTimeout(()=>{navigate('/main/form')}, 420)
     setClose(true)
   }
   const onSubmit = () => {
     
-    setTimeout(()=>{navigate('/lectures')}, 420)
+    setTimeout(()=>{navigate('/main/lectures')}, 420)
     setClose(true)
   }
   return (
@@ -47,9 +47,6 @@ const LogIn = () => {
           <Text fontWeight='700'>계정이 없습니까?</Text>
           <Text fontWeight='700' color='#106BF4'>계정 만들기</Text>
         </Click>
-
-
-
 
       </Main>
       

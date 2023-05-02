@@ -11,47 +11,47 @@ import {result} from '../Form'
 const PricingHome = () => {
   const navigate = useNavigate();
   // if click from story page to the price page, class default is 'SW • HW 솔루션'
-  const path = localStorage.getItem('path')
+  const option = localStorage.getItem('option')
 
   // Function for the Buttons:
   
   const onClick_1 =()=>{
-    setTimeout(()=>{navigate('/payment-form')}, 420)
+    setTimeout(()=>{navigate('/main/payment-form')}, 420)
     setClose(true)
     localStorage.setItem('productName', '250000won')
     localStorage.setItem('paymentAmount', '250000')
   }
 
   const onClick_2 =()=>{
-    setTimeout(()=>{navigate('/payment-form')}, 420)
+    setTimeout(()=>{navigate('/main/payment-form')}, 420)
     setClose(true)
     localStorage.setItem('productName', '2500000won')
     localStorage.setItem('paymentAmount', '2500000')
   }
 
   const onClick_3 =()=>{
-    setTimeout(()=>{navigate('/payment-form')}, 420)
+    setTimeout(()=>{navigate('/main/payment-form')}, 420)
     setClose(true)
     localStorage.setItem('productName', '실비+매출의 10%')
     localStorage.setItem('paymentAmount', '10000')
   }
 
   const onClick_4 =()=>{
-    setTimeout(()=>{navigate('/payment-form')}, 420)
+    setTimeout(()=>{navigate('/main/payment-form')}, 420)
     setClose(true)
     localStorage.setItem('productName', '250,000원/1회2h')
     localStorage.setItem('paymentAmount', '250000')
   }
 
   const onClick_5 =()=>{
-    setTimeout(()=>{navigate('/payment-form')}, 420)
+    setTimeout(()=>{navigate('/main/payment-form')}, 420)
     setClose(true)
     localStorage.setItem('productName', '월330,000원/3년')
     localStorage.setItem('paymentAmount', '330000')
   }
 
   const onClick_6 =()=>{
-    setTimeout(()=>{navigate('/payment-form')}, 420)
+    setTimeout(()=>{navigate('/main/payment-form')}, 420)
     setClose(true)
     localStorage.setItem('productName', '월230,000원/3년')
     localStorage.setItem('paymentAmount', '230000')
@@ -61,17 +61,16 @@ const PricingHome = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   // closing animation state:
   
   const [close, setClose] = useState(false);
   // Form result choosen name:
   const [name] = useState(`${result[0]}`);
   // class selection states:
-  const [ visible1, setVisible1] = useState(path ? 'none' : 'flex');
-  const [ visible2, setVisible2] = useState(path ? 'flex' : 'none');
-  const [ border1, setBorder1] = useState(path? '' : '3px solid #000')
-  const [ border2, setBorder2] = useState(path? '3px solid #000' : '')
+  const [ visible1, setVisible1] = useState(option ? 'none' : 'flex');
+  const [ visible2, setVisible2] = useState(option ? 'flex' : 'none');
+  const [ border1, setBorder1] = useState(option? '' : '3px solid #000')
+  const [ border2, setBorder2] = useState(option? '3px solid #000' : '')
   
   const [hover, setHover] = useState(false)
   const [hover2, setHover2] = useState(false)
@@ -104,7 +103,7 @@ const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
     setVisible2('none');
     setBorder1('3px solid #000');
     setBorder2('none');
-    localStorage.removeItem('path')
+    localStorage.removeItem('option')
 
   }
   const onNav2 = () => {

@@ -13,7 +13,7 @@ const Lectures = () => {
   const [vidId, setVidId] = useState('');
   const navigate = useNavigate();
   const onClick =()=> {
-    setTimeout(()=>{navigate('/form')}, 420);
+    setTimeout(()=>{navigate('/main/form')}, 420);
     localStorage.setItem('path', vidId)
       setClose(true)
   }
@@ -37,7 +37,7 @@ const Lectures = () => {
             {videoData.map((video)=>(
               <VideoBox key={video.id}>
               
-              <VideoWrap onClick={()=>{video.type === 'free' ? setVidId(video.id) : (navigate('/login'))}}>
+              <VideoWrap onClick={()=>{video.type === 'free' ? setVidId(video.id) : (navigate('/main/login'))}}>
               <Img src={video.imgSrc}/>
                 <Icon.Lock display = {video.type === 'free' ? 'none': 'block'}/>
                 <Icon.Play/>

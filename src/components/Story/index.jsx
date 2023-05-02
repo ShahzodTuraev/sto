@@ -9,7 +9,7 @@ import PartnersPage from '../7_HomePage_Partners';
 import Footer from '../Footer'
 import { FirstBottom, FirstTop } from '../Generic/transform';
 const StoryHome = () => {
-  localStorage.setItem('path', 'story')
+  localStorage.setItem('option', 'second')
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

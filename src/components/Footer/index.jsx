@@ -11,16 +11,16 @@ const Footer = () => {
   
   // navbar texts' navigation pathes
   const onDirect1 =() => {
-    navigate('/')
+    navigate('/main/')
   }
   const onDirect2 =() => {
-    navigate('/story')
+    navigate('/main/story')
   }
   const onDirect3 =() => {
-    navigate('/form')
+    navigate('/main/form')
   }
   const onDirect4 =() => {
-    navigate('/form')
+    navigate('/main/form')
   }
   return (
     <Container>

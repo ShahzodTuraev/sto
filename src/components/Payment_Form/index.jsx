@@ -7,7 +7,6 @@ import { loadTossPayments } from '@tosspayments/payment-sdk';
 import axios from 'axios';
 
 const Payment = () => {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -20,7 +19,7 @@ const Payment = () => {
   const productName = localStorage.getItem('productName');
   const paymentAmount = Number(localStorage.getItem('paymentAmount'))
   // client email adress come from main initial page :
-  const [emailReplace, setEmailReplace] = useState(localStorage.getItem('email'));
+  const [emailReplace, setEmailReplace] = useState(localStorage.getItem('mainEmail'));
   const [customerName, setCustomerName] = useState('')
   // data input onChange functions:
   const onChangeEmail = (e) => {
@@ -97,6 +96,17 @@ const Payment = () => {
             </InputWrap>
             <InputWrap>
               <Input onChange={onChangeEmail} onFocus={onFocusEmail} value = {emailReplace} placeholder='이메일 주소'/>
+              <Alert>{emailAlert}</Alert>
+            </InputWrap>
+            <Button onClick={onClick} type={'step'}>결제하기</Button>
+          </Wrapper>
+          <Wrapper style={{marginTop: '15px'}}>
+            <InputWrap>
+              <Input onChange={onChangeName} onFocus={onFocusName} placeholder='성명'/>
+              <Alert>{nameAlert}</Alert>
+            </InputWrap>
+            <InputWrap>
+              <Input onChange={onChangeEmail} onFocus={onFocusEmail}  placeholder='cash'/>
               <Alert>{emailAlert}</Alert>
             </InputWrap>
             <Button onClick={onClick} type={'step'}>결제하기</Button>

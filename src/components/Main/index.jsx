@@ -8,7 +8,7 @@ import { FirstBottom, BottomClose, FirstTop, TopClose } from '../Generic/transfo
 import axios from 'axios';
 
 const MainP = () => {
-
+  localStorage.setItem('mainEmail', 'hello@dr.me')
   const [videos, setVideos] = useState([]);
   useEffect(() => {
     // 유튜브 API로부터 동영상 목록을 가져올 함수
@@ -90,9 +90,8 @@ const MainP = () => {
     if (data.email.includes('@', '.') &&
         (data.phone.length> 10 && /[a-zA-Z]/.test(data.phone) === false) &&
         isChecked) {
-          setTimeout(()=>{navigate('/next-step')}, 420)
+          setTimeout(()=>{navigate('/main/next-step')}, 420)
           setClose(true)
-          localStorage.setItem('email', data.email);
           localStorage.setItem('phone', data.phone);
         event.preventDefault();
       api_post();
@@ -110,7 +109,7 @@ const MainP = () => {
     }
 
   };
-  
+  data.email = localStorage.getItem('mainEmail')
   const handleChange = (event) => {
     const { name, value } = event.target;
     setData(prevData => ({

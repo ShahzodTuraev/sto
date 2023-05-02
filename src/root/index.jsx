@@ -15,7 +15,7 @@ export const Root = () => {
             })
           }
           <Route path= '*' element={<h1>404 NOT FOUND</h1>}/>
-          <Route path= '/' element={<Navigate to = {'/main'} />}/>
+          <Route path= '/' element={<Navigate to = {'/main/page'} />}/>
           </Route>
         </Routes>
       </BrowserRouter>

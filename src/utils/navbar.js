@@ -15,7 +15,7 @@ export const navbar = [
     id: useId, 
     element: <MainPage/>, 
     title: 'Main', 
-    path:'/', 
+    path:'/main/page',
     private: false, 
     hidden: false
   },
@@ -23,7 +23,7 @@ export const navbar = [
   {
     id: useId,
     element: <NextStepPage/>,
-    path: '/next-step',
+    path: '/main/next-step',
     private: false,
     hidden: true
   },
@@ -31,7 +31,7 @@ export const navbar = [
   {
     id: useId,
     element: <ExtendPage/>,
-    path: '/extend',
+    path: '/main/extend',
     private: false,
     hidden: true
   },
@@ -39,7 +39,7 @@ export const navbar = [
   {
     id: useId,
     element: <StoryHomePage/>,
-    path: '/story',
+    path: '/main/story',
     private: false,
     hidden: true
   },
@@ -47,7 +47,7 @@ export const navbar = [
   {
     id: useId,
     element: <SuccessHomePage/>,
-    path: '/lectures',
+    path: '/main/lectures',
     private: false,
     hidden: true
   },
@@ -55,7 +55,7 @@ export const navbar = [
   {
     id: useId,
     element: <PricingHomePage/>,
-    path: '/pricing',
+    path: '/main/pricing',
     private: false,
     hidden: true
   },
@@ -63,7 +63,7 @@ export const navbar = [
   {
     id: useId,
     element: <PaymentFormPage/>,
-    path: '/payment-form',
+    path: '/main/payment-form',
     private: false,
     hidden: true
   },
@@ -71,7 +71,7 @@ export const navbar = [
   {
     id: useId,
     element: <FeaturesPage/>,
-    path: '/features',
+    path: '/main/features',
     private: false,
     hidden: true
   },
@@ -79,21 +79,21 @@ export const navbar = [
   {
     id: useId,
     element: <Step1Page/>,
-    path: '/form',
+    path: '/main/form',
     private: false,
     hidden: true
   },
   {
     id: useId,
     element: <FormGeneratePage/>,
-    path: '/form-generate',
+    path: '/main/form-generate',
     private: false,
     hidden: true
   },
   {
     id: useId,
     element: <LogInPage/>,
-    path: '/login',
+    path: '/main/login',
     private: false,
     hidden: true
   }

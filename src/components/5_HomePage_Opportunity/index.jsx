@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 const OpportunityPage = () => {
   const navigate = useNavigate();
   const onClick = () =>{
-    navigate('/form')
+    navigate('/main/form')
   }
   return (
     <Container>

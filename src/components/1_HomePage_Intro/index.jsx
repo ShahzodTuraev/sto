@@ -10,7 +10,7 @@ import ReactPlayer from 'react-player';
 const Intro = () => {
   const navigate = useNavigate();
   const onClick = () => { 
-    navigate('/form');
+    navigate('/main/form');
   }
   return (
     <Container>

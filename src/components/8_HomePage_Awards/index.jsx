@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 const QuestionsPage = () => {
   const navigate = useNavigate();
   const onClick =()=>{
-    navigate('/pricing')
+    navigate('/main/pricing')
   }
   return (
     <Container>

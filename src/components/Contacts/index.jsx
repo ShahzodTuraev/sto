@@ -24,7 +24,7 @@ const antIcon = (
 
 const Footer = () => {
   const onClick1 = () => {
-    window.open('https://www.youtube.com/channel/UCXHaChrER0XYPrR43S7mx5A', '_blank');
+    window.open('https://www.youtube.com/channel/UCSD6Q9ct8OuNvu_wR_U705g', '_blank');
   }
   const onClick2 = () => {
     window.open('https://www.tiktok.com/@official_mever?is_from_webapp=1&sender_device=pc', '_blank');

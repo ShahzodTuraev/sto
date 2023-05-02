@@ -62,7 +62,7 @@ const Step1 = () => {
 
   const postResult = () => {
     if(atForm.id === 4){
-      setTimeout(()=>{navigate('/form-generate')}, 420)
+      setTimeout(()=>{navigate('/main/form-generate')}, 420)
       setClose(true)
     }
   }

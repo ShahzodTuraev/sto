@@ -10,7 +10,7 @@ import { idSelect } from '../Features';
 const AbilityPage = () => {
   const navigate = useNavigate()
   const onClick = () => {
-    navigate('/form');
+    navigate('/main/form');
   }
   const abilities = [
     {id: 1,
@@ -103,7 +103,7 @@ const AbilityPage = () => {
             
             {abilities.map((ability)=>(
               <Box key={ability.id} onClick={()=>{
-                navigate('/features')
+                navigate('/main/features')
                 idSelect.push(ability.id)
               }}>
               {ability.icon}

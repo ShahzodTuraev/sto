@@ -12,7 +12,7 @@ const Features = () => {
   }, []);
   const navigate = useNavigate();
   const onClick = ()=>{
-    navigate('/form')
+    navigate('/main/form')
   }
   const abilityContent = [
     {id: 1,

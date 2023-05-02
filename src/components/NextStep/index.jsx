@@ -12,12 +12,12 @@ const FreeTrialStep1 = () => {
   }, []);
   const navigate = useNavigate()
   const onClick = () => {
-    setTimeout(()=>{navigate('/extend')}, 420)
+    setTimeout(()=>{navigate('/main/extend')}, 420)
       setClose(true)
   }
   const [close, setClose] = useState(false);
   const onClick2 = () => {
-      navigate('/story')
+      navigate('/main/story')
   }
   return (
     <Container>
