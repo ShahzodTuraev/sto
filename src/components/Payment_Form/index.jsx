@@ -36,6 +36,7 @@ const Payment = () => {
     const tossPayments = await loadTossPayments(clientKey);
     axios.post('https://api.mever.me:8080/payment', {
       payType: '카드',
+      // https://api.mever.me:8080/paymentList
       totalAmount: `${paymentAmount}`,
       orderName: `${productName}`,
       name: `${customerName}`,
@@ -55,6 +56,7 @@ const Payment = () => {
       .catch((error) => {
         alert(error.message);
       });
+    
 
     // tossPayments.requestPayment('카드', {
     //   amount: `${paymentAmount}`,
@@ -100,7 +102,7 @@ const Payment = () => {
             </InputWrap>
             <Button onClick={onClick} type={'step'}>결제하기</Button>
           </Wrapper>
-          <Wrapper style={{marginTop: '15px'}}>
+          {/* <Wrapper style={{marginTop: '15px'}}>
             <InputWrap>
               <Input onChange={onChangeName} onFocus={onFocusName} placeholder='성명'/>
               <Alert>{nameAlert}</Alert>
@@ -110,7 +112,7 @@ const Payment = () => {
               <Alert>{emailAlert}</Alert>
             </InputWrap>
             <Button onClick={onClick} type={'step'}>결제하기</Button>
-          </Wrapper>
+          </Wrapper> */}
           <Coution>결제 후 이용 (관련 세금 별도). 대시보드 또는 이메일(sm@mever.me)을 통해 취소하십시오. 또한 서비스 약관, 개인 정보 보호 정책 및 제휴 계약에 동의합니다.</Coution>
         </Main>
         {/* left side page */}

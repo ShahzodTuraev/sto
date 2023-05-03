@@ -60,19 +60,19 @@ const EntrepreneursHomePage = () => {
             <ClientImg src= {client1}/>
           <ClientName>건설회사 엘림(주) 김남재 CEO</ClientName>
             <ClientType>1.10.100억 매출 도전자</ClientType>
-            <ClientText>"의.식.주 어떤 비즈니스든 CEO가 <br /> 일부라도 지분을 가지고 있다면, 반드시 <br /> 3D홈페이지, 3D마케팅, AI컨텐츠가 <br /> 필요합니다. 메버는 <b>복잡한 홈페이지 <br /> 제작과정을 직관적으로 체험하게 하고, <br /> 고객이 원하는 것을 더 빠르게 얻을 <br /> 수 있도록 도와주며 수익을 증가 </b><br /> 시켜줌을 데이터로 보여줍니다."</ClientText>
+            <ClientText>"의.식.주 어떤 비즈니스든 CEO가 일부라도 지분을 가지고 있다면, 반드시 3D홈페이지, 3D마케팅, AI컨텐츠가 필요합니다. 메버는 <b>복잡한 홈페이지 제작과정을 직관적으로 체험하게 하고, 고객이 원하는 것을 더 빠르게 얻을 수 있도록 도와주며 수익을 증가 </b> 시켜줌을 데이터로 보여줍니다."</ClientText>
             </ClientCard>
           <ClientCard>
             <ClientImg src= {client2}/>
             <ClientName>교육회사 메리사(주) 천홍숙 CEO</ClientName>
             <ClientType>3D•AI CEO 교육과정 참여자</ClientType>
-            <ClientText>“<b>메버는 단순 마케팅 회사가 아닙니다! <br /> 100% IT개발자들만 있어서, 모든 것을 <br /> 자동화, 시스템화로 연구개발합니다. <br /></b> 지금까지의 온라인 마케팅의 정석을 <br /> 메버만의 특허기술인 3D. AI기술로 <br /> 재해석하여 성공사례를 계속해서 함께 <br /> 만들어 가고 있기에 더욱 신뢰가 갑니다 ”.</ClientText>
+            <ClientText>“<b>메버는 단순 마케팅 회사가 아닙니다! 100% IT개발자들만 있어서, 모든 것을 자동화, 시스템화로 연구개발합니다. </b> 지금까지의 온라인 마케팅의 정석을 메버만의 특허기술인 3D. AI기술로 재해석하여 성공사례를 계속해서 함께 만들어 가고 있기에 더욱 신뢰가 갑니다 ”.</ClientText>
             </ClientCard>
           <ClientCard>
-            <ClientImg src= {client3}/>
-            <ClientName>의사•유튜버 이동환TV 이동환 CEO</ClientName>
+            {/* <ClientImg src= {client3}/> */}
+            {/* <ClientName>의사•유튜버 이동환TV 이동환 CEO</ClientName> */}
             <ClientType>3D홈페이지.3D마케팅 의뢰사</ClientType>
-            <ClientText>“유튜버인 제가 3D홈페이지, 3D마케팅, <br /> AI컨텐츠 시스템에 푹 빠졌습니다.  <b>그리고 <br /> 과거 1년간 벌었던 수익보다, 시작 후 <br /> 1달간 번 수익이 더 많아 졌습니다.</b>지금껏 <br /> 어떤 마케팅 방식보다 믿을 수 없었고, <br /> 더 높은 가치를 위해 계속해서 함께 <br /> 나아가고 있습니다. CEO분들께 <br /> 강추합니다”.</ClientText>
+            <ClientText>“유튜버인 제가 3D홈페이지, 3D마케팅, AI컨텐츠 시스템에 푹 빠졌습니다.  <b>그리고 과거 1년간 벌었던 수익보다, 시작 후 1달간 번 수익이 더 많아 졌습니다.</b>지금껏 어떤 마케팅 방식보다 믿을 수 없었고, 더 높은 가치를 위해 계속해서 함께 나아가고 있습니다. CEO분들께 강추합니다”.</ClientText>
           </ClientCard>
         </Wrapper>
         <Button onClick={onClick} type={'large'}>처음 오신 CEO를 위한, 서비스 견적 </Button>

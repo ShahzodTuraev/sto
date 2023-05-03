@@ -17,9 +17,9 @@ const FormGenerate = () => {
     // Backend Post Request:
     const dsrcVal = result.join('-')
     const [data, setData] = useState({
-      email: localStorage.getItem('email'),
-      phone: localStorage.getItem('phone'),
-      dscr: dsrcVal
+      email: localStorage.getItem('mainEmail'),
+      phone: localStorage.getItem('mainPhone'),
+      dcrp: dsrcVal
     });
     const api_post = () => {
       fetch('https://api.mever.me:8080/insMember', {
@@ -54,6 +54,7 @@ const FormGenerate = () => {
     const timer = setTimeout(() => {
       setIsChecked(true);
       api_post()
+      console.log();
     }, 1000);
 
     const timer2 = setTimeout(() => {
