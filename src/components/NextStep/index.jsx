@@ -32,7 +32,7 @@ const FreeTrialStep1 = () => {
           <Title>회원 축하기념, <br /> 당일만 드리는 특별 혜택! </Title>
           <BoxWrap>
             <TitleWrap>
-              <Title>30억 빚을 300억 만든, CEO비밀!</Title>
+              <Title>30억 빚을 300억 가치로 만든, CEO비밀!</Title>
               <Box>
                 <VideoBox>
                   <ReactPlayer controls width={'100%'} height={'100%'} url={'https://youtu.be/O8bvGKUs5Dg'}></ReactPlayer>

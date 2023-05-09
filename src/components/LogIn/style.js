@@ -13,7 +13,7 @@ const Main = styled.div`
   border-radius: 9px;
   max-width: 436px;
   width: 100%;
-  height: 640px;
+  height: 600px;
   background: #FFFFFF;
   margin: auto;
   @media ${device.mobile}{
@@ -38,8 +38,9 @@ const Title = styled.p`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 35px;
   margin: 40px 0;
+  position: relative;
 `;
 
 const Section = styled.div`
@@ -50,9 +51,6 @@ justify-content: space-between;
 const Text = styled.p`
   font-size: 14px;
   cursor: pointer;
-  font-weight: ${({fontWeight})=>(fontWeight ? `${fontWeight}` : '400')};
-  color: ${({color})=>(color ? `${color}` : '#374151')};
-  text-align: right;
 `;
 
 const Click = styled.div`
@@ -68,7 +66,20 @@ const Click = styled.div`
   &:hover{
     background: #f8f9fa;
   }
+`;
+
+const LoginAlert = styled.p`
+  color: red;
+  font-size: 14px;
+  position: absolute;
+  left: 20%;
+`;
+const PassAlert = styled.p`
+  color: red;
+  font-size: 14px;
+  position: absolute;
+  left: 20%;
 `
 
 
-export {Container, Main, Img, ImgWrap, Title, Wrapper, Section, Text, Click};
+export {Container, PassAlert, Main, LoginAlert, Img, ImgWrap, Title, Wrapper, Section, Text, Click};

@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Main, SectionTop, IconBox, Icon, Text, Title,  StarWrap, SubTitle, ClientCard, ClientImg, Wrapper, ClientName, ClientType, ClientText, LogoImg, LogoTitle, LogoText } from './style';
 import client1 from '../../assets/imgs/client-1.jpg';
 import client2 from '../../assets/imgs/client-2.jpg';
-import client3 from '../../assets/imgs/client-3.jpg';
 import logo from '../../assets/imgs/5-stars.png';
 import { Button } from '../Generic';
 import { Index } from '../1_HomePage_Intro/style';

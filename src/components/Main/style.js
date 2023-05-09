@@ -7,6 +7,7 @@ const Container = styled.div`
   align-items: center;
   background: linear-gradient( #E0ECFB, #F4F9FC);
   min-height: 100vh;
+  padding-top: 30px;
   `;
 
 const Main = styled.div`
@@ -44,6 +45,7 @@ const Text = styled.p`
 const VideoBox = styled.div`
   width: 80%;
   height: 530px;
+  margin-bottom: 30px;
   @media ${device.tablet}{
     width: 80%;
     height: 380px;
@@ -101,10 +103,6 @@ const InputWrap = styled.div`
     width: 90%;
   };
 `;
-
-
-
-
 const AlertEmail =styled.p`
   color: red;
   font-size: 14px;
@@ -153,7 +151,7 @@ const AlertTel =styled.p`
     }
   `;
   const DownTitle = styled.p`
-  margin-top: 10px;
+  margin-top: 30px;
   font-size: 22px;
   font-weight: 600;
   text-align: center;

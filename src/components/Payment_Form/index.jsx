@@ -49,7 +49,7 @@ const Payment = () => {
           orderName: res.data.orderName,
           name: res.data.name,
           email: res.data.email,
-          successUrl: 'https://api.mever.me:8080/success',
+          successUrl: 'https://api.mever.me:8080/success?url=https://mever.me/',
           failUrl: 'http://api.mever.me:8080/fail',
         });
       })

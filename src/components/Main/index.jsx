@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import { Container, Main, Title, Text, Phone, VideoBox, AlertCheck, AlertEmail, AlertTel, InputBox, InputTitle, Wrapper, InputWrap, DownTitle, } from './style';
-import {Button, Input} from '../Generic';
+import { Container, Main, Title, Text, Phone, VideoBox,  DownTitle, } from './style';
+import {Button} from '../Generic';
 import { useNavigate } from 'react-router-dom';
-import { Checkbox } from 'antd';
 import Contact from '../Contacts'
 import { FirstBottom, BottomClose, FirstTop, TopClose } from '../Generic/transform';
 import axios from 'axios';
@@ -55,82 +54,79 @@ const MainP = () => {
         />
     );
 
-  const [data, setData] = useState({
-    email: '',
-    phone: '',
-  });
-  const api_post = () => {
-    fetch('https://api.mever.me:8080/insMember', {
-      // https://api.mever.me/api/v1/req2
-      method: 'POST',
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data)
-    })
-      .then(response => response.json())
-      // .then(result => {
-      //   if (result.ErrorCode === 0) {
-      //     alert('문의가 접수되었습니다.');
-      //   } else {
-      //     alert('시스템오류, 관리자에게 문의하십시오.');
-      //   }
-      // })
-      .catch(error => {
-        console.error(error);
-      });
-  };
+  // const [data, setData] = useState({
+  //   email: '',
+  //   phone: '',
+  // });
+  // const api_post = () => {
+  //   fetch('https://api.mever.me:8080/insMember', {
+  //     // https://api.mever.me/api/v1/req2
+  //     method: 'POST',
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(data)
+  //   })
+  //     .then(response => response.json())
+  //     .catch(error => {
+  //       console.error(error);
+  //     });
+  // };
   const navigate = useNavigate();
-  const [isChecked, setIsChecked] = useState(false);
-  const [displayEmail, setDisplayEmail] = useState('');
-  const [displayTel, setDisplayTel] = useState('');
-  const [displayCheck, setDisplayCheck] = useState('');
+  // const [isChecked, setIsChecked] = useState(false);
+  // const [displayEmail, setDisplayEmail] = useState('');
+  // const [displayTel, setDisplayTel] = useState('');
+  // const [displayCheck, setDisplayCheck] = useState('');
   const [close, setClose] = useState(false)
-  const onSubmit = (event) => {
-    if (data.email.includes('@', '.') &&
-        (data.phone.length> 10 && /[a-zA-Z]/.test(data.phone) === false) &&
-        isChecked) {
-          setTimeout(()=>{navigate('/main/next-step')}, 420)
-          setClose(true)
-          localStorage.setItem('phone', data.phone);
-        event.preventDefault();
-      api_post();
+  const onClick =()=>{
+    setTimeout(()=>{navigate('/main/next-step')}, 420)
+    setClose(true)
+  }
+  // const onSubmit = (event) => {
+  //   if (data.email.includes('@', '.') &&
+  //       (data.phone.length> 10 && /[a-zA-Z]/.test(data.phone) === false) &&
+  //       isChecked) {
+  //         setTimeout(()=>{navigate('/main/next-step')}, 420)
+  //         setClose(true)
+  //         localStorage.setItem('phone', data.phone);
+  //       event.preventDefault();
+  //     api_post();
     
-    }else{
-      if(!isChecked){
-        setDisplayCheck('동이 해 주세요!')
-      }
-    };
-    if(!data.email.includes('@', '.')){
-      setDisplayEmail('입력한 이메일 주소 확인해 주세요!');
-    };
-    if(data.phone.length < 10 || /[a-zA-Z]/.test(data.phone) === true ){
-      setDisplayTel('입력한 전화번호 확인해 주세요!');
-    }
+  //   }else{
+  //     if(!isChecked){
+  //       setDisplayCheck('동이 해 주세요!')
+  //     }
+  //   };
+  //   if(!data.email.includes('@', '.')){
+  //     setDisplayEmail('입력한 이메일 주소 확인해 주세요!');
+  //   };
+  //   if(data.phone.length < 10 || /[a-zA-Z]/.test(data.phone) === true ){
+  //     setDisplayTel('입력한 전화번호 확인해 주세요!');
+  //   }
 
-  };
-  data.email = localStorage.getItem('mainEmail')
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setData(prevData => ({
-      ...prevData,
-      [name]: value
-    }));
-  };
+  // };
+  // data.email = localStorage.getItem('mainEmail')
+  // const handleChange = (event) => {
+  //   const { name, value } = event.target;
+  //   setData(prevData => ({
+  //     ...prevData,
+  //     [name]: value
+  //   }));
+  // };
 
-  const handleCheckboxChange = (event) => {
-      setIsChecked(event.target.checked);
-      if(event.target.checked === true ){
-        setDisplayCheck('');
-      }
-    };
+  // const handleCheckboxChange = (event) => {
+  //     setIsChecked(event.target.checked);
+  //     if(event.target.checked === true ){
+  //       setDisplayCheck('');
+  //     }
+  //   };
 
-    const FocusEmail = () => {
-      setDisplayEmail('')
-    };
-    const FocusTel = () => {
-      setDisplayTel('')
-    }
+  //   const FocusEmail = () => {
+  //     setDisplayEmail('')
+  //   };
+  //   const FocusTel = () => {
+  //     setDisplayTel('')
+  //   }
   
 
   return (
@@ -148,7 +144,8 @@ const MainP = () => {
           <VideoBox>
           {videos.length > 0 ? latestVideoJSX : 'Loading...'}
           </VideoBox>
-          <InputBox>
+          <Button onClick={onClick} type='large'>무료 뉴스 신청하기</Button>
+          {/* <InputBox>
             <InputTitle>뉴스 받을 정보 입력란</InputTitle>
             <Wrapper>
                 <InputWrap>
@@ -179,7 +176,7 @@ const MainP = () => {
                 <AlertCheck>{displayCheck}</AlertCheck> 
               <Button type='main' onClick={onSubmit} >무료 뉴스 신청하기</Button>
             </Wrapper>
-          </InputBox>
+          </InputBox> */}
           <DownTitle>문의전화</DownTitle>
           <Phone href="tel:1688-9050">1688-9050</Phone>
           <Contact/>

@@ -124,10 +124,10 @@ const setColor6 = {color: hover6 ? '#fff' : 'var(--color-6Z-dzM8-1)'}
           <Heading > {name} <br /> CEO들의 매출 <br /> 성장 플랜</Heading> :
           <Heading > {name} <br /> CEO들의 매출 성장 플랜</Heading>
         }
-        <SupHeading>CEO들의 후기를 보고 천천히 고민해보세요. <br /> 이미, 3개월 일정이 밀려 있습니다.</SupHeading>
+        <SupHeading>많은 CEO들의 후기를 보고 천천히 고민해보세요. <br /> 이미, 2개월 일정이 밀려 있습니다.</SupHeading>
           <Wrap>
-            <Plan onClick={onNav1} borderBottom ={border1}>교육 과정 • 매출 도전</Plan>
-            <Plan onClick={onNav2} borderBottom ={border2}>SW • HW 솔루션</Plan>
+            <Plan onClick={onNav1} borderBottom ={border1}>[Best] CEO교육•컨설팅</Plan>
+            <Plan onClick={onNav2} borderBottom ={border2}>[Best] 소프트웨어•하드웨어</Plan>
           </Wrap>
           
           <Wrapper style={{display: visible1}}>
