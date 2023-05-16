@@ -40,7 +40,7 @@ const LogIn = () => {
         console.error(error);
       });
       setTimeout(()=>{navigate('/main/lectures')}, 420)
-      setClose(true)
+      setClose(true) 
     
     }else{
       const email = login;

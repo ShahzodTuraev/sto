@@ -34,7 +34,7 @@ const Payment = () => {
   async function toss_go() {
 
     const tossPayments = await loadTossPayments(clientKey);
-    axios.post('https://api.mever.me:8080/payment', {
+    axios.post('https://mever.hopto.org:8899/payment', {
       payType: '카드',
       // https://api.mever.me:8080/paymentList
       totalAmount: `${paymentAmount}`,

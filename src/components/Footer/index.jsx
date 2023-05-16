@@ -33,6 +33,7 @@ const Footer = () => {
                 <Text>(주)메버</Text>
                 <Text>대표 이상민</Text>
                 <Text>사업자 번호 653-81-02062</Text>
+                <Text>통신판매번호 : 2021-서울송파-0291</Text>
               </Contact>
               <Contact>
                 <Text> 1688-9050 </Text>

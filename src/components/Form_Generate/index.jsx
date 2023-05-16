@@ -49,12 +49,11 @@ const FormGenerate = () => {
 
     return () => clearInterval(interval);
   }, []);
-  useEffect(()=>{
-    api_post()
-  })
+ 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsChecked(true);
+      api_post()
     }, 1000);
 
     const timer2 = setTimeout(() => {

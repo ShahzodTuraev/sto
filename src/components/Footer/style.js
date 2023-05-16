@@ -36,6 +36,9 @@ const Box = styled.div`
 `;
 const BoxWrap = styled.div`
   display: flex;
+  @media ${device.mobile}{
+    flex-direction: column;
+  }
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -67,7 +70,10 @@ const Contact = styled.div`
   flex-direction: column;
   align-items: center;
   border-right: ${({borderRight})=>(borderRight ? `${borderRight}` : 'none')};
-  padding: 0 40px;
+  padding: 0 30px;
+  @media ${device.mobile}{
+    border-right: none
+  }
 `;
 const Text = styled.div`
   font-size: 1rem;
@@ -76,7 +82,7 @@ const Box2 = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
-  width: 50%;
+  width: 40%;
   @media ${device.tablet}{
     width: 75%;
   }
@@ -89,7 +95,7 @@ const Box2 = styled.div`
   
 `;
 const Li = styled.p`
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 900;
   cursor: pointer;
   &:hover {

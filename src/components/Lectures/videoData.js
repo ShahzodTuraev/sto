@@ -34,6 +34,7 @@ export const videoData = [
     imgSrc: ceo3,
     title: '[무료1강] 비즈니스 모델별 사례', 
     note: '강사 : 이상민 CEO',
+    pdfSrc: 'http://localhost:3001/main/맛보기.pdf'
   },
   {
     id: 4,

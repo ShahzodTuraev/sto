@@ -7,7 +7,6 @@ import { FirstBottom, BottomClose, FirstTop, TopClose } from '../Generic/transfo
 import axios from 'axios';
 
 const MainP = () => {
-  localStorage.setItem('mainEmail', 'example@re.me')
   const [videos, setVideos] = useState([]);
   useEffect(() => {
     // 유튜브 API로부터 동영상 목록을 가져올 함수
