@@ -43,9 +43,9 @@ const OpportunityPage = () => {
         <FunctionCard>
           <IntroTextBox>
             <Suptitle>메버는...</Suptitle>
-            <IntroTitle>당신의 3D웹사이트•AI콘텐츠</IntroTitle>
+            <IntroTitle>웹사이트•AI콘텐츠</IntroTitle>
             <IntroText>웹사이트나 콘텐츠를 만드는 것은 오랜 시간과 비용이 들어갑니다. 하지만, 이제는 단 몇시간, 몇분만에 해결할 수 있습니다!</IntroText>
-            <BoxUnit>메버을 사용하면...</BoxUnit>
+            <BoxUnit>메버를 사용하면...</BoxUnit>
             <CanWrapper>
               <Icon.Right/>
               <CanText>3D웹을 고객에게 제공하여 매우 색다른 경험을 선사하여, 더 많은 전환과 판매를 이룰 수 있습니다</CanText>

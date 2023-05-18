@@ -20,7 +20,7 @@ const AbilityPage = () => {
     },
     {id: 2,
       icon: <Icon.Website/>,
-      item: '3D 홈페이지 마케팅',
+      item: '3D홈페이지 제작',
       text: '산업별•업종별 검증된 3D 홈페이지를 만들어 매출을 일으킵니다.월33만~'
     },
     {id: 3,
