@@ -20,6 +20,7 @@ const PricingHome = () => {
     setClose(true)
     localStorage.setItem('productName', '250000won')
     localStorage.setItem('paymentAmount', '250000')
+    localStorage.setItem('type', 'NORMAL')
   }
 
   const onClick_2 =()=>{
@@ -27,6 +28,7 @@ const PricingHome = () => {
     setClose(true)
     localStorage.setItem('productName', '2500000won')
     localStorage.setItem('paymentAmount', '2500000')
+    localStorage.setItem('type', 'NORMAL')
   }
 
   const onClick_3 =()=>{
@@ -34,6 +36,7 @@ const PricingHome = () => {
     setClose(true)
     localStorage.setItem('productName', '실비+매출의 10%')
     localStorage.setItem('paymentAmount', '10000')
+    localStorage.setItem('type', 'NORMAL')
   }
 
   const onClick_4 =()=>{
@@ -41,6 +44,7 @@ const PricingHome = () => {
     setClose(true)
     localStorage.setItem('productName', '250,000원/1회2h')
     localStorage.setItem('paymentAmount', '250000')
+    localStorage.setItem('type', 'NORMAL')
   }
 
   const onClick_5 =()=>{
@@ -48,6 +52,8 @@ const PricingHome = () => {
     setClose(true)
     localStorage.setItem('productName', '월330,000원/3년')
     localStorage.setItem('paymentAmount', '330000')
+    localStorage.setItem('type', 'BILLING')
+    localStorage.setItem('period', 'month')
   }
 
   const onClick_6 =()=>{
@@ -55,6 +61,8 @@ const PricingHome = () => {
     setClose(true)
     localStorage.setItem('productName', '월230,000원/3년')
     localStorage.setItem('paymentAmount', '230000')
+    localStorage.setItem('type', 'BILLING')
+    localStorage.setItem('period', 'month')
   }
 
   // Function for fixing page scroll:

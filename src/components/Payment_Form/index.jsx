@@ -18,6 +18,8 @@ const Payment = () => {
   // product name and payment amount come from pricing page according to the choice:
   const productName = localStorage.getItem('productName');
   const paymentAmount = Number(localStorage.getItem('paymentAmount'))
+  const period = localStorage.getItem('period');
+  const type = localStorage.getItem('type');
   // client email adress come from main initial page :
   const [emailReplace, setEmailReplace] = useState(localStorage.getItem('mainEmail'));
   const [customerName, setCustomerName] = useState('')
@@ -32,31 +34,61 @@ const Payment = () => {
   // async/await을 사용하는 경우
 
   async function toss_go() {
-
     const tossPayments = await loadTossPayments(clientKey);
-    axios.post('https://mever.hopto.org:8899/payment', {
-      payType: '카드',
-      // https://api.mever.me:8080/paymentList
-      totalAmount: `${paymentAmount}`,
-      orderName: `${productName}`,
-      name: `${customerName}`,
-      email: `${emailReplace}`,
+    if(type === 'BILLING'){
+      axios.post('https://api.mever.me:8080/autoPayment', JSON.stringify({
+        payType: '카드',
+        totalAmount: `${paymentAmount}`,
+        orderName: `${productName}`,
+        name: `${customerName}`,
+        email: `${emailReplace}`,
+        period: `${period}`,
+      }),{
+        headers: {
+          'Content-Type': 'application/json',
+        },
     })
-      .then((res) => {
-        tossPayments.requestPayment('카드', {
-          amount: res.data.totalAmount,
-          orderId: res.data.orderId,
-          orderName: res.data.orderName,
-          name: res.data.name,
-          email: res.data.email,
-          successUrl: 'https://api.mever.me:8080/success?url=https://mever.me/',
-          failUrl: 'http://api.mever.me:8080/fail',
+        .then((res) => {
+          tossPayments.requestBillingAuth('CARD', {
+            customerKey: res.data.customerKey,
+            authKey: res.data.authKey,
+            amount: res.data.totalAmount,
+            orderId: res.data.orderId,
+            orderName: res.data.orderName,
+            name: res.data.name,
+            email: res.data.email,
+            successUrl: 'https://api.mever.me:8080/autoSuccess?url=https://mever.me/',
+            failUrl: 'http://api.mever.me:8080/fail',
+          });
+        })
+        .catch((error) => {
+          alert(error.message);
         });
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
-    
+    }else{
+        
+        axios.post('https://api.mever.me:8080/payment', {
+          payType: '카드',
+          // https://api.mever.me:8080/paymentList
+          totalAmount: `${paymentAmount}`,
+          orderName: `${productName}`,
+          name: `${customerName}`,
+          email: `${emailReplace}`,
+        })
+          .then((res) => {
+            tossPayments.requestPayment('카드', {
+              amount: res.data.totalAmount,
+              orderId: res.data.orderId,
+              orderName: res.data.orderName,
+              name: res.data.name,
+              email: res.data.email,
+              successUrl: 'https://api.mever.me:8080/success?url=https://mever.me/',
+              failUrl: 'http://api.mever.me:8080/fail',
+            });
+          })
+          .catch((error) => {
+            alert(error.message);
+          });
+    }
 
     // tossPayments.requestPayment('카드', {
     //   amount: `${paymentAmount}`,
